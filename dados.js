@@ -64,21 +64,21 @@ const DADOS_SITE = {
   indicacoes: [
     {
       id: "medcof",
-      selo: "Recomendação Pessoal · Residência Médica & Estudo",
+      selo: "Recomendação Pessoal · Cupom: MARINABASTOS",
       titulo: "Grupo MedCof",
       subtitulo: "Preparação de alta performance para provas de Residência Médica e raciocínio clínico",
       link: "https://embaixadores.medcof.com.br?embaixador=mnt",
-      textoBotao: "Quero fazer MedCof (Link de Embaixadora)",
+      textoBotao: "Quero entrar no MedCof (Cupom: MARINABASTOS)",
       depoimentoDestaque: "Indico o MedCof pela profundidade teórica aliada ao direcionamento prático para as provas de Residência Médica, com aulas ministradas por especialistas e metodologia focada em retenção de longo prazo.",
       descricao: [
         "O MedCof se destaca pela excelência didática e pelo foco no raciocínio clínico aprofundado, preparando o estudante de Medicina e o médico generalista tanto para as provas de Residência Médica mais concorridas do país quanto para a tomada de decisão na prática médica.",
-        "Por meio da plataforma, do banco de questões comentadas (QBank) e do sistema de revisão espaçada inteligente, o estudo se torna estruturado, eficiente e adaptado à rotina intensa do internato e da graduação. Utilizando meu link de embaixadora abaixo, você garante condições especiais na sua matrícula."
+        "Por meio da plataforma, do banco de questões comentadas (QBank) e do sistema de revisão espaçada inteligente, o estudo se torna estruturado, eficiente e adaptado à rotina intensa do internato e da graduação. Utilizando meu link de embaixadora e o cupom MARINABASTOS, você garante condições especiais na sua matrícula."
       ],
       pilares: [
+        "Cupom de Embaixadora: MARINABASTOS",
         "Aulas direcionadas e aprofundadas com professores especialistas das principais instituições",
         "QBank completo com questões comentadas alternativa por alternativa e filtros personalizados",
-        "Metodologia de estudo ativo, flashcards e revisão espaçada para fixação eficiente",
-        "Condições exclusivas pelo link oficial de Embaixadora MedCof"
+        "Metodologia de estudo ativo, flashcards e revisão espaçada para fixação eficiente"
       ]
     },
     {
