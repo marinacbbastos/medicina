@@ -293,8 +293,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const listaInteresses = document.getElementById("lista-interesses");
     const listaTrajetoria = document.getElementById("lista-trajetoria");
 
-    if (sobreNome && perfil.nome) {
-      sobreNome.textContent = `Sobre ${perfil.nome}`;
+    if (sobreNome) {
+      sobreNome.textContent = "Sobre mim";
     }
 
     if (sobreFrase && perfil.FraseDestaque) {

@@ -12,16 +12,16 @@ const DADOS_SITE = {
   // 1. INFORMAÇÕES DO PERFIL
   perfil: {
     nome: "Marina Castello Branco Bastos",
-    subtitulo: "Medicina (UFSJ) & Pesquisa Científica",
+    subtitulo: "Estudante de Medicina (UFSJ) & Pesquisa Científica",
     universidade: "Universidade Federal de São João del Rei (UFSJ)",
     periodoAtual: "Departamento de Medicina da UFSJ",
     localizacao: "Belo Horizonte e São João del Rei, MG",
     fotoGithub: "https://github.com/marinacbbastos.png",
-    FraseDestaque: "Dedicação à ciência médica, à pesquisa clínica rigorosa e à medicina baseada em evidências.",
-    resumoHero: "Bem-vinda(o) ao meu portfólio acadêmico. Aqui reúno minhas publicações científicas, revisões sistemáticas e meta-análises indexadas no PubMed e Crossref.",
+    FraseDestaque: "Acredito em uma Medicina que une o rigor da ciência à escuta atenta e ao cuidado individualizado de cada paciente.",
+    resumoHero: "Olá! Eu sou a Marina, estudante de Medicina na UFSJ. Criei este espaço para reunir os artigos científicos dos quais participei, compartilhar um pouco da minha trajetória e deixar indicações que fizeram diferença na minha formação.",
     sobreMim: [
       "Sou de Belo Horizonte (MG) e curso Medicina na Universidade Federal de São João del Rei (UFSJ). Ao longo da graduação, tenho direcionado meus estudos para a prática clínica baseada em evidências, a leitura crítica da literatura médica e a produção de revisões sistemáticas e meta-análises.",
-      "Antes da faculdade, estudei no Colégio Santo Antônio e no Bernoulli, em Belo Horizonte, além de ter cursado dois anos do ensino médio em Portugal e três meses de estudos no Gold Coast Learning Centre, na Austrália. O convívio com diferentes contextos culturais e sistemas de ensino contribuiu para a minha rotina de estudos, para o domínio do inglês e para a facilidade de comunicação, aspectos que hoje auxiliam tanto no cuidado ao paciente quanto na participação em grupos de pesquisa."
+      "Antes da faculdade, estudei no Colégio Santo Antônio e no Bernoulli, em Belo Horizonte, além de ter cursado dois anos do ensino médio em Portugal e três meses de estudos no Gold Coast Learning Centre, na Austrália. O convívio com diferentes contextos culturais e sistemas de ensino contribuiu para a minha rotina de estudos, para o domínio do inglês e para a facilidade de comunicação, aspectos que hoje me ajudam tanto no cuidado ao paciente quanto na participação em grupos de pesquisa."
     ],
     areasInteresse: [
       "Revisão Sistemática & Meta-Análise",
@@ -44,44 +44,44 @@ const DADOS_SITE = {
     }
   },
 
-  // 2. TRAJETÓRIA ACADÊMICA
+  // 2. TRAJETÓRIA ACADÊMICA (EM PRIMEIRA PESSOA)
   trajetoria: [
     {
       periodo: "Atual",
       cargo: "Graduação em Medicina",
       instituicao: "Universidade Federal de São João del Rei (UFSJ), São João del Rei, MG",
-      descricao: "Formação médica pelo Departamento de Medicina da UFSJ, com participação em projetos de pesquisa científica, extração sistematizada de dados e síntese de evidências."
+      descricao: "Curso Medicina na UFSJ, onde dedico minha formação ao raciocínio clínico, à medicina baseada em evidências e à participação ativa em projetos de pesquisa científica."
     },
     {
       periodo: "2026",
       cargo: "Coautora de Revisão Sistemática e Meta-Análise",
       instituicao: "The American Surgeon (SAGE Journals)",
-      descricao: "Publicação do estudo 'CT for Detection, Fluoroscopy for Confirmation: A Meta-Analysis of Imaging in Suspected Esophageal Perforation' em colaboração multicêntrica (Barretos Cancer Center, UFMG, UFU, UFSJ, MaterDei e UTMB John Sealy School of Medicine)."
+      descricao: "Participei como coautora, atuando diretamente na extração sistematizada de dados, do estudo 'CT for Detection, Fluoroscopy for Confirmation: A Meta-Analysis of Imaging in Suspected Esophageal Perforation', realizado em colaboração multicêntrica."
     },
     {
       periodo: "Formação Escolar",
       cargo: "Ensino Fundamental e Médio",
       instituicao: "Colégio Santo Antônio e Bernoulli (BH), Portugal e Austrália",
-      descricao: "Formação escolar realizada em Belo Horizonte, complementada por dois anos de ensino médio em Portugal e três meses de estudos no Gold Coast Learning Centre, na Austrália."
+      descricao: "Fiz minha formação escolar em Belo Horizonte, complementada por dois anos de ensino médio em Portugal e três meses de estudos no Gold Coast Learning Centre, na Austrália."
     }
   ],
 
-  // 3. INDICAÇÕES ACADÊMICAS & FORMAÇÃO EM PESQUISA
+  // 3. INDICAÇÕES ACADÊMICAS & FORMAÇÃO EM PESQUISA (EM PRIMEIRA PESSOA)
   indicacoes: [
     {
       id: "medcof",
-      selo: "Recomendação Pessoal · Cupom: MARINABASTOS",
+      selo: "Minha Indicação · Cupom: MARINABASTOS",
       titulo: "Grupo MedCof",
       subtitulo: "Preparação para provas de Residência Médica e raciocínio clínico",
       link: "https://embaixadores.medcof.com.br?embaixador=mnt",
       textoBotao: "Quero entrar no MedCof (Cupom: MARINABASTOS)",
-      depoimentoDestaque: "Indico o MedCof pela profundidade teórica aliada ao direcionamento prático para as provas de Residência Médica, com aulas ministradas por especialistas e metodologia focada em retenção de longo prazo.",
+      depoimentoDestaque: "Uso e indico o MedCof pela profundidade das aulas e pela forma prática como o curso trabalha o raciocínio clínico para as provas de Residência Médica.",
       descricao: [
-        "O MedCof se destaca pela didática e pelo foco no raciocínio clínico aprofundado, preparando o estudante de Medicina e o médico generalista tanto para as provas de Residência Médica quanto para a tomada de decisão na prática médica.",
-        "Por meio da plataforma, do banco de questões comentadas (QBank) e do sistema de revisão espaçada, o estudo se torna estruturado e adaptado à rotina da graduação e do internato. Utilizando meu link de embaixadora e o cupom MARINABASTOS, você conta com condições especiais na matrícula."
+        "Escolhi ser embaixadora do MedCof porque me identifico muito com a didática dos professores e com a organização do estudo. As aulas vão além da memorização e me ajudam a construir raciocínio clínico tanto para as provas de Residência quanto para a prática médica.",
+        "O banco de questões comentadas (QBank) e o sistema de revisão espaçada facilitam bastante a minha rotina na faculdade. Se você quiser entrar no MedCof, usando o meu link de embaixadora e o cupom MARINABASTOS você garante condições especiais na matrícula."
       ],
       pilares: [
-        "Cupom de Embaixadora: MARINABASTOS",
+        "Meu cupom de Embaixadora: MARINABASTOS",
         "Aulas direcionadas e aprofundadas com professores especialistas",
         "QBank completo com questões comentadas alternativa por alternativa e filtros personalizados",
         "Metodologia de estudo ativo, flashcards e revisão espaçada para fixação do conteúdo"
@@ -89,21 +89,21 @@ const DADOS_SITE = {
     },
     {
       id: "meta-analysis-academy",
-      selo: "Recomendação Pessoal · Pesquisa & Metodologia",
+      selo: "Minha Indicação · Pesquisa & Metodologia",
       titulo: "Meta Analysis Academy",
       subtitulo: "Formação prática em Revisão Sistemática, Meta-Análise e Medicina Baseada em Evidências",
       link: "https://m.metaanalysisacademy.com/marina3",
       textoBotao: "Quero entrar no Meta Analysis Academy (Lista de Espera)",
-      depoimentoDestaque: "Foi por meio do Meta Analysis Academy que aprendi a interpretar criticamente artigos científicos utilizando escalas validadas de análise de viés e a estruturar revisões sistemáticas.",
+      depoimentoDestaque: "Foi por meio do Meta Analysis Academy que aprendi a interpretar criticamente artigos com escalas de análise de viés validadas e a trabalhar em revisões sistemáticas.",
       descricao: [
-        "O Meta Analysis Academy oferece ensinamentos claros em metodologia científica e meta-análise, acompanhando desde a formulação da pergunta clínica e estratégia de busca até a extração padronizada de dados e análise estatística.",
-        "Além do aprendizado técnico, o curso proporciona excelente networking por meio de grupos de pesquisa colaborativos, conectando estudantes e médicos de diferentes instituições. Recomendo fortemente o programa para quem deseja aprender pesquisa clínica na prática. Entre na lista de espera pelo botão abaixo."
+        "O Meta Analysis Academy me trouxe ensinamentos essenciais em metodologia científica e meta-análise, mostrando na prática cada etapa de um estudo, desde a formulação da pergunta clínica e busca nas bases de dados até a extração padronizada e análise estatística.",
+        "Além da parte metodológica, o curso oferece um excelente networking por meio de grupos de pesquisa colaborativos, onde pude me conectar com estudantes e médicos de diferentes instituições. Recomendo fortemente! Você pode entrar na lista de espera pelo botão abaixo."
       ],
       pilares: [
-        "Networking acadêmico por meio de grupos de pesquisa",
-        "Ensinamentos passo a passo em metodologia científica e meta-análise",
+        "Networking por meio de grupos de pesquisa colaborativos",
+        "Ensinamentos práticos em metodologia científica e meta-análise",
         "Interpretação crítica de artigos com escalas de análise de viés validadas (como QUADAS-2, RoB 2 e ROBINS-I)",
-        "Acompanhamento prático do desenho do estudo até a submissão"
+        "Acompanhamento do desenho do estudo até a submissão"
       ]
     }
   ],
@@ -120,7 +120,7 @@ const DADOS_SITE = {
       veiculo: "The American Surgeon™ (SAGE Journals) · DOI: 10.1177/00031348261472868 · PMID: 42528088",
       autores: "Rachid Eduardo Noleto da Nobrega Oliveira, MD, MS; Lucas Monteiro Delgado; Leonardo Braga Gonçalves, MD; Marina Castello Branco Bastos; Felipe S. Passos, MD; Isabella Faria, MD; Roman Petrov, MD",
       tempoLeitura: "Artigo Original (10 págs.)",
-      resumo: "Revisão sistemática e meta-análise comparando o desempenho diagnóstico da esofagografia fluoroscópica (FE) e da esofagografia por tomografia computadorizada (CTE) em adultos com suspeita de perfuração esofágica (4 estudos retrospectivos, 439 pacientes). Demonstra os papéis complementares de ambas as modalidades: CTE como avaliação inicial de triagem (sensibilidade agrupada bivariada de 81,8%) e FE como teste confirmatório de alta especificidade (98,4%), maior VPP (93,9%), maior razão de verossimilhança positiva (PLR 43,3) e maior AUC (0,978 vs 0,911; P = 0,013).",
+      resumo: "Nesta revisão sistemática e meta-análise com 439 pacientes (4 estudos retrospectivos), avaliamos e comparamos o desempenho diagnóstico da esofagografia fluoroscópica (FE) e da esofagografia por tomografia computadorizada (CTE) em adultos com suspeita de perfuração esofágica. Nossos resultados mostram os papéis complementares dos dois exames: a CTE é ideal para a avaliação inicial de triagem (sensibilidade bivariada de 81,8%), enquanto a FE se destaca como exame confirmatório de alta especificidade (98,4%), maior VPP (93,9%), maior PLR (43,3) e maior AUC (0,978 vs 0,911; P = 0,013).",
       palavrasChave: [
         "Esophageal Perforation",
         "Computed Tomography (CTE)",
@@ -141,11 +141,11 @@ const DADOS_SITE = {
         <p><strong>Results:</strong> Four retrospective studies including 439 patients met inclusion criteria; 69 patients (15.6%) had confirmed perforation. FE showed pooled sensitivity of 69.2% (95% CI, 48.9 a 84.0) and specificity of 98.4% (95% CI, 96.3 a 99.4). CTE showed higher sensitivity (81.8%; 95% CI, 38.5 a 97.0) but lower specificity (86.7%; 95% CI, 67.3 a 95.4). Sensitivity and specificity did not differ significantly between modalities. However, FE had significantly higher PPV (93.9% vs 38.5%, <em>P</em> &lt; .001), PLR (43.3 vs 6.2, <em>P</em> = .007), and AUC (0.978 vs 0.911, <em>P</em> = .013) than CTE, indicating stronger rule-in and overall discriminative performance.</p>
         <p><strong>Conclusions:</strong> CTE and FE should be considered complementary tests. CTE is well suited for initial evaluation because of its sensitivity and broader anatomic assessment, whereas FE provides stronger confirmatory value, supporting a sequential strategy of initial CTE followed by selective FE.</p>
 
-        <h3>Síntese dos Resultados Diagnósticos (Modelo Bivariado & Agregado)</h3>
+        <h3>Síntese dos Nossos Resultados Diagnósticos (Modelo Bivariado & Agregado)</h3>
         <ul>
-          <li><strong>População avaliada:</strong> 439 pacientes adultos em 4 estudos comparativos pareados (Terrazas 2020, Wei 2020, Awais 2019 e Wu 2013), sendo 69 casos (15,6%) com perfuração esofágica confirmada.</li>
-          <li><strong>Esofagografia por Tomografia Computadorizada (CTE):</strong> Sensibilidade bivariada de <strong>81,8%</strong> (IC 95%: 38,5 a 97,0), especificidade de <strong>86,7%</strong> (IC 95%: 67,3 a 95,4), VPN de <strong>95,3%</strong> (IC 95%: 92,2 a 97,2) e AUC de <strong>0,911</strong>. Ideal para triagem inicial rápida e avaliação anatômica cervicotoracoabdominal ampla.</li>
-          <li><strong>Esofagografia Fluoroscópica (FE):</strong> Sensibilidade bivariada de <strong>69,2%</strong> (IC 95%: 48,9 a 84,0), especificidade de <strong>98,4%</strong> (IC 95%: 96,3 a 99,4), VPP de <strong>93,9%</strong> (IC 95%: 83,5 a 97,9), PLR de <strong>43,3</strong> e AUC de <strong>0,978</strong>. Desempenho superior para confirmação diagnóstica (<em>rule-in</em>).</li>
+          <li><strong>População que avaliamos:</strong> 439 pacientes adultos em 4 estudos comparativos pareados (Terrazas 2020, Wei 2020, Awais 2019 e Wu 2013), sendo 69 casos (15,6%) com perfuração esofágica confirmada.</li>
+          <li><strong>Esofagografia por Tomografia Computadorizada (CTE):</strong> Sensibilidade bivariada de <strong>81,8%</strong> (IC 95%: 38,5 a 97,0), especificidade de <strong>86,7%</strong> (IC 95%: 67,3 a 95,4), VPN de <strong>95,3%</strong> (IC 95%: 92,2 a 97,2) e AUC de <strong>0,911</strong>. Mostrou-se ideal para a triagem inicial rápida e avaliação anatômica cervicotoracoabdominal ampla.</li>
+          <li><strong>Esofagografia Fluoroscópica (FE):</strong> Sensibilidade bivariada de <strong>69,2%</strong> (IC 95%: 48,9 a 84,0), especificidade de <strong>98,4%</strong> (IC 95%: 96,3 a 99,4), VPP de <strong>93,9%</strong> (IC 95%: 83,5 a 97,9), PLR de <strong>43,3</strong> e AUC de <strong>0,978</strong>. Apresentou desempenho superior para confirmação diagnóstica (<em>rule-in</em>).</li>
         </ul>
 
         <h3>Estudos Primários Incluídos (Verificados no PubMed & Crossref)</h3>
