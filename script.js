@@ -42,12 +42,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const heroLinksContainer = document.getElementById("hero-links");
     if (heroLinksContainer && perfil.links) {
       const linksRapidos = [
-        { chave: "bibtex", rotulo: "Referências Verificadas (.bib)", url: perfil.links.bibtex || "referencias.bib" },
-        { chave: "lattes", rotulo: "Currículo Lattes", url: perfil.links.lattes },
-        { chave: "orcid", rotulo: "ORCID", url: perfil.links.orcid },
+        { chave: "orcid", rotulo: "ORCID iD", url: perfil.links.orcid },
         { chave: "linkedin", rotulo: "LinkedIn", url: perfil.links.linkedin },
-        { chave: "github", rotulo: "GitHub", url: perfil.links.github },
-        { chave: "email", rotulo: "E-mail Acadêmico", url: perfil.links.email }
+        { chave: "instagram", rotulo: "Instagram", url: perfil.links.instagram },
+        { chave: "tiktok", rotulo: "TikTok", url: perfil.links.tiktok },
+        { chave: "email", rotulo: "E-mail", url: perfil.links.email },
+        { chave: "bibtex", rotulo: "Referências (.bib)", url: perfil.links.bibtex || "referencias.bib" },
+        { chave: "linktree", rotulo: "Página de Links", url: perfil.links.linktree || "links.html" }
       ].filter((item) => item.url && item.url.trim() !== "");
 
       heroLinksContainer.innerHTML = linksRapidos
@@ -336,21 +337,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const cartoesContato = [
       {
-        rotulo: "Acervo Bibliográfico",
-        valor: "Baixar referencias.bib",
-        url: links.bibtex || "referencias.bib",
-        externo: true
-      },
-      {
         rotulo: "E-mail",
-        valor: links.emailTexto || "Enviar mensagem",
+        valor: links.emailTexto || "marina.cbbastos@gmail.com",
         url: links.email,
         externo: false
       },
       {
-        rotulo: "Plataforma Lattes",
-        valor: "Currículo Lattes",
-        url: links.lattes,
+        rotulo: "Rede Profissional",
+        valor: "LinkedIn",
+        url: links.linkedin,
         externo: true
       },
       {
@@ -360,9 +355,15 @@ document.addEventListener("DOMContentLoaded", () => {
         externo: true
       },
       {
-        rotulo: "Rede Profissional",
-        valor: "LinkedIn",
-        url: links.linkedin,
+        rotulo: "Instagram",
+        valor: "@marinabastosmed",
+        url: links.instagram,
+        externo: true
+      },
+      {
+        rotulo: "TikTok",
+        valor: "@marinabastosmed",
+        url: links.tiktok,
         externo: true
       },
       {
@@ -370,6 +371,18 @@ document.addEventListener("DOMContentLoaded", () => {
         valor: "GitHub",
         url: links.github,
         externo: true
+      },
+      {
+        rotulo: "Acervo Bibliográfico",
+        valor: "Baixar referencias.bib",
+        url: links.bibtex || "referencias.bib",
+        externo: true
+      },
+      {
+        rotulo: "Bio / Linktree",
+        valor: "Página de Links",
+        url: links.linktree || "links.html",
+        externo: false
       }
     ].filter((item) => item.url && item.url.trim() !== "");
 

@@ -16,6 +16,7 @@ const DADOS_SITE = {
     universidade: "Universidade Federal de São João del Rei (UFSJ)",
     periodoAtual: "Departamento de Medicina — UFSJ",
     localizacao: "São João del Rei, MG — Brasil",
+    fotoGithub: "https://github.com/marinacbbastos.png",
     FraseDestaque: "Dedicação à ciência médica, à pesquisa clínica rigorosa e à medicina baseada em evidências.",
     resumoHero: "Bem-vinda(o) ao meu portfólio acadêmico. Aqui reúno minhas publicações científicas, revisões sistemáticas e meta-análises indexadas no PubMed e Crossref.",
     sobreMim: [
@@ -30,14 +31,16 @@ const DADOS_SITE = {
       "Medicina Baseada em Evidências"
     ],
     links: {
-      email: "",
-      emailTexto: "",
+      email: "mailto:marina.cbbastos@gmail.com",
+      emailTexto: "marina.cbbastos@gmail.com",
       lattes: "",
-      orcid: "",
-      linkedin: "",
-      instagram: "",
+      orcid: "https://orcid.org/0009-0008-3357-5237",
+      linkedin: "https://www.linkedin.com/in/marina-castello-branco-bastos-a1334a177/",
+      instagram: "https://www.instagram.com/marinabastosmed",
+      tiktok: "https://www.tiktok.com/@marinabastosmed?_r=1&_t=ZS-9BLOuofepfy",
       github: "https://github.com/marinacbbastos",
-      bibtex: "referencias.bib"
+      bibtex: "referencias.bib",
+      linktree: "links.html"
     }
   },
 
