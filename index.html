@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marina Bastos — Medicina & Produção Científica</title>
+  <meta name="description" content="Portfólio acadêmico, artigos científicos, revisões de literatura e textos sobre Medicina por Marina Bastos." />
+
+  <!-- Tipografia Editorial & Acadêmica -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Barra de Navegação -->
+  <header class="site-header" id="topo">
+    <div class="container header-inner">
+      <a href="#topo" class="brand" aria-label="Início">
+        <span class="brand-monogram">MB</span>
+        <div class="brand-text">
+          <span class="brand-name" id="nav-nome">Marina Bastos</span>
+          <span class="brand-role">Medicina & Pesquisa</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegação Principal">
+        <a href="#artigos" class="nav-link">Artigos & Publicações</a>
+        <a href="#sobre" class="nav-link">Sobre & Trajetória</a>
+        <a href="#contato" class="nav-link">Contato</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#artigos" class="btn btn-outline btn-sm">Ler Publicações</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Seção Hero / Apresentação Editorial -->
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="eyebrow-badge">
+            <span class="eyebrow-dot"></span>
+            <span id="hero-subtitulo">Acadêmica de Medicina & Produção Científica</span>
+          </div>
+
+          <h1 class="hero-title">
+            Ciência médica, raciocínio clínico e <span class="serif-italic">conhecimento compartilhado.</span>
+          </h1>
+
+          <p class="hero-lead" id="hero-resumo">
+            Bem-vinda(o) ao meu espaço acadêmico. Aqui reúno meus artigos científicos, revisões de literatura, relatos de caso e reflexões sobre a prática médica e a saúde pública.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#artigos" class="btn btn-primary">
+              Explorar Artigos
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href="#sobre" class="btn btn-secondary">Conhecer Trajetória</a>
+          </div>
+
+          <div class="hero-quick-links" id="hero-links">
+            <!-- Preenchido dinamicamente via dados.js -->
+          </div>
+        </div>
+
+        <!-- Card de Artigo em Destaque no Hero -->
+        <aside class="hero-featured-wrapper" aria-label="Publicação em destaque">
+          <div class="featured-card" id="hero-destaque-card">
+            <!-- Preenchido dinamicamente via script.js -->
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Seção de Artigos & Publicações -->
+    <section class="articles-section section-padding" id="artigos">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-kicker">Acervo Acadêmico & Autoral</span>
+            <h2 class="section-title">Artigos & Publicações</h2>
+          </div>
+          <p class="section-subtitle">
+            Selecione uma categoria ou pesquise por tema, área médica ou palavra-chave para ler os textos completos.
+          </p>
+        </div>
+
+        <!-- Barra de Filtro e Busca -->
+        <div class="articles-toolbar">
+          <div class="category-filters" id="filtros-categoria" role="tablist" aria-label="Filtrar artigos por categoria">
+            <!-- Botões gerados dinamicamente -->
+          </div>
+
+          <div class="search-box">
+            <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <input
+              type="search"
+              id="input-busca"
+              placeholder="Buscar por título, tema ou área..."
+              aria-label="Buscar artigos"
+            />
+          </div>
+        </div>
+
+        <!-- Contador de resultados -->
+        <div class="articles-meta-bar">
+          <span id="contador-artigos">Carregando publicações...</span>
+        </div>
+
+        <!-- Grade de Artigos -->
+        <div class="articles-grid" id="lista-artigos">
+          <!-- Cards de artigos inseridos via script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Sobre Mim & Trajetória Acadêmica -->
+    <section class="about-section section-padding" id="sobre">
+      <div class="container">
+        <div class="about-grid">
+          <!-- Coluna Esquerda: Bio e Áreas de Interesse -->
+          <div class="about-bio-col">
+            <span class="section-kicker">Perfil Acadêmico</span>
+            <h2 class="section-title" id="sobre-nome">Sobre Marina Bastos</h2>
+
+            <blockquote class="editorial-quote" id="sobre-frase">
+              "Dedicação à ciência médica, à clínica humanizada e ao compartilhamento de conhecimento baseado em evidências."
+            </blockquote>
+
+            <div class="about-text" id="sobre-texto">
+              <!-- Parágrafos inseridos via script.js -->
+            </div>
+
+            <div class="interests-block">
+              <h3 class="subsection-title">Áreas de Interesse</h3>
+              <div class="tags-cloud" id="lista-interesses">
+                <!-- Tags inseridas via script.js -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Coluna Direita: Linha do Tempo / Atuação -->
+          <div class="about-timeline-col">
+            <div class="timeline-card">
+              <h3 class="timeline-heading">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                Formação & Atuação Acadêmica
+              </h3>
+              <div class="timeline-list" id="lista-trajetoria">
+                <!-- Itens da trajetória inseridos via script.js -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de Contato & Links Acadêmicos -->
+    <section class="contact-section section-padding" id="contato">
+      <div class="container">
+        <div class="contact-box">
+          <div class="contact-content">
+            <span class="section-kicker">Contato & Redes Acadêmicas</span>
+            <h2 class="section-title">Vamos conversar ou colaborar em pesquisas?</h2>
+            <p class="contact-description">
+              Estou aberta a convites para projetos de iniciação científica, revisões colaborativas, ligas acadêmicas, eventos médicos e trocas de experiências.
+            </p>
+          </div>
+
+          <div class="contact-links-grid" id="contato-links">
+            <!-- Links gerados via script.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <span class="brand-monogram brand-monogram-sm">MB</span>
+        <p>© <span id="ano-atual"></span> <strong id="footer-nome">Marina Bastos</strong> — Medicina & Produção Científica.</p>
+      </div>
+      <div class="footer-right">
+        <a href="#topo" class="back-to-top">Voltar ao topo ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal de Leitura Completa do Artigo -->
+  <div class="article-modal-backdrop" id="modal-artigo" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+    <div class="article-modal-container">
+      <header class="modal-topbar">
+        <div class="modal-topbar-meta">
+          <span class="badge-category" id="modal-categoria">Categoria</span>
+          <span class="modal-reading-time" id="modal-tempo"></span>
+        </div>
+        <div class="modal-topbar-actions">
+          <button type="button" class="btn-icon-action" id="btn-copiar-citacao" title="Copiar citação bibliográfica">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+            <span>Citar</span>
+          </button>
+          <button type="button" class="btn-icon-action" id="btn-imprimir-artigo" title="Imprimir ou salvar como PDF">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
+            <span>PDF / Imprimir</span>
+          </button>
+          <button type="button" class="btn-close-modal" id="btn-fechar-modal" aria-label="Fechar leitura">
+            ✕
+          </button>
+        </div>
+      </header>
+
+      <article class="modal-article-body">
+        <div class="modal-article-header">
+          <p class="modal-journal" id="modal-veiculo"></p>
+          <h1 class="modal-title" id="modal-titulo"></h1>
+          <p class="modal-authors" id="modal-autores"></p>
+          <div class="modal-keywords" id="modal-palavras-chave"></div>
+        </div>
+
+        <div class="modal-abstract-box">
+          <strong>Resumo:</strong>
+          <p id="modal-resumo"></p>
+        </div>
+
+        <div class="modal-content-prose" id="modal-conteudo">
+          <!-- Conteúdo completo do artigo -->
+        </div>
+
+        <footer class="modal-article-footer">
+          <div class="citation-box">
+            <span class="citation-label">Como citar este trabalho:</span>
+            <p class="citation-text" id="modal-citacao"></p>
+          </div>
+          <div id="modal-link-externo-wrapper"></div>
+        </footer>
+      </article>
+    </div>
+  </div>
+
+  <!-- Carrega primeiro os dados e depois a lógica -->
+  <script src="dados.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
