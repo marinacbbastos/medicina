@@ -1,11 +1,11 @@
 // ============================================================================
-// ARQUIVO DE DADOS DO SITE — MARINA CASTELLO BRANCO BASTOS
+// ARQUIVO DE DADOS DO SITE: MARINA CASTELLO BRANCO BASTOS
 // ============================================================================
 // Regra de Integridade:
-// - Nenhum artigo inventado/fictício é permitido.
-// - Todos os artigos listados abaixo correspondem aos arquivos reais na pasta
-//   "artigos/" e possuem referências duplamente verificadas no PubMed e Crossref,
-//   armazenadas em "referencias.bib".
+// Nenhum artigo inventado ou fictício é permitido.
+// Todos os artigos listados abaixo correspondem aos arquivos reais na pasta
+// "artigos/" e possuem referências duplamente verificadas no PubMed e Crossref,
+// armazenadas em "referencias.bib".
 // ============================================================================
 
 const DADOS_SITE = {
@@ -14,22 +14,21 @@ const DADOS_SITE = {
     nome: "Marina Castello Branco Bastos",
     subtitulo: "Medicina (UFSJ) & Pesquisa Científica",
     universidade: "Universidade Federal de São João del Rei (UFSJ)",
-    periodoAtual: "Departamento de Medicina — UFSJ",
-    localizacao: "Belo Horizonte & São João del Rei, MG — Brasil",
+    periodoAtual: "Departamento de Medicina da UFSJ",
+    localizacao: "Belo Horizonte e São João del Rei, MG",
     fotoGithub: "https://github.com/marinacbbastos.png",
-    FraseDestaque: "Rigor metodológico na pesquisa científica, formação de excelência e olhar humano e global para a prática médica.",
+    FraseDestaque: "Dedicação à ciência médica, à pesquisa clínica rigorosa e à medicina baseada em evidências.",
     resumoHero: "Bem-vinda(o) ao meu portfólio acadêmico. Aqui reúno minhas publicações científicas, revisões sistemáticas e meta-análises indexadas no PubMed e Crossref.",
     sobreMim: [
-      "Radicada em Belo Horizonte (MG) e acadêmica de Medicina na Universidade Federal de São João del Rei (UFSJ), construí minha trajetória sobre uma base de disciplina intelectual e busca constante por excelência acadêmica. Antes de ingressar na faculdade de Medicina, minha formação incluiu instituições de referência como o Colégio Santo Antônio e o Bernoulli, onde consolidei o hábito do estudo aprofundado e do pensamento analítico.",
-      "Complementei essa base com experiências educacionais no exterior — incluindo dois anos de ensino médio em Portugal e um período de imersão acadêmica no Gold Coast Learning Centre, na Austrália. Essa vivência internacional ampliou minha fluência em idiomas, minha adaptabilidade e minha sensibilidade para lidar com diferentes realidades culturais — competências que hoje aplico diretamente tanto na escuta clínica humanizada quanto na leitura crítica de literatura médica em língua inglesa e na colaboração em grupos de pesquisa multicêntricos.",
-      "Na Medicina, direciono essa dedicação para a pesquisa clínica, revisões sistemáticas e meta-análises de acurácia diagnóstica, integrando evidências científicas de alto nível ao raciocínio médico."
+      "Sou de Belo Horizonte (MG) e curso Medicina na Universidade Federal de São João del Rei (UFSJ). Ao longo da graduação, tenho direcionado meus estudos para a prática clínica baseada em evidências, a leitura crítica da literatura médica e a produção de revisões sistemáticas e meta-análises.",
+      "Antes da faculdade, estudei no Colégio Santo Antônio e no Bernoulli, em Belo Horizonte, além de ter cursado dois anos do ensino médio em Portugal e três meses de estudos no Gold Coast Learning Centre, na Austrália. O convívio com diferentes contextos culturais e sistemas de ensino contribuiu para a minha rotina de estudos, para o domínio do inglês e para a facilidade de comunicação, aspectos que hoje auxiliam tanto no cuidado ao paciente quanto na participação em grupos de pesquisa."
     ],
     areasInteresse: [
       "Revisão Sistemática & Meta-Análise",
       "Acurácia Diagnóstica",
-      "Pesquisa Clínica Internacional",
+      "Pesquisa Clínica",
       "Medicina Baseada em Evidências",
-      "Raciocínio Clínico"
+      "Clínica Médica"
     ],
     links: {
       email: "mailto:marina.cbbastos@gmail.com",
@@ -50,20 +49,20 @@ const DADOS_SITE = {
     {
       periodo: "Atual",
       cargo: "Graduação em Medicina",
-      instituicao: "Universidade Federal de São João del Rei (UFSJ)",
-      descricao: "Formação médica com foco em raciocínio clínico, medicina baseada em evidências e participação ativa em grupos de pesquisa científica."
+      instituicao: "Universidade Federal de São João del Rei (UFSJ), São João del Rei, MG",
+      descricao: "Formação médica pelo Departamento de Medicina da UFSJ, com participação em projetos de pesquisa científica, extração sistematizada de dados e síntese de evidências."
     },
     {
       periodo: "2026",
-      cargo: "Coautora — Revisão Sistemática & Meta-Análise Internacional",
+      cargo: "Coautora de Revisão Sistemática e Meta-Análise",
       instituicao: "The American Surgeon (SAGE Journals)",
-      descricao: "Publicação do estudo 'CT for Detection, Fluoroscopy for Confirmation: A Meta-Analysis of Imaging in Suspected Esophageal Perforation' em colaboração multicêntrica nacional e norte-americana (Barretos Cancer Center, UFMG, UFU, UFSJ, MaterDei e UTMB John Sealy School of Medicine)."
+      descricao: "Publicação do estudo 'CT for Detection, Fluoroscopy for Confirmation: A Meta-Analysis of Imaging in Suspected Esophageal Perforation' em colaboração multicêntrica (Barretos Cancer Center, UFMG, UFU, UFSJ, MaterDei e UTMB John Sealy School of Medicine)."
     },
     {
-      periodo: "Formação de Base & Internacional",
-      cargo: "Excelência Acadêmica & Imersão Multicultural",
-      instituicao: "Colégio Santo Antônio e Bernoulli (BH) · Portugal (2 anos) · Gold Coast Learning Centre (Austrália)",
-      descricao: "Formação de alto rigor acadêmico em Belo Horizonte aliada a dois anos de ensino médio em Portugal e imersão na Austrália, consolidando domínio de idiomas, comunicação intercultural e facilidade para cooperação científica internacional."
+      periodo: "Formação Escolar",
+      cargo: "Ensino Fundamental e Médio",
+      instituicao: "Colégio Santo Antônio e Bernoulli (BH), Portugal e Austrália",
+      descricao: "Formação escolar realizada em Belo Horizonte, complementada por dois anos de ensino médio em Portugal e três meses de estudos no Gold Coast Learning Centre, na Austrália."
     }
   ],
 
@@ -73,19 +72,19 @@ const DADOS_SITE = {
       id: "medcof",
       selo: "Recomendação Pessoal · Cupom: MARINABASTOS",
       titulo: "Grupo MedCof",
-      subtitulo: "Preparação de alta performance para provas de Residência Médica e raciocínio clínico",
+      subtitulo: "Preparação para provas de Residência Médica e raciocínio clínico",
       link: "https://embaixadores.medcof.com.br?embaixador=mnt",
       textoBotao: "Quero entrar no MedCof (Cupom: MARINABASTOS)",
       depoimentoDestaque: "Indico o MedCof pela profundidade teórica aliada ao direcionamento prático para as provas de Residência Médica, com aulas ministradas por especialistas e metodologia focada em retenção de longo prazo.",
       descricao: [
-        "O MedCof se destaca pela excelência didática e pelo foco no raciocínio clínico aprofundado, preparando o estudante de Medicina e o médico generalista tanto para as provas de Residência Médica mais concorridas do país quanto para a tomada de decisão na prática médica.",
-        "Por meio da plataforma, do banco de questões comentadas (QBank) e do sistema de revisão espaçada inteligente, o estudo se torna estruturado, eficiente e adaptado à rotina intensa do internato e da graduação. Utilizando meu link de embaixadora e o cupom MARINABASTOS, você garante condições especiais na sua matrícula."
+        "O MedCof se destaca pela didática e pelo foco no raciocínio clínico aprofundado, preparando o estudante de Medicina e o médico generalista tanto para as provas de Residência Médica quanto para a tomada de decisão na prática médica.",
+        "Por meio da plataforma, do banco de questões comentadas (QBank) e do sistema de revisão espaçada, o estudo se torna estruturado e adaptado à rotina da graduação e do internato. Utilizando meu link de embaixadora e o cupom MARINABASTOS, você conta com condições especiais na matrícula."
       ],
       pilares: [
         "Cupom de Embaixadora: MARINABASTOS",
-        "Aulas direcionadas e aprofundadas com professores especialistas das principais instituições",
+        "Aulas direcionadas e aprofundadas com professores especialistas",
         "QBank completo com questões comentadas alternativa por alternativa e filtros personalizados",
-        "Metodologia de estudo ativo, flashcards e revisão espaçada para fixação eficiente"
+        "Metodologia de estudo ativo, flashcards e revisão espaçada para fixação do conteúdo"
       ]
     },
     {
@@ -95,16 +94,16 @@ const DADOS_SITE = {
       subtitulo: "Formação prática em Revisão Sistemática, Meta-Análise e Medicina Baseada em Evidências",
       link: "https://m.metaanalysisacademy.com/marina3",
       textoBotao: "Quero entrar no Meta Analysis Academy (Lista de Espera)",
-      depoimentoDestaque: "Foi por meio do Meta Analysis Academy que desenvolvi a base metodológica para interpretar criticamente a literatura médica utilizando escalas validadas de análise de risco de viés e conduzir revisões sistemáticas de alto nível.",
+      depoimentoDestaque: "Foi por meio do Meta Analysis Academy que aprendi a interpretar criticamente artigos científicos utilizando escalas validadas de análise de viés e a estruturar revisões sistemáticas.",
       descricao: [
-        "O Meta Analysis Academy é uma formação completa voltada para estudantes de Medicina e médicos que desejam dominar todas as etapas da produção científica de alto impacto — desde a formulação da pergunta clínica e estratégia de busca até a extração padronizada de dados e síntese estatística em meta-análises.",
-        "Além do rigor técnico em metodologia científica, um dos maiores diferenciais do programa é o networking qualificado: você passa a integrar grupos de pesquisa ativos e colaborativos, conectando-se com estudantes, residentes e pesquisadores de diversas instituições no Brasil e no exterior. Recomendo fortemente para quem deseja publicar em periódicos internacionais revisados por pares e aprimorar o raciocínio clínico baseado em evidências."
+        "O Meta Analysis Academy oferece ensinamentos claros em metodologia científica e meta-análise, acompanhando desde a formulação da pergunta clínica e estratégia de busca até a extração padronizada de dados e análise estatística.",
+        "Além do aprendizado técnico, o curso proporciona excelente networking por meio de grupos de pesquisa colaborativos, conectando estudantes e médicos de diferentes instituições. Recomendo fortemente o programa para quem deseja aprender pesquisa clínica na prática. Entre na lista de espera pelo botão abaixo."
       ],
       pilares: [
-        "Networking acadêmico por meio de grupos de pesquisa multicêntricos",
-        "Fundamentos sólidos em metodologia científica, protocolo PRISMA e síntese de evidências",
-        "Leitura crítica de artigos e aplicação prática de escalas validadas de análise de viés (como QUADAS-2, RoB 2 e ROBINS-I)",
-        "Mentoria e acompanhamento do desenho do estudo até a submissão internacional"
+        "Networking acadêmico por meio de grupos de pesquisa",
+        "Ensinamentos passo a passo em metodologia científica e meta-análise",
+        "Interpretação crítica de artigos com escalas de análise de viés validadas (como QUADAS-2, RoB 2 e ROBINS-I)",
+        "Acompanhamento prático do desenho do estudo até a submissão"
       ]
     }
   ],
@@ -139,22 +138,22 @@ const DADOS_SITE = {
         <h3>Abstract (Original Publication)</h3>
         <p><strong>Background:</strong> Esophageal perforation is a time-critical emergency in which delayed diagnosis is associated with substantial morbidity and mortality. Fluoroscopic esophagography (FE) and computed tomography esophagram (CTE) are commonly used, but their optimal roles in the acute diagnostic pathway remain uncertain. We performed a systematic review and meta-analysis comparing the diagnostic performance of FE and CTE in adults with suspected esophageal perforation and clarifying their complementary utility.</p>
         <p><strong>Study Design:</strong> PubMed, Embase, and Cochrane Library were searched from inception to October 26, 2025, for observational studies evaluating both FE and CTE in adults with suspected esophageal perforation and providing data for 2 × 2 contingency tables. Pooled diagnostic estimates were calculated using univariate and bivariate random-effects models. Direct comparisons were performed using Z tests on transformed summary estimates. Protocol registered on OSF (DOI: <a href="https://doi.org/10.17605/OSF.IO/TYU9M" target="_blank" rel="noopener noreferrer">10.17605/OSF.IO/TYU9M</a>).</p>
-        <p><strong>Results:</strong> Four retrospective studies including 439 patients met inclusion criteria; 69 patients (15.6%) had confirmed perforation. FE showed pooled sensitivity of 69.2% (95% CI, 48.9–84.0) and specificity of 98.4% (95% CI, 96.3–99.4). CTE showed higher sensitivity (81.8%; 95% CI, 38.5–97.0) but lower specificity (86.7%; 95% CI, 67.3–95.4). Sensitivity and specificity did not differ significantly between modalities. However, FE had significantly higher PPV (93.9% vs 38.5%, <em>P</em> &lt; .001), PLR (43.3 vs 6.2, <em>P</em> = .007), and AUC (0.978 vs 0.911, <em>P</em> = .013) than CTE, indicating stronger rule-in and overall discriminative performance.</p>
+        <p><strong>Results:</strong> Four retrospective studies including 439 patients met inclusion criteria; 69 patients (15.6%) had confirmed perforation. FE showed pooled sensitivity of 69.2% (95% CI, 48.9 a 84.0) and specificity of 98.4% (95% CI, 96.3 a 99.4). CTE showed higher sensitivity (81.8%; 95% CI, 38.5 a 97.0) but lower specificity (86.7%; 95% CI, 67.3 a 95.4). Sensitivity and specificity did not differ significantly between modalities. However, FE had significantly higher PPV (93.9% vs 38.5%, <em>P</em> &lt; .001), PLR (43.3 vs 6.2, <em>P</em> = .007), and AUC (0.978 vs 0.911, <em>P</em> = .013) than CTE, indicating stronger rule-in and overall discriminative performance.</p>
         <p><strong>Conclusions:</strong> CTE and FE should be considered complementary tests. CTE is well suited for initial evaluation because of its sensitivity and broader anatomic assessment, whereas FE provides stronger confirmatory value, supporting a sequential strategy of initial CTE followed by selective FE.</p>
 
         <h3>Síntese dos Resultados Diagnósticos (Modelo Bivariado & Agregado)</h3>
         <ul>
           <li><strong>População avaliada:</strong> 439 pacientes adultos em 4 estudos comparativos pareados (Terrazas 2020, Wei 2020, Awais 2019 e Wu 2013), sendo 69 casos (15,6%) com perfuração esofágica confirmada.</li>
-          <li><strong>Esofagografia por Tomografia Computadorizada (CTE):</strong> Sensibilidade bivariada de <strong>81,8%</strong> (IC 95%: 38,5–97,0), especificidade de <strong>86,7%</strong> (IC 95%: 67,3–95,4), VPN de <strong>95,3%</strong> (IC 95%: 92,2–97,2) e AUC de <strong>0,911</strong>. Ideal para triagem inicial rápida e avaliação anatômica cervicotoracoabdominal ampla.</li>
-          <li><strong>Esofagografia Fluoroscópica (FE):</strong> Sensibilidade bivariada de <strong>69,2%</strong> (IC 95%: 48,9–84,0), especificidade de <strong>98,4%</strong> (IC 95%: 96,3–99,4), VPP de <strong>93,9%</strong> (IC 95%: 83,5–97,9), PLR de <strong>43,3</strong> e AUC de <strong>0,978</strong>. Desempenho superior para confirmação diagnóstica (<em>rule-in</em>).</li>
+          <li><strong>Esofagografia por Tomografia Computadorizada (CTE):</strong> Sensibilidade bivariada de <strong>81,8%</strong> (IC 95%: 38,5 a 97,0), especificidade de <strong>86,7%</strong> (IC 95%: 67,3 a 95,4), VPN de <strong>95,3%</strong> (IC 95%: 92,2 a 97,2) e AUC de <strong>0,911</strong>. Ideal para triagem inicial rápida e avaliação anatômica cervicotoracoabdominal ampla.</li>
+          <li><strong>Esofagografia Fluoroscópica (FE):</strong> Sensibilidade bivariada de <strong>69,2%</strong> (IC 95%: 48,9 a 84,0), especificidade de <strong>98,4%</strong> (IC 95%: 96,3 a 99,4), VPP de <strong>93,9%</strong> (IC 95%: 83,5 a 97,9), PLR de <strong>43,3</strong> e AUC de <strong>0,978</strong>. Desempenho superior para confirmação diagnóstica (<em>rule-in</em>).</li>
         </ul>
 
         <h3>Estudos Primários Incluídos (Verificados no PubMed & Crossref)</h3>
         <ul>
-          <li><strong>Terrazas et al. (2020)</strong> — <em>Abdominal Radiology</em> · DOI: <a href="https://doi.org/10.1007/s00261-019-02187-w" target="_blank" rel="noopener noreferrer">10.1007/s00261-019-02187-w</a> · PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/31435763/" target="_blank" rel="noopener noreferrer">31435763</a></li>
-          <li><strong>Wei et al. (2020)</strong> — <em>American Journal of Roentgenology (AJR)</em> · DOI: <a href="https://doi.org/10.2214/AJR.19.22166" target="_blank" rel="noopener noreferrer">10.2214/AJR.19.22166</a> · PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/32515607/" target="_blank" rel="noopener noreferrer">32515607</a></li>
-          <li><strong>Awais et al. (2019)</strong> — <em>European Journal of Trauma and Emergency Surgery</em> · DOI: <a href="https://doi.org/10.1007/s00068-018-0929-4" target="_blank" rel="noopener noreferrer">10.1007/s00068-018-0929-4</a> · PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/29484462/" target="_blank" rel="noopener noreferrer">29484462</a></li>
-          <li><strong>Wu et al. (2013)</strong> — <em>American Journal of Roentgenology (AJR)</em> · DOI: <a href="https://doi.org/10.2214/AJR.12.10345" target="_blank" rel="noopener noreferrer">10.2214/AJR.12.10345</a> · PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/24147467/" target="_blank" rel="noopener noreferrer">24147467</a></li>
+          <li><strong>Terrazas et al. (2020)</strong>, <em>Abdominal Radiology</em> · DOI: <a href="https://doi.org/10.1007/s00261-019-02187-w" target="_blank" rel="noopener noreferrer">10.1007/s00261-019-02187-w</a> · PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/31435763/" target="_blank" rel="noopener noreferrer">31435763</a></li>
+          <li><strong>Wei et al. (2020)</strong>, <em>American Journal of Roentgenology (AJR)</em> · DOI: <a href="https://doi.org/10.2214/AJR.19.22166" target="_blank" rel="noopener noreferrer">10.2214/AJR.19.22166</a> · PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/32515607/" target="_blank" rel="noopener noreferrer">32515607</a></li>
+          <li><strong>Awais et al. (2019)</strong>, <em>European Journal of Trauma and Emergency Surgery</em> · DOI: <a href="https://doi.org/10.1007/s00068-018-0929-4" target="_blank" rel="noopener noreferrer">10.1007/s00068-018-0929-4</a> · PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/29484462/" target="_blank" rel="noopener noreferrer">29484462</a></li>
+          <li><strong>Wu et al. (2013)</strong>, <em>American Journal of Roentgenology (AJR)</em> · DOI: <a href="https://doi.org/10.2214/AJR.12.10345" target="_blank" rel="noopener noreferrer">10.2214/AJR.12.10345</a> · PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/24147467/" target="_blank" rel="noopener noreferrer">24147467</a></li>
         </ul>
       `
     }
