@@ -744,6 +744,12 @@ body {
   border-bottom: 1px solid var(--border-subtle);
 }
 
+.recommendations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+
 .recommendation-card {
   background-color: var(--bg-card);
   border: 1px solid var(--border-subtle);
