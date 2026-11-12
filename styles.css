@@ -4,34 +4,35 @@
    ============================================================================ */
 
 :root {
-  --bg-primary: #FAF8F5;
-  --bg-secondary: #F2EFE9;
-  --bg-card: #FFFFFF;
-  --bg-accent-soft: #E9F0EC;
+  --bg-primary: #FBF8F3;
+  --bg-secondary: #F3EDE2;
+  --bg-card: #FFFDF9;
+  --bg-accent-soft: #E9F0EB;
 
-  --text-primary: #1A2420;
-  --text-secondary: #4A5751;
-  --text-muted: #6E7B75;
+  --text-primary: #222B26;
+  --text-secondary: #4E5B54;
+  --text-muted: #748079;
 
-  --accent-primary: #234236;
-  --accent-primary-hover: #182F26;
-  --accent-sage: #3B6655;
-  --accent-bronze: #8E633D;
+  --accent-primary: #2D4F3E;
+  --accent-primary-hover: #213B2E;
+  --accent-sage: #496E5B;
+  --accent-bronze: #A86B4C;
 
-  --border-subtle: #E3DFD7;
-  --border-strong: #CEC8BC;
+  --border-subtle: #E6DFD3;
+  --border-strong: #D4CBB9;
 
-  --shadow-sm: 0 2px 8px rgba(26, 36, 32, 0.04);
-  --shadow-md: 0 10px 30px rgba(26, 36, 32, 0.07);
-  --shadow-lg: 0 20px 50px rgba(26, 36, 32, 0.12);
+  --shadow-sm: 0 4px 14px rgba(34, 43, 38, 0.04);
+  --shadow-md: 0 14px 36px rgba(34, 43, 38, 0.07);
+  --shadow-lg: 0 24px 56px rgba(34, 43, 38, 0.12);
 
   --font-display: 'Cormorant Garamond', Georgia, serif;
   --font-serif: 'Source Serif 4', Georgia, serif;
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-handwritten: 'Caveat', cursive;
 
-  --radius-sm: 8px;
-  --radius-md: 14px;
-  --radius-lg: 20px;
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 26px;
 }
 
 * {
@@ -223,6 +224,50 @@ body {
   grid-template-columns: 1.2fr 0.95fr;
   gap: 3.5rem;
   align-items: center;
+}
+
+.hero-profile-intro {
+  display: flex;
+  align-items: center;
+  gap: 1.15rem;
+  margin-bottom: 1.65rem;
+}
+
+.hero-avatar-ring {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-bronze));
+  box-shadow: var(--shadow-md);
+  flex-shrink: 0;
+}
+
+.hero-avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--bg-primary);
+  display: block;
+}
+
+.hero-profile-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+}
+
+.hero-profile-meta .eyebrow-badge {
+  margin-bottom: 0;
+}
+
+.hero-location-tag {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  padding-left: 0.3rem;
 }
 
 .eyebrow-badge {
@@ -623,9 +668,59 @@ body {
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 3.5rem;
+  grid-template-columns: 1.12fr 0.88fr;
+  gap: 2.75rem;
   align-items: start;
+}
+
+.about-letter-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-md);
+  position: relative;
+}
+
+.letter-header {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  margin-bottom: 1.25rem;
+}
+
+.letter-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent-bronze);
+  box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
+}
+
+.letter-signature-block {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 0 1.75rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--border-strong);
+}
+
+.letter-warm-regards {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 0.15rem;
+}
+
+.handwritten-signature {
+  font-family: var(--font-handwritten);
+  font-size: 2.05rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+  line-height: 1.15;
 }
 
 .editorial-quote {
