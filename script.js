@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const heroLinksContainer = document.getElementById("hero-links");
     if (heroLinksContainer && perfil.links) {
       const linksRapidos = [
+        { chave: "lattes", rotulo: "Currículo Lattes", url: perfil.links.lattes },
         { chave: "orcid", rotulo: "ORCID iD", url: perfil.links.orcid },
         { chave: "linkedin", rotulo: "LinkedIn", url: perfil.links.linkedin },
         { chave: "instagram", rotulo: "Instagram", url: perfil.links.instagram },
@@ -395,10 +396,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const cartoesContato = [
       {
-        rotulo: "E-mail",
-        valor: links.emailTexto || "marina.cbbastos@gmail.com",
-        url: links.email,
-        externo: false
+        rotulo: "Plataforma CNPq",
+        valor: "Currículo Lattes",
+        url: links.lattes,
+        externo: true
+      },
+      {
+        rotulo: "Identificador Acadêmico",
+        valor: "ORCID iD",
+        url: links.orcid,
+        externo: true
       },
       {
         rotulo: "Rede Profissional",
@@ -407,10 +414,10 @@ document.addEventListener("DOMContentLoaded", () => {
         externo: true
       },
       {
-        rotulo: "Identificador Acadêmico",
-        valor: "ORCID iD",
-        url: links.orcid,
-        externo: true
+        rotulo: "E-mail",
+        valor: links.emailTexto || "marina.cbbastos@gmail.com",
+        url: links.email,
+        externo: false
       },
       {
         rotulo: "Instagram",
