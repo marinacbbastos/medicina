@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   inicializarFiltros();
   renderizarArtigos();
   inicializarSobreETrajetoria();
+  inicializarIndicacoes();
   inicializarContato();
   inicializarModal();
 
@@ -325,6 +326,63 @@ document.addEventListener("DOMContentLoaded", () => {
         )
         .join("");
     }
+  }
+
+  // --------------------------------------------------------------------------
+  // 5.5 SEÇÃO DE INDICAÇÕES ACADÊMICAS
+  // --------------------------------------------------------------------------
+  function inicializarIndicacoes() {
+    const container = document.getElementById("lista-indicacoes");
+    if (!container || !Array.isArray(DADOS_SITE.indicacoes)) return;
+
+    container.innerHTML = DADOS_SITE.indicacoes
+      .map(
+        (item) => `
+        <article class="recommendation-card">
+          <div class="recommendation-grid">
+            <div class="recommendation-main">
+              <span class="badge-category">${item.selo || "Indicação Acadêmica"}</span>
+              <h3 class="recommendation-title">${item.titulo}</h3>
+              ${item.subtitulo ? `<p class="recommendation-subtitle">${item.subtitulo}</p>` : ""}
+
+              ${
+                item.depoimentoDestaque
+                  ? `<blockquote class="editorial-quote recommendation-quote">"${item.depoimentoDestaque}"</blockquote>`
+                  : ""
+              }
+
+              <div class="recommendation-prose">
+                ${(item.descricao || []).map((p) => `<p>${p}</p>`).join("")}
+              </div>
+
+              <div class="recommendation-cta">
+                <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                  <span>${item.textoBotao || "Acessar Indicação"}</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <aside class="recommendation-highlights">
+              <h4 class="highlights-heading">O que o curso oferece:</h4>
+              <ul class="highlights-list">
+                ${(item.pilares || [])
+                  .map(
+                    (pilar) => `
+                  <li class="highlight-item">
+                    <span class="highlight-check">✓</span>
+                    <span>${pilar}</span>
+                  </li>
+                `
+                  )
+                  .join("")}
+              </ul>
+            </aside>
+          </div>
+        </article>
+      `
+      )
+      .join("");
   }
 
   // --------------------------------------------------------------------------

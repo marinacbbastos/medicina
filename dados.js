@@ -60,7 +60,30 @@ const DADOS_SITE = {
     }
   ],
 
-  // 3. LISTA DE ARTIGOS PUBLICADOS (PASTA "artigos/")
+  // 3. INDICAÇÕES ACADÊMICAS & FORMAÇÃO EM PESQUISA
+  indicacoes: [
+    {
+      id: "meta-analysis-academy",
+      selo: "Recomendação Pessoal · Pesquisa & Metodologia",
+      titulo: "Meta Analysis Academy",
+      subtitulo: "Formação prática em Revisão Sistemática, Meta-Análise e Medicina Baseada em Evidências",
+      link: "https://m.metaanalysisacademy.com/marina3",
+      textoBotao: "Quero entrar no Meta Analysis Academy (Lista de Espera)",
+      depoimentoDestaque: "Foi por meio do Meta Analysis Academy que desenvolvi a base metodológica para interpretar criticamente a literatura médica utilizando escalas validadas de análise de risco de viés e conduzir revisões sistemáticas de alto nível.",
+      descricao: [
+        "O Meta Analysis Academy é uma formação completa voltada para estudantes de Medicina e médicos que desejam dominar todas as etapas da produção científica de alto impacto — desde a formulação da pergunta clínica e estratégia de busca até a extração padronizada de dados e síntese estatística em meta-análises.",
+        "Além do rigor técnico em metodologia científica, um dos maiores diferenciais do programa é o networking qualificado: você passa a integrar grupos de pesquisa ativos e colaborativos, conectando-se com estudantes, residentes e pesquisadores de diversas instituições no Brasil e no exterior. Recomendo fortemente para quem deseja publicar em periódicos internacionais revisados por pares e aprimorar o raciocínio clínico baseado em evidências."
+      ],
+      pilares: [
+        "Networking acadêmico por meio de grupos de pesquisa multicêntricos",
+        "Fundamentos sólidos em metodologia científica, protocolo PRISMA e síntese de evidências",
+        "Leitura crítica de artigos e aplicação prática de escalas validadas de análise de viés (como QUADAS-2, RoB 2 e ROBINS-I)",
+        "Mentoria e acompanhamento do desenho do estudo até a submissão internacional"
+      ]
+    }
+  ],
+
+  // 4. LISTA DE ARTIGOS PUBLICADOS (PASTA "artigos/")
   artigos: [
     {
       id: "oliveira-2026-ct-fluoroscopy-esophageal-perforation",
