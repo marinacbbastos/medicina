@@ -15,20 +15,21 @@ const DADOS_SITE = {
     subtitulo: "Medicina (UFSJ) & Pesquisa Científica",
     universidade: "Universidade Federal de São João del Rei (UFSJ)",
     periodoAtual: "Departamento de Medicina — UFSJ",
-    localizacao: "São João del Rei, MG — Brasil",
+    localizacao: "Belo Horizonte & São João del Rei, MG — Brasil",
     fotoGithub: "https://github.com/marinacbbastos.png",
-    FraseDestaque: "Dedicação à ciência médica, à pesquisa clínica rigorosa e à medicina baseada em evidências.",
+    FraseDestaque: "Rigor metodológico na pesquisa científica, formação de excelência e olhar humano e global para a prática médica.",
     resumoHero: "Bem-vinda(o) ao meu portfólio acadêmico. Aqui reúno minhas publicações científicas, revisões sistemáticas e meta-análises indexadas no PubMed e Crossref.",
     sobreMim: [
-      "Acadêmica do Departamento de Medicina da Universidade Federal de São João del Rei (UFSJ), com atuação em pesquisa clínica, revisões sistemáticas, meta-análises de acurácia diagnóstica e medicina baseada em evidências.",
-      "Este espaço reúne exclusivamente artigos científicos publicados em periódicos revisados por pares, com verificação dupla de metadados via PubMed (PMID) e Crossref (DOI) e acervo bibliográfico disponível em formato BibTeX (referencias.bib)."
+      "Radicada em Belo Horizonte (MG) e acadêmica de Medicina na Universidade Federal de São João del Rei (UFSJ), construí minha trajetória sobre uma base de disciplina intelectual e busca constante por excelência acadêmica. Antes de ingressar na faculdade de Medicina, minha formação incluiu instituições de referência como o Colégio Santo Antônio e o Bernoulli, onde consolidei o hábito do estudo aprofundado e do pensamento analítico.",
+      "Complementei essa base com experiências educacionais no exterior — incluindo dois anos de ensino médio em Portugal e um período de imersão acadêmica no Gold Coast Learning Centre, na Austrália. Essa vivência internacional ampliou minha fluência em idiomas, minha adaptabilidade e minha sensibilidade para lidar com diferentes realidades culturais — competências que hoje aplico diretamente tanto na escuta clínica humanizada quanto na leitura crítica de literatura médica em língua inglesa e na colaboração em grupos de pesquisa multicêntricos.",
+      "Na Medicina, direciono essa dedicação para a pesquisa clínica, revisões sistemáticas e meta-análises de acurácia diagnóstica, integrando evidências científicas de alto nível ao raciocínio médico."
     ],
     areasInteresse: [
       "Revisão Sistemática & Meta-Análise",
       "Acurácia Diagnóstica",
-      "Cirurgia Torácica & Gastrointestinal",
-      "Radiologia de Emergência",
-      "Medicina Baseada em Evidências"
+      "Pesquisa Clínica Internacional",
+      "Medicina Baseada em Evidências",
+      "Raciocínio Clínico"
     ],
     links: {
       email: "mailto:marina.cbbastos@gmail.com",
@@ -49,14 +50,20 @@ const DADOS_SITE = {
     {
       periodo: "Atual",
       cargo: "Graduação em Medicina",
-      instituicao: "Universidade Federal de São João del Rei (UFSJ) — São João del Rei, MG",
-      descricao: "Formação médica pelo Departamento de Medicina da UFSJ, com atuação em pesquisa científica, extração sistematizada de dados e síntese de evidências."
+      instituicao: "Universidade Federal de São João del Rei (UFSJ)",
+      descricao: "Formação médica com foco em raciocínio clínico, medicina baseada em evidências e participação ativa em grupos de pesquisa científica."
     },
     {
       periodo: "2026",
       cargo: "Coautora — Revisão Sistemática & Meta-Análise Internacional",
       instituicao: "The American Surgeon (SAGE Journals)",
-      descricao: "Publicação do estudo 'CT for Detection, Fluoroscopy for Confirmation: A Meta-Analysis of Imaging in Suspected Esophageal Perforation' em colaboração multicêntrica (Barretos Cancer Center, UFMG, UFU, UFSJ, MaterDei e UTMB John Sealy School of Medicine)."
+      descricao: "Publicação do estudo 'CT for Detection, Fluoroscopy for Confirmation: A Meta-Analysis of Imaging in Suspected Esophageal Perforation' em colaboração multicêntrica nacional e norte-americana (Barretos Cancer Center, UFMG, UFU, UFSJ, MaterDei e UTMB John Sealy School of Medicine)."
+    },
+    {
+      periodo: "Formação de Base & Internacional",
+      cargo: "Excelência Acadêmica & Imersão Multicultural",
+      instituicao: "Colégio Santo Antônio e Bernoulli (BH) · Portugal (2 anos) · Gold Coast Learning Centre (Austrália)",
+      descricao: "Formação de alto rigor acadêmico em Belo Horizonte aliada a dois anos de ensino médio em Portugal e imersão na Austrália, consolidando domínio de idiomas, comunicação intercultural e facilidade para cooperação científica internacional."
     }
   ],
 
