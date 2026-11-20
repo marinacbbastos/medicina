@@ -420,7 +420,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       {
         rotulo: "E-mail",
-        valor: links.emailTexto || "marina.cbbastos@gmail.com",
+        valor: links.emailTexto || "marinabastosmed@gmail.com",
         url: links.email,
         externo: false
       },

@@ -31,8 +31,8 @@ const DADOS_SITE = {
       "Clínica Médica"
     ],
     links: {
-      email: "mailto:marina.cbbastos@gmail.com",
-      emailTexto: "marina.cbbastos@gmail.com",
+      email: "mailto:marinabastosmed@gmail.com",
+      emailTexto: "marinabastosmed@gmail.com",
       lattes: "http://lattes.cnpq.br/0260846804894564",
       orcid: "https://orcid.org/0009-0008-3357-5237",
       linkedin: "https://www.linkedin.com/in/marina-castello-branco-bastos-a1334a177/",
