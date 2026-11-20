@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mídia Kit | Marina Bastos</title>
+  <meta name="description" content="Mídia Kit oficial de Marina Bastos (@marinabastosmed). Medicina, pesquisa científica, estatística, métricas atualizadas e formatos de parceria." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg?v=1" />
+  <link rel="shortcut icon" href="favicon.svg?v=1" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --mk-paper: #F6F5F1;
+      --mk-stone: #ECEAE4;
+      --mk-stone-deep: #DFDDD6;
+      --mk-dark: #222524;
+      --mk-dark-elevated: #2C302E;
+      --mk-ink: #1B1D1C;
+      --mk-muted: #555956;
+      --mk-accent: #2D4F3E;
+      --mk-accent-soft: #E7EFEA;
+      --mk-bronze: #A86B4C;
+      --mk-line: rgba(27, 29, 28, 0.24);
+      --mk-line-soft: rgba(27, 29, 28, 0.11);
+      --mk-font-display: 'Cormorant Garamond', Georgia, serif;
+      --mk-font-serif: 'Source Serif 4', Georgia, serif;
+      --mk-font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background-color: var(--mk-paper);
+      color: var(--mk-ink);
+      font-family: var(--mk-font-sans);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .mk-container {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 1.75rem;
+    }
+
+    /* Barra flutuante discreta para navegação interna e salvar PDF */
+    .mk-topbar {
+      position: sticky;
+      top: 0;
+      z-index: 60;
+      background: rgba(246, 245, 241, 0.88);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--mk-line-soft);
+    }
+
+    .mk-topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      height: 64px;
+    }
+
+    .mk-topbar-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      text-decoration: none;
+      color: var(--mk-ink);
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.02em;
+    }
+
+    .mk-topbar-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--mk-accent);
+    }
+
+    .mk-nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.4rem;
+    }
+
+    .mk-nav-links a {
+      text-decoration: none;
+      color: var(--mk-muted);
+      font-size: 0.82rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .mk-nav-links a:hover {
+      color: var(--mk-ink);
+    }
+
+    .mk-btn-print {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.48rem 1.05rem;
+      border-radius: 999px;
+      border: 1px solid var(--mk-ink);
+      background: transparent;
+      color: var(--mk-ink);
+      font-family: var(--mk-font-sans);
+      font-size: 0.78rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .mk-btn-print:hover {
+      background: var(--mk-ink);
+      color: #FFFFFF;
+    }
+
+    /* Selo pill característico do PDF com brilhos ✦ */
+    .mk-pill-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.45rem 1.35rem;
+      border-radius: 999px;
+      border: 1px solid var(--mk-line);
+      font-size: 0.96rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--mk-ink);
+      background: rgba(255, 255, 255, 0.35);
+    }
+
+    .mk-pill-label-dark {
+      border-color: rgba(255, 255, 255, 0.35);
+      color: #FFFFFF;
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .mk-sparkle {
+      display: inline-flex;
+      align-items: center;
+      line-height: 1;
+    }
+
+    /* Moldura dupla com brilhos no canto (assinatura visual do PDF) */
+    .mk-photo-frame {
+      position: relative;
+      padding: 10px;
+      border-radius: 26px;
+      border: 1px solid rgba(27, 29, 28, 0.32);
+      background: rgba(255, 255, 255, 0.35);
+      box-shadow: 0 18px 44px rgba(20, 24, 22, 0.1);
+    }
+
+    .mk-photo-frame img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 18px;
+    }
+
+    .mk-photo-sparkle {
+      position: absolute;
+      top: -12px;
+      right: 16px;
+      background: var(--mk-stone);
+      padding: 0 5px;
+      color: var(--mk-ink);
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+    }
+
+    /* ========================================================================
+       1. CAPA / HERO (Inspirado na Página 1 do PDF)
+       ======================================================================== */
+    .mk-hero {
+      position: relative;
+      min-height: 76vh;
+      display: flex;
+      align-items: center;
+      background-image:
+        linear-gradient(100deg, rgba(246, 245, 241, 0.45) 0%, rgba(246, 245, 241, 0.88) 46%, rgba(246, 245, 241, 0.94) 100%),
+        url('assets/midia-kit/hero-desk.jpg');
+      background-size: cover;
+      background-position: left center;
+      border-bottom: 1px solid var(--mk-line-soft);
+      padding: 5.5rem 0;
+    }
+
+    .mk-hero-box {
+      max-width: 680px;
+      margin-left: auto;
+      padding: 1rem 0;
+    }
+
+    .mk-hero-kicker {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 0.25rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .mk-hero-kicker .word-midia {
+      font-size: clamp(1.7rem, 3vw, 2.25rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--mk-ink);
+    }
+
+    .mk-hero-kicker .word-kit {
+      font-size: clamp(3rem, 5.5vw, 4.4rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 0.92;
+      color: var(--mk-ink);
+    }
+
+    .mk-hero-name-box {
+      position: relative;
+      display: inline-block;
+      padding: 0.65rem 2.75rem 0.75rem 1.75rem;
+      border: 1.25px solid var(--mk-ink);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.55);
+      backdrop-filter: blur(4px);
+      margin-bottom: 1.15rem;
+    }
+
+    .mk-hero-name {
+      font-family: var(--mk-font-display);
+      font-size: clamp(2.6rem, 5.4vw, 4.25rem);
+      font-weight: 500;
+      line-height: 1.05;
+      color: var(--mk-ink);
+      letter-spacing: -0.01em;
+    }
+
+    .mk-hero-sparkles {
+      position: absolute;
+      top: -13px;
+      right: 18px;
+      background: var(--mk-paper);
+      padding: 0 6px;
+      display: inline-flex;
+      align-items: center;
+      color: var(--mk-ink);
+    }
+
+    .mk-hero-subtitle {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      color: var(--mk-ink);
+      margin-bottom: 1.4rem;
+    }
+
+    .mk-hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      align-items: center;
+    }
+
+    .mk-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.36rem 0.85rem;
+      border-radius: 999px;
+      background: rgba(45, 79, 62, 0.1);
+      color: var(--mk-accent);
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    /* ========================================================================
+       2. QUEM SOU (Inspirado na Página 2 do PDF)
+       ======================================================================== */
+    .mk-section {
+      padding: 5.25rem 0;
+    }
+
+    .mk-section-stone {
+      background:
+        radial-gradient(circle at 12% 20%, rgba(255, 255, 255, 0.48), transparent 45%),
+        radial-gradient(circle at 88% 80%, rgba(45, 79, 62, 0.06), transparent 45%),
+        var(--mk-stone);
+      border-bottom: 1px solid var(--mk-line-soft);
+    }
+
+    .mk-about-grid {
+      display: grid;
+      grid-template-columns: 330px 1fr;
+      gap: 3.25rem;
+      align-items: center;
+    }
+
+    .mk-about-photo {
+      aspect-ratio: 9 / 15.5;
+      max-height: 520px;
+    }
+
+    .mk-screen-card {
+      background: #FFFFFF;
+      border: 1px solid var(--mk-line-soft);
+      border-radius: 22px;
+      padding: 2.75rem 3rem;
+      box-shadow: 0 20px 50px rgba(27, 29, 28, 0.07);
+      position: relative;
+    }
+
+    .mk-screen-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      border-radius: 22px 22px 0 0;
+      background: linear-gradient(90deg, var(--mk-ink), var(--mk-accent), var(--mk-bronze));
+    }
+
+    .mk-section-title {
+      font-family: var(--mk-font-sans);
+      font-size: clamp(1.75rem, 3vw, 2.25rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      color: var(--mk-ink);
+      margin-bottom: 1.25rem;
+    }
+
+    .mk-prose p {
+      font-family: var(--mk-font-serif);
+      font-size: 1.05rem;
+      line-height: 1.82;
+      color: #2C302E;
+      margin-bottom: 1.1rem;
+    }
+
+    .mk-prose p:last-child {
+      margin-bottom: 0;
+    }
+
+    .mk-credentials-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin-top: 1.6rem;
+      padding-top: 1.4rem;
+      border-top: 1px solid var(--mk-line-soft);
+    }
+
+    .mk-credential-tag {
+      padding: 0.38rem 0.85rem;
+      border-radius: 999px;
+      background: var(--mk-paper);
+      border: 1px solid var(--mk-line-soft);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--mk-ink);
+    }
+
+    /* ========================================================================
+       3. MÉTRICAS EM 30 DIAS (Fundo Grafite Escuro — Página 3 do PDF)
+       ======================================================================== */
+    .mk-section-dark {
+      background:
+        radial-gradient(circle at 82% 18%, rgba(45, 79, 62, 0.32), transparent 48%),
+        radial-gradient(circle at 12% 85%, rgba(168, 107, 76, 0.16), transparent 45%),
+        var(--mk-dark);
+      color: #F6F5F1;
+    }
+
+    .mk-metrics-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      margin-bottom: 3rem;
+    }
+
+    .mk-metrics-title {
+      font-family: var(--mk-font-display);
+      font-size: clamp(2.1rem, 3.6vw, 2.95rem);
+      font-weight: 500;
+      line-height: 1.1;
+      color: #FFFFFF;
+      margin-top: 0.85rem;
+    }
+
+    .mk-metrics-period {
+      font-size: 0.85rem;
+      color: #B8C2BC;
+      max-width: 390px;
+      line-height: 1.6;
+    }
+
+    .mk-kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .mk-kpi-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 20px;
+      padding: 1.75rem 1.85rem;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .mk-kpi-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(255, 255, 255, 0.28);
+    }
+
+    .mk-kpi-label {
+      display: block;
+      font-family: var(--mk-font-display);
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: #D2D9D5;
+      margin-bottom: 0.2rem;
+    }
+
+    .mk-kpi-value {
+      display: block;
+      font-family: var(--mk-font-display);
+      font-style: italic;
+      font-size: clamp(2.65rem, 4.2vw, 3.45rem);
+      font-weight: 600;
+      line-height: 1.05;
+      color: #FFFFFF;
+      margin-bottom: 0.45rem;
+    }
+
+    .mk-kpi-sub {
+      font-size: 0.8rem;
+      color: #A7B3AC;
+      line-height: 1.5;
+    }
+
+    /* Breakdown + Top Conteúdos do Período */
+    .mk-highlights-box {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.11);
+      border-radius: 20px;
+      padding: 2rem;
+    }
+
+    .mk-highlights-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .mk-highlights-title {
+      font-size: 0.86rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 700;
+      color: #C7D7CE;
+    }
+
+    .mk-mix-bar {
+      display: flex;
+      height: 10px;
+      border-radius: 999px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.1);
+      margin-bottom: 0.65rem;
+    }
+
+    .mk-mix-stories {
+      width: 65.5%;
+      background: #77A88E;
+    }
+
+    .mk-mix-reels {
+      width: 34.5%;
+      background: #D49675;
+    }
+
+    .mk-mix-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      font-size: 0.82rem;
+      color: #CBD3CE;
+      margin-bottom: 1.75rem;
+    }
+
+    .mk-legend-dot {
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      margin-right: 0.4rem;
+    }
+
+    .mk-top-posts-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .mk-top-post {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 14px;
+      padding: 1.15rem 1.25rem;
+    }
+
+    .mk-top-post-type {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      color: #D49675;
+      margin-bottom: 0.35rem;
+      display: block;
+    }
+
+    .mk-top-post-name {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #FFFFFF;
+      margin-bottom: 0.45rem;
+      line-height: 1.4;
+    }
+
+    .mk-top-post-stats {
+      font-size: 0.78rem;
+      color: #B4BEB8;
+    }
+
+    /* ========================================================================
+       4. @MARINABASTOSMED (Inspirado na Página 4 do PDF)
+       ======================================================================== */
+    .mk-profile-grid {
+      display: grid;
+      grid-template-columns: 330px 1fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .mk-ig-card {
+      background: #FFFFFF;
+      border: 1px solid var(--mk-line-soft);
+      border-radius: 28px;
+      padding: 1.5rem;
+      box-shadow: 0 22px 48px rgba(27, 29, 28, 0.09);
+    }
+
+    .mk-ig-top {
+      display: flex;
+      align-items: center;
+      gap: 0.95rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .mk-ig-avatar {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2.5px solid var(--mk-accent);
+      padding: 2px;
+      background: #FFFFFF;
+      flex-shrink: 0;
+    }
+
+    .mk-ig-handle {
+      font-size: 0.98rem;
+      font-weight: 800;
+      color: var(--mk-ink);
+    }
+
+    .mk-ig-name {
+      font-size: 0.8rem;
+      color: var(--mk-muted);
+      font-weight: 500;
+    }
+
+    .mk-ig-bio {
+      font-size: 0.84rem;
+      line-height: 1.55;
+      color: #2F3331;
+      margin-bottom: 1.15rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--mk-line-soft);
+    }
+
+    .mk-ig-photo-preview {
+      border-radius: 16px;
+      overflow: hidden;
+      aspect-ratio: 4 / 4.8;
+      margin-bottom: 0.95rem;
+    }
+
+    .mk-ig-photo-preview img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
+
+    .mk-ig-btn {
+      display: block;
+      text-align: center;
+      padding: 0.65rem 1rem;
+      border-radius: 999px;
+      background: var(--mk-ink);
+      color: #FFFFFF;
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 600;
+      transition: background 0.2s ease;
+    }
+
+    .mk-ig-btn:hover {
+      background: var(--mk-accent);
+    }
+
+    /* ========================================================================
+       5. PÚBLICO ALVO & SEGMENTAÇÃO (Inspirado na Página 5 do PDF)
+       ======================================================================== */
+    .mk-audience-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      margin-top: 2.25rem;
+    }
+
+    .mk-chart-card {
+      background: #FFFFFF;
+      border: 1px solid var(--mk-line-soft);
+      border-radius: 22px;
+      padding: 2rem 2.2rem;
+      box-shadow: 0 12px 32px rgba(27, 29, 28, 0.05);
+    }
+
+    .mk-bar-row {
+      display: grid;
+      grid-template-columns: 98px 1fr 44px;
+      align-items: center;
+      gap: 0.9rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .mk-bar-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .mk-bar-label {
+      font-size: 0.84rem;
+      font-weight: 700;
+      color: var(--mk-ink);
+    }
+
+    .mk-bar-track {
+      height: 28px;
+      border-radius: 8px;
+      background: var(--mk-stone);
+      overflow: hidden;
+    }
+
+    .mk-bar-fill {
+      height: 100%;
+      border-radius: 8px;
+      background: linear-gradient(90deg, var(--mk-accent), #4E7A64);
+    }
+
+    .mk-bar-pct {
+      font-size: 0.84rem;
+      font-weight: 700;
+      color: var(--mk-muted);
+      text-align: right;
+    }
+
+    .mk-donuts-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .mk-donut-card {
+      background: #FFFFFF;
+      border: 1px solid var(--mk-line-soft);
+      border-radius: 22px;
+      padding: 1.75rem 1.25rem;
+      text-align: center;
+      box-shadow: 0 12px 32px rgba(27, 29, 28, 0.05);
+    }
+
+    .mk-donut-svg {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto 0.85rem;
+      display: block;
+    }
+
+    .mk-donut-caption {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--mk-muted);
+    }
+
+    /* ========================================================================
+       6. FORMAS DE PARCERIA (Inspirado na Página 6 do PDF)
+       ======================================================================== */
+    .mk-partner-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .mk-partner-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.85rem;
+    }
+
+    .mk-partner-item {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      padding: 0.85rem 1.15rem;
+      background: var(--mk-paper);
+      border: 1px solid var(--mk-line-soft);
+      border-radius: 14px;
+      font-family: var(--mk-font-serif);
+      font-size: 1.08rem;
+      font-weight: 500;
+      color: var(--mk-ink);
+    }
+
+    .mk-partner-bullet {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--mk-accent);
+      flex-shrink: 0;
+    }
+
+    /* ========================================================================
+       7. EXEMPLOS DE PARCERIAS (Inspirado nas Páginas 7 e 8 do PDF)
+       ======================================================================== */
+    .mk-cases-block {
+      margin-top: 3.25rem;
+    }
+
+    .mk-cases-block:first-of-type {
+      margin-top: 0;
+    }
+
+    .mk-cases-header {
+      text-align: center;
+      margin-bottom: 2.25rem;
+    }
+
+    .mk-phones-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .mk-phone-case {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .mk-phone-mockup {
+      width: 100%;
+      max-width: 265px;
+      aspect-ratio: 9 / 19;
+      background: #181A19;
+      border-radius: 34px;
+      padding: 9px;
+      box-shadow: 0 22px 46px rgba(20, 24, 22, 0.16);
+      border: 2px solid #D7CFC2;
+      margin-bottom: 1.1rem;
+      overflow: hidden;
+    }
+
+    .mk-phone-mockup img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 25px;
+      display: block;
+    }
+
+    .mk-case-caption {
+      font-size: 0.94rem;
+      font-weight: 700;
+      color: var(--mk-ink);
+      max-width: 240px;
+      line-height: 1.38;
+    }
+
+    /* ========================================================================
+       8. PILARES: MEDICINA · ESTRATÉGIA · AMBIÇÃO (Página 9 do PDF)
+       ======================================================================== */
+    .mk-pillars-grid {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .mk-pillars-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 1.35rem;
+    }
+
+    .mk-pillar-pill {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.15rem 1.85rem;
+      border-radius: 18px;
+      border: 1px solid var(--mk-line);
+      background: rgba(255, 255, 255, 0.55);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .mk-pillar-pill:hover {
+      transform: translateX(4px);
+      border-color: var(--mk-accent);
+    }
+
+    .mk-pillar-word {
+      font-size: clamp(1.45rem, 2.5vw, 1.95rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--mk-ink);
+    }
+
+    .mk-pillar-note {
+      font-size: 0.88rem;
+      color: var(--mk-muted);
+      margin-left: auto;
+      text-align: right;
+      max-width: 260px;
+    }
+
+    .mk-esteto-photo {
+      aspect-ratio: 9 / 15.5;
+      max-height: 510px;
+    }
+
+    /* ========================================================================
+       9. CONTATO (Fundo Escuro Mesa — Página 10 do PDF)
+       ======================================================================== */
+    .mk-contact {
+      position: relative;
+      padding: 6rem 0;
+      background-image:
+        linear-gradient(95deg, rgba(22, 24, 23, 0.94) 0%, rgba(22, 24, 23, 0.84) 55%, rgba(22, 24, 23, 0.45) 100%),
+        url('assets/midia-kit/contato-desk.jpg');
+      background-size: cover;
+      background-position: right center;
+      color: #FFFFFF;
+    }
+
+    .mk-contact-box {
+      max-width: 560px;
+    }
+
+    .mk-contact-name {
+      font-family: var(--mk-font-display);
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 500;
+      margin: 1.2rem 0 1.4rem;
+      line-height: 1.1;
+      color: #FFFFFF;
+    }
+
+    .mk-contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      margin-bottom: 2rem;
+    }
+
+    .mk-contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: #F2F4F3;
+      text-decoration: none;
+      font-size: 1.05rem;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+
+    .mk-contact-item:hover {
+      color: #A9D4BC;
+    }
+
+    .mk-contact-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+    }
+
+    .mk-btn-light {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.78rem 1.45rem;
+      border-radius: 999px;
+      background: #FFFFFF;
+      color: var(--mk-ink);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 700;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .mk-btn-light:hover {
+      background: #E9F0EB;
+      transform: translateY(-2px);
+    }
+
+    .mk-btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.78rem 1.45rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      background: rgba(255, 255, 255, 0.06);
+      color: #FFFFFF;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: background 0.2s ease;
+    }
+
+    .mk-btn-ghost:hover {
+      background: rgba(255, 255, 255, 0.16);
+    }
+
+    /* ========================================================================
+       RESPONSIVIDADE & IMPRESSÃO (PDF)
+       ======================================================================== */
+    @media (max-width: 920px) {
+      .mk-nav-links {
+        display: none;
+      }
+
+      .mk-about-grid,
+      .mk-profile-grid,
+      .mk-audience-grid,
+      .mk-partner-grid,
+      .mk-pillars-grid {
+        grid-template-columns: 1fr;
+        gap: 2.25rem;
+      }
+
+      .mk-about-photo,
+      .mk-esteto-photo {
+        max-width: 310px;
+        margin: 0 auto;
+      }
+
+      .mk-kpi-grid,
+      .mk-top-posts-grid,
+      .mk-phones-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .mk-screen-card {
+        padding: 2rem 1.5rem;
+      }
+
+      .mk-pillar-pill {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.35rem;
+      }
+
+      .mk-pillar-note {
+        margin-left: 0;
+        text-align: left;
+      }
+
+      .mk-hero {
+        min-height: 62vh;
+        background-position: center;
+      }
+    }
+
+    @media print {
+      .mk-topbar {
+        display: none;
+      }
+      .mk-section,
+      .mk-hero,
+      .mk-contact {
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra Superior Discreta (Navegação Interna + Exportar PDF) -->
+  <header class="mk-topbar">
+    <div class="mk-container mk-topbar-inner">
+      <a href="#capa" class="mk-topbar-brand">
+        <span class="mk-topbar-dot"></span>
+        <span>Mídia Kit · @marinabastosmed</span>
+      </a>
+
+      <nav class="mk-nav-links" aria-label="Seções do Mídia Kit">
+        <a href="#quem-sou">Quem sou</a>
+        <a href="#metricas">Métricas</a>
+        <a href="#perfil">Perfil</a>
+        <a href="#publico">Público</a>
+        <a href="#parcerias">Parcerias</a>
+        <a href="#exemplos">Exemplos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <button type="button" class="mk-btn-print" onclick="window.print()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
+        <span>Salvar PDF</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. CAPA -->
+    <section class="mk-hero" id="capa">
+      <div class="mk-container">
+        <div class="mk-hero-box">
+          <div class="mk-hero-kicker">
+            <span class="word-midia">mídia</span>
+            <span class="word-kit">kit</span>
+          </div>
+
+          <div class="mk-hero-name-box">
+            <h1 class="mk-hero-name">Marina Bastos</h1>
+            <span class="mk-hero-sparkles" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 28 28" fill="currentColor">
+                <path d="M12 2 L13.8 9.2 L21 11 L13.8 12.8 L12 20 L10.2 12.8 L3 11 L10.2 9.2 Z"/>
+                <path d="M23 15 L23.9 18.1 L27 19 L23.9 19.9 L23 23 L22.1 19.9 L19 19 L22.1 18.1 Z"/>
+              </svg>
+            </span>
+          </div>
+
+          <p class="mk-hero-subtitle">influenciadora | medicina e pesquisa</p>
+
+          <div class="mk-hero-meta">
+            <span class="mk-chip">@marinabastosmed</span>
+            <span class="mk-chip">Medicina UFSJ · 8º Período</span>
+            <span class="mk-chip">Dados atualizados: Nov 2026</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. QUEM SOU -->
+    <section class="mk-section mk-section-stone" id="quem-sou">
+      <div class="mk-container">
+        <div class="mk-about-grid">
+          <div class="mk-photo-frame mk-about-photo">
+            <span class="mk-photo-sparkle" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 28 28" fill="currentColor">
+                <path d="M12 2 L13.8 9.2 L21 11 L13.8 12.8 L12 20 L10.2 12.8 L3 11 L10.2 9.2 Z"/>
+                <path d="M23 15 L23.9 18.1 L27 19 L23.9 19.9 L23 23 L22.1 19.9 L19 19 L22.1 18.1 Z"/>
+              </svg>
+            </span>
+            <img src="assets/midia-kit/marina-jaleco.jpg" alt="Marina Bastos de jaleco da Medicina UFSJ" />
+          </div>
+
+          <div class="mk-screen-card">
+            <h2 class="mk-section-title">Quem sou</h2>
+            <div class="mk-prose">
+              <p>Natural de Belo Horizonte, 24 anos, sou acadêmica do 8º período de Medicina na Universidade Federal de São João del Rei (UFSJ). Minha jornada é marcada pela paixão pelo ensino, saúde, gestão, tecnologia e inovação.</p>
+              <p>Com conhecimentos em programação de websites, desenvolvimento de aplicativos e edição de mídias, venho construindo minha presença digital com consistência e estratégia. A busca por um currículo de destaque me levou a representar o Meta Analysis Academy, o MedCof e a Sociedade de Acadêmicos de Medicina de Minas Gerais (SAMMG), além de publicar meta-análise no periódico internacional <em>The American Surgeon</em> e apresentar trabalho como primeira autora no XXXII Congresso Brasileiro de Neurologia.</p>
+              <p>Sou inspirada a ensinar e a compartilhar conteúdo prático, tendo já atuado como professora de estatística, de alemão e de inglês. Hoje, meu foco está no compartilhamento de conteúdo em medicina baseada em evidências, em linguagem acessível e bem-humorada. Meu objetivo é mostrar um caminho ético, real e possível para a construção de uma carreira médica de sucesso no Brasil.</p>
+            </div>
+
+            <div class="mk-credentials-row">
+              <span class="mk-credential-tag">Embaixadora MedCof</span>
+              <span class="mk-credential-tag">Meta Analysis Academy</span>
+              <span class="mk-credential-tag">SAMMG</span>
+              <span class="mk-credential-tag">Publicação no PubMed</span>
+              <span class="mk-credential-tag">Professora de Estatística & Idiomas</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. MÉTRICAS ATUALIZADAS (30 DIAS) -->
+    <section class="mk-section mk-section-dark" id="metricas">
+      <div class="mk-container">
+        <div class="mk-metrics-header">
+          <div>
+            <span class="mk-pill-label mk-pill-label-dark">
+              <span class="mk-sparkle" aria-hidden="true">✦</span>
+              <span>métricas em 30 dias</span>
+            </span>
+            <h2 class="mk-metrics-title">Resultados reais no Instagram</h2>
+          </div>
+          <p class="mk-metrics-period">
+            Dados auditados via Instagram Insights no período de <strong>20 de outubro a 20 de novembro de 2026</strong>, somando 40 conteúdos publicados (30 Stories e 10 Reels).
+          </p>
+        </div>
+
+        <div class="mk-kpi-grid">
+          <div class="mk-kpi-card">
+            <span class="mk-kpi-label">visualizações totais</span>
+            <span class="mk-kpi-value">25.320</span>
+            <p class="mk-kpi-sub">16.588 em Stories e 8.732 em Reels nos últimos 30 dias.</p>
+          </div>
+
+          <div class="mk-kpi-card">
+            <span class="mk-kpi-label">visualizações em stories</span>
+            <span class="mk-kpi-value">16.588</span>
+            <p class="mk-kpi-sub">Média de 553 visualizações por Story, com pico de 1.741 visualizações em um único Story.</p>
+          </div>
+
+          <div class="mk-kpi-card">
+            <span class="mk-kpi-label">visualizações em reels</span>
+            <span class="mk-kpi-value">8.732</span>
+            <p class="mk-kpi-sub">Média de 873 visualizações por Reel, com pico de 2.746 visualizações em um único vídeo.</p>
+          </div>
+
+          <div class="mk-kpi-card">
+            <span class="mk-kpi-label">interações totais</span>
+            <span class="mk-kpi-value">889</span>
+            <p class="mk-kpi-sub">617 curtidas, 120 salvamentos, 70 comentários, 43 compartilhamentos e 39 respostas diretas.</p>
+          </div>
+
+          <div class="mk-kpi-card">
+            <span class="mk-kpi-label">pico de alcance único</span>
+            <span class="mk-kpi-value">2.276</span>
+            <p class="mk-kpi-sub">Contas únicas alcançadas em um único Reel educativo e promocional (19 nov 2026).</p>
+          </div>
+
+          <div class="mk-kpi-card">
+            <span class="mk-kpi-label">salvamentos & cliques</span>
+            <span class="mk-kpi-value">320</span>
+            <p class="mk-kpi-sub">120 salvamentos em Reels, 188 toques em figurinhas e 12 cliques diretos em links nos Stories.</p>
+          </div>
+        </div>
+
+        <!-- Distribuição + Top 3 Conteúdos do Período -->
+        <div class="mk-highlights-box">
+          <div class="mk-highlights-head">
+            <span class="mk-highlights-title">Distribuição de visualizações e principais destaques do período</span>
+            <span style="font-size: 0.8rem; color: #A7B3AC;">78 visitas ao perfil originadas diretamente dos Stories</span>
+          </div>
+
+          <div class="mk-mix-bar" role="img" aria-label="65,5% das visualizações em Stories e 34,5% em Reels">
+            <div class="mk-mix-stories"></div>
+            <div class="mk-mix-reels"></div>
+          </div>
+
+          <div class="mk-mix-legend">
+            <span><span class="mk-legend-dot" style="background: #77A88E;"></span><strong>Stories:</strong> 16.588 visualizações (65,5%)</span>
+            <span><span class="mk-legend-dot" style="background: #D49675;"></span><strong>Reels:</strong> 8.732 visualizações (34,5%)</span>
+          </div>
+
+          <div class="mk-top-posts-grid">
+            <div class="mk-top-post">
+              <span class="mk-top-post-type">Destaque Reel · Parceria & Educação</span>
+              <p class="mk-top-post-name">Fatores confundidores em meta-análises & convite Meta Analysis Academy</p>
+              <p class="mk-top-post-stats">2.746 visualizações · 2.276 contas alcançadas · 104 curtidas · 75 salvamentos</p>
+            </div>
+
+            <div class="mk-top-post">
+              <span class="mk-top-post-type">Destaque Story · Extensão UFSJ</span>
+              <p class="mk-top-post-name">Prêmio de extensão universitária do projeto QualiRenal na UFSJ</p>
+              <p class="mk-top-post-stats">1.741 visualizações · 1.275 contas alcançadas · 25 toques em figurinhas</p>
+            </div>
+
+            <div class="mk-top-post">
+              <span class="mk-top-post-type">Destaque Story · Pesquisa Médica</span>
+              <p class="mk-top-post-name">Bastidores e celebração de publicação científica com equipe de pesquisa</p>
+              <p class="mk-top-post-stats">1.648 visualizações · 1.088 contas alcançadas · 24 curtidas · 6 respostas</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. @MARINABASTOSMED -->
+    <section class="mk-section" id="perfil">
+      <div class="mk-container">
+        <div class="mk-profile-grid">
+          <aside class="mk-ig-card" aria-label="Resumo do perfil @marinabastosmed">
+            <div class="mk-ig-top">
+              <img src="assets/midia-kit/marina-perfil.jpg" alt="Foto de perfil de Marina Bastos" class="mk-ig-avatar" />
+              <div>
+                <div class="mk-ig-handle">@marinabastosmed</div>
+                <div class="mk-ig-name">Marina Bastos | Pesquisa Médica</div>
+              </div>
+            </div>
+
+            <div class="mk-ig-bio">
+              Medicina UFSJ (8º período) · Pesquisa Clínica & Estatística · Embaixadora MedCof & Meta Analysis Academy · Ciência acessível e rotina real na graduação.
+            </div>
+
+            <div class="mk-ig-photo-preview">
+              <img src="assets/midia-kit/marina-perfil.jpg" alt="Marina Bastos" />
+            </div>
+
+            <a href="https://www.instagram.com/marinabastosmed" target="_blank" rel="noopener noreferrer" class="mk-ig-btn">
+              Abrir @marinabastosmed no Instagram ↗
+            </a>
+          </aside>
+
+          <div>
+            <span class="mk-pill-label" style="margin-bottom: 1.5rem;">
+              <span class="mk-sparkle" aria-hidden="true">✦</span>
+              <span>@marinabastosmed</span>
+            </span>
+
+            <div class="mk-prose">
+              <p>O <strong>@marinabastosmed</strong> é um diário de bordo honesto, focado em transmissão de conhecimento e bastidores. Nele, inspiro estudantes de Medicina a equilibrarem os estudos da faculdade com trabalho remunerado, estilo de vida saudável, lazer prudente e fé cristã.</p>
+              <p>Minha experiência como professora me permite explicar os diferenciais de produtos e serviços de forma clara, convincente e que gera conversão. Isso se reflete diretamente nos meus resultados: conteúdos educativos com recomendação de parceiros concentram os maiores índices de alcance e salvamentos do perfil.</p>
+              <p>Meu conteúdo é centrado em esforço, estratégia e busca por destaque, justificando sempre o custo-benefício real dos meus investimentos para uma audiência exigente e qualificada.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. PÚBLICO ALVO & SEGMENTAÇÃO -->
+    <section class="mk-section mk-section-stone" id="publico">
+      <div class="mk-container">
+        <span class="mk-pill-label" style="margin-bottom: 1.25rem;">
+          <span class="mk-sparkle" aria-hidden="true">✦</span>
+          <span>Público-alvo</span>
+        </span>
+
+        <div class="mk-prose" style="max-width: 680px;">
+          <p>Diferente de perfis que focam apenas em lifestyle, meu conteúdo aprofunda em temas como pesquisa médica, medicina baseada em evidências e estatística, atraindo estudantes mais dedicados e jovens médicos que investem tempo e recursos na própria carreira.</p>
+        </div>
+
+        <div class="mk-audience-grid">
+          <div class="mk-chart-card">
+            <div style="margin-bottom: 1.5rem;">
+              <span class="mk-pill-label" style="font-size: 0.85rem; padding: 0.35rem 1rem;">
+                <span class="mk-sparkle" aria-hidden="true">✦</span>
+                <span>faixa etária</span>
+              </span>
+            </div>
+
+            <div class="mk-bar-row">
+              <span class="mk-bar-label">13 a 17 anos</span>
+              <div class="mk-bar-track"><div class="mk-bar-fill" style="width: 3%;"></div></div>
+              <span class="mk-bar-pct">1%</span>
+            </div>
+
+            <div class="mk-bar-row">
+              <span class="mk-bar-label">18 a 24 anos</span>
+              <div class="mk-bar-track"><div class="mk-bar-fill" style="width: 96%;"></div></div>
+              <span class="mk-bar-pct">48%</span>
+            </div>
+
+            <div class="mk-bar-row">
+              <span class="mk-bar-label">25 a 35 anos</span>
+              <div class="mk-bar-track"><div class="mk-bar-fill" style="width: 76%;"></div></div>
+              <span class="mk-bar-pct">38%</span>
+            </div>
+
+            <div class="mk-bar-row">
+              <span class="mk-bar-label">35 a 45 anos</span>
+              <div class="mk-bar-track"><div class="mk-bar-fill" style="width: 18%;"></div></div>
+              <span class="mk-bar-pct">9%</span>
+            </div>
+
+            <p style="font-size: 0.78rem; color: var(--mk-muted); margin-top: 1.25rem;">
+              Mais de 85% da audiência está concentrada entre 18 e 35 anos (graduandos, internos e médicos em início de carreira).
+            </p>
+          </div>
+
+          <div class="mk-donuts-wrap">
+            <div class="mk-donut-card">
+              <svg class="mk-donut-svg" viewBox="0 0 140 140" role="img" aria-label="55% público feminino">
+                <circle cx="70" cy="70" r="52" fill="none" stroke="#3D4441" stroke-width="18"/>
+                <circle cx="70" cy="70" r="52" fill="none" stroke="#2D4F3E" stroke-width="18"
+                  stroke-dasharray="179.7 326.7" stroke-linecap="round" transform="rotate(-90 70 70)"/>
+                <text x="70" y="67" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="22" font-weight="800" fill="#1B1D1C">55%</text>
+                <text x="70" y="85" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="11" font-weight="600" fill="#555956">feminino</text>
+              </svg>
+              <p class="mk-donut-caption">Equilíbrio de gênero (45% masculino)</p>
+            </div>
+
+            <div class="mk-donut-card">
+              <svg class="mk-donut-svg" viewBox="0 0 140 140" role="img" aria-label="92% público brasileiro">
+                <circle cx="70" cy="70" r="52" fill="none" stroke="#3D4441" stroke-width="18"/>
+                <circle cx="70" cy="70" r="52" fill="none" stroke="#A86B4C" stroke-width="18"
+                  stroke-dasharray="300.6 326.7" stroke-linecap="round" transform="rotate(-90 70 70)"/>
+                <text x="70" y="67" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="22" font-weight="800" fill="#1B1D1C">92%</text>
+                <text x="70" y="85" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="11" font-weight="600" fill="#555956">brasileiro</text>
+              </svg>
+              <p class="mk-donut-caption">Forte penetração nacional e em MG</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. FORMAS DE PARCERIA -->
+    <section class="mk-section" id="parcerias">
+      <div class="mk-container">
+        <div class="mk-partner-grid">
+          <div class="mk-screen-card">
+            <h2 class="mk-section-title" style="margin-bottom: 1.4rem;">O que posso construir com a sua marca</h2>
+            <ul class="mk-partner-list">
+              <li class="mk-partner-item"><span class="mk-partner-bullet"></span><span>Recebidos e demonstração em rotina real</span></li>
+              <li class="mk-partner-item"><span class="mk-partner-bullet"></span><span>Publicidade em Reels, Stories e YouTube</span></li>
+              <li class="mk-partner-item"><span class="mk-partner-bullet"></span><span>Ministração de palestras e aulas</span></li>
+              <li class="mk-partner-item"><span class="mk-partner-bullet"></span><span>Tutoriais educativos focados em conversão</span></li>
+              <li class="mk-partner-item"><span class="mk-partner-bullet"></span><span>Cobertura de eventos e congressos médicos</span></li>
+              <li class="mk-partner-item"><span class="mk-partner-bullet"></span><span>Intermediação entre entidades acadêmicas</span></li>
+              <li class="mk-partner-item"><span class="mk-partner-bullet"></span><span>Representação regional e embaixadoria</span></li>
+            </ul>
+          </div>
+
+          <div>
+            <span class="mk-pill-label" style="margin-bottom: 1.5rem;">
+              <span class="mk-sparkle" aria-hidden="true">✦</span>
+              <span>formas de parceria</span>
+            </span>
+
+            <div class="mk-prose">
+              <p>Como representante da Sociedade de Acadêmicos de Medicina de Minas Gerais (SAMMG), embaixadora do MedCof e representante do Meta Analysis Academy, instituições altamente respeitadas, minhas recomendações ganham peso adicional dentro da comunidade acadêmica.</p>
+              <p>Por selecionar apenas produtos, cursos, eventos e soluções em que realmente confio e utilizo na minha rotina de estudos e pesquisa, cada recomendação feita nos meus canais é recebida pela audiência como um selo de qualidade.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. EXEMPLOS DE PARCERIAS (INSTITUIÇÕES & EVENTOS) -->
+    <section class="mk-section mk-section-stone" id="exemplos">
+      <div class="mk-container">
+
+        <!-- Bloco 1: Instituições -->
+        <div class="mk-cases-block">
+          <div class="mk-cases-header">
+            <span class="mk-pill-label">
+              <span class="mk-sparkle" aria-hidden="true">✦</span>
+              <span>exemplos de parcerias · instituições</span>
+            </span>
+          </div>
+
+          <div class="mk-phones-grid">
+            <figure class="mk-phone-case">
+              <div class="mk-phone-mockup">
+                <img src="assets/midia-kit/parceria-ufsj.jpg" alt="Representação presencial regional na UFSJ" />
+              </div>
+              <figcaption class="mk-case-caption">Representação presencial regional</figcaption>
+            </figure>
+
+            <figure class="mk-phone-case">
+              <div class="mk-phone-mockup">
+                <img src="assets/midia-kit/parceria-sammg.jpg" alt="Cobertura de eventos e representação regional na SAMMG" />
+              </div>
+              <figcaption class="mk-case-caption">Cobertura de eventos e representação regional</figcaption>
+            </figure>
+
+            <figure class="mk-phone-case">
+              <div class="mk-phone-mockup">
+                <img src="assets/midia-kit/parceria-meta.jpg" alt="Reel para curso do Meta Analysis Academy" />
+              </div>
+              <figcaption class="mk-case-caption">Reel para curso do Meta Analysis Academy</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <!-- Bloco 2: Eventos -->
+        <div class="mk-cases-block">
+          <div class="mk-cases-header">
+            <span class="mk-pill-label">
+              <span class="mk-sparkle" aria-hidden="true">✦</span>
+              <span>exemplos de parcerias · eventos</span>
+            </span>
+          </div>
+
+          <div class="mk-phones-grid">
+            <figure class="mk-phone-case">
+              <div class="mk-phone-mockup">
+                <img src="assets/midia-kit/parceria-neuro.jpg" alt="Reel para Congresso de Neurologia" />
+              </div>
+              <figcaption class="mk-case-caption">Reel para Congresso de Neurologia</figcaption>
+            </figure>
+
+            <figure class="mk-phone-case">
+              <div class="mk-phone-mockup">
+                <img src="assets/midia-kit/parceria-mrcc.jpg" alt="Reel para Medical Research and Career Conference" />
+              </div>
+              <figcaption class="mk-case-caption">Reel para Medical Research and Career Conference</figcaption>
+            </figure>
+
+            <figure class="mk-phone-case">
+              <div class="mk-phone-mockup">
+                <img src="assets/midia-kit/parceria-curem.jpg" alt="Story para Congresso de Urgência e Emergência" />
+              </div>
+              <figcaption class="mk-case-caption">Story para Congresso de Urgência e Emergência</figcaption>
+            </figure>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 8. PILARES: MEDICINA · ESTRATÉGIA · AMBIÇÃO -->
+    <section class="mk-section">
+      <div class="mk-container">
+        <div class="mk-pillars-grid">
+          <div class="mk-pillars-stack">
+            <div class="mk-pillar-pill">
+              <span class="mk-sparkle" aria-hidden="true" style="font-size: 1.2rem; color: var(--mk-accent);">✦</span>
+              <span class="mk-pillar-word">medicina</span>
+              <span class="mk-pillar-note">Prática clínica baseada em evidências e formação ética</span>
+            </div>
+
+            <div class="mk-pillar-pill">
+              <span class="mk-sparkle" aria-hidden="true" style="font-size: 1.2rem; color: var(--mk-accent);">✦</span>
+              <span class="mk-pillar-word">estratégia</span>
+              <span class="mk-pillar-note">Comunicação didática orientada a valor e conversão</span>
+            </div>
+
+            <div class="mk-pillar-pill">
+              <span class="mk-sparkle" aria-hidden="true" style="font-size: 1.2rem; color: var(--mk-accent);">✦</span>
+              <span class="mk-pillar-word">ambição</span>
+              <span class="mk-pillar-note">Construção ativa de currículo, pesquisa e inovação</span>
+            </div>
+          </div>
+
+          <div class="mk-photo-frame mk-esteto-photo">
+            <span class="mk-photo-sparkle" aria-hidden="true" style="background: var(--mk-paper);">
+              <svg width="20" height="20" viewBox="0 0 28 28" fill="currentColor">
+                <path d="M12 2 L13.8 9.2 L21 11 L13.8 12.8 L12 20 L10.2 12.8 L3 11 L10.2 9.2 Z"/>
+                <path d="M23 15 L23.9 18.1 L27 19 L23.9 19.9 L23 23 L22.1 19.9 L19 19 L22.1 18.1 Z"/>
+              </svg>
+            </span>
+            <img src="assets/midia-kit/marina-esteto.jpg" alt="Marina Bastos com estetoscópio" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. CONTATO -->
+    <section class="mk-contact" id="contato">
+      <div class="mk-container">
+        <div class="mk-contact-box">
+          <span class="mk-pill-label mk-pill-label-dark">
+            <span class="mk-sparkle" aria-hidden="true">✦</span>
+            <span>contato</span>
+          </span>
+
+          <h2 class="mk-contact-name">Marina C. B. Bastos</h2>
+
+          <div class="mk-contact-list">
+            <a href="https://wa.me/5531995008497" target="_blank" rel="noopener noreferrer" class="mk-contact-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+55 (31) 99500-8497</span>
+            </a>
+
+            <a href="mailto:marinabastosmed@gmail.com" class="mk-contact-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>marinabastosmed@gmail.com</span>
+            </a>
+
+            <div class="mk-contact-item" style="cursor: default;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              <span>Instagram, YouTube e TikTok: @marinabastosmed</span>
+            </div>
+          </div>
+
+          <div class="mk-contact-cta-row">
+            <a href="mailto:marinabastosmed@gmail.com?subject=Proposta%20de%20Parceria%20%7C%20M%C3%ADdia%20Kit" class="mk-btn-light">
+              Enviar proposta por e-mail ↗
+            </a>
+            <a href="https://wa.me/5531995008497" target="_blank" rel="noopener noreferrer" class="mk-btn-ghost">
+              Conversar no WhatsApp ↗
+            </a>
+            <a href="https://www.instagram.com/marinabastosmed" target="_blank" rel="noopener noreferrer" class="mk-btn-ghost">
+              Instagram ↗
+            </a>
+            <a href="https://www.youtube.com/@marinabastosmed" target="_blank" rel="noopener noreferrer" class="mk-btn-ghost">
+              YouTube ↗
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
