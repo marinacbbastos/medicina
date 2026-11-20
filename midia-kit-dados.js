@@ -49,6 +49,18 @@ const MIDIA_KIT_DATA = {
     tiktokMrccViews: 1764,
     tiktokPesquisaViews: 2023,
     tiktokRayyanViews: 7367,
+    audienceDemographics: {
+      ageBars: [
+        { key: "age13_17", pct: 0.3, barWidth: 2 },
+        { key: "age18_24", pct: 47.9, barWidth: 78 },
+        { key: "age25_35", pct: 38.0, barWidth: 62 },
+        { key: "age35_45", pct: 8.0, barWidth: 13 }
+      ],
+      coreAgePct: 85.9,
+      genderFemalePct: 55,
+      genderMalePct: 45,
+      countryBrazilPct: 92
+    },
     reelsTopicBars: [
       { key: "research", pct: 45.1, barWidth: 66 },
       { key: "routine", pct: 32.9, barWidth: 48 },
@@ -194,9 +206,28 @@ const MIDIA_KIT_DATA = {
           "Meu conteúdo é centrado em esforço, estratégia e busca por destaque, justificando sempre o custo-benefício real dos meus investimentos para uma audiência exigente e qualificada."
         ]
       },
+      demographicsSection: {
+        pill: "público-alvo",
+        intro: "Diferente de perfis voltados apenas para lifestyle, meu conteúdo aprofunda em medicina baseada em evidências, pesquisa científica e estatística, atraindo estudantes dedicados, residentes e jovens médicos que investem tempo e recursos na carreira.",
+        ageChartTitle: "Faixa etária da audiência (%)",
+        ageLabels: {
+          age13_17: "13 a 17 anos",
+          age18_24: "18 a 24 anos",
+          age25_35: "25 a 35 anos",
+          age35_45: "35 a 45 anos"
+        },
+        ageNoteHtml: (d, fmtP) =>
+          `<strong>${fmtP(d.coreAgePct)}</strong> do público está concentrado entre <strong>18 e 35 anos</strong>, principal faixa de estudantes de Medicina, residentes e médicos em início de carreira.`,
+        genderSub: "feminino",
+        genderCaption: (d, fmtW) =>
+          `<strong>${fmtW(d.genderFemalePct)} feminino</strong> e <strong>${fmtW(d.genderMalePct)} masculino</strong>, com distribuição equilibrada entre mulheres e homens na Medicina`,
+        countrySub: "brasileiro",
+        countryCaption: (d, fmtW) =>
+          `<strong>${fmtW(d.countryBrazilPct)} do público no Brasil</strong>, com presença complementar de brasileiros e pesquisadores no exterior`
+      },
       audienceSection: {
-        pill: "Público e engajamento",
-        intro: "Diferente de perfis que focam apenas em lifestyle, meu conteúdo aprofunda em temas como pesquisa médica, medicina baseada em evidências e estatística, atraindo estudantes dedicados e jovens médicos que investem tempo e recursos na carreira. Os dados abaixo refletem exclusivamente os relatórios reais dos últimos 30 dias.",
+        pill: "comportamento e engajamento",
+        intro: "Os relatórios reais dos últimos 30 dias (20 de outubro a 20 de novembro de 2026) confirmam que conteúdos de pesquisa médica, rotina acadêmica e recomendações de parceiros concentram os maiores índices de alcance, visualizações e salvamentos.",
         reelsChartTitle: (m, fmt) => `Visualizações em Reels por tema (${fmt(m.reelsViews)} views)`,
         reelsTopicLabels: {
           research: "Pesquisa & Meta-Análise",
@@ -381,9 +412,28 @@ const MIDIA_KIT_DATA = {
           "My content centers on discipline, strategy, and academic growth, always breaking down the real return on investment for an engaged, discerning audience."
         ]
       },
+      demographicsSection: {
+        pill: "target audience",
+        intro: "Unlike accounts focused solely on lifestyle, my content dives into evidence-based medicine, clinical research, and statistics, attracting dedicated medical students, residents, and early-career physicians who actively invest time and resources in their careers.",
+        ageChartTitle: "Audience age distribution (%)",
+        ageLabels: {
+          age13_17: "13 to 17 years",
+          age18_24: "18 to 24 years",
+          age25_35: "25 to 35 years",
+          age35_45: "35 to 45 years"
+        },
+        ageNoteHtml: (d, fmtP) =>
+          `<strong>${fmtP(d.coreAgePct)}</strong> of the audience is aged <strong>18 to 35</strong>, spanning medical students, residents, and early-career physicians.`,
+        genderSub: "female",
+        genderCaption: (d, fmtW) =>
+          `<strong>${fmtW(d.genderFemalePct)} female</strong> and <strong>${fmtW(d.genderMalePct)} male</strong>, delivering balanced reach across women and men in medicine`,
+        countrySub: "Brazil",
+        countryCaption: (d, fmtW) =>
+          `<strong>${fmtW(d.countryBrazilPct)} based in Brazil</strong>, plus Brazilian medical students and researchers abroad`
+      },
       audienceSection: {
-        pill: "Audience & engagement",
-        intro: "Unlike accounts focused solely on lifestyle, my content dives into clinical research, evidence-based medicine, and statistics, attracting dedicated students and early-career physicians who actively invest time and resources in their careers. Every metric below comes exclusively from verified 30-day reports.",
+        pill: "behavior & engagement",
+        intro: "Verified reports from the past 30 days (October 20 to November 20, 2026) confirm that clinical research education, authentic academic routine, and partner recommendations drive the highest reach, views, and save rates.",
         reelsChartTitle: (m, fmt) => `Reel views by topic (${fmt(m.reelsViews)} views)`,
         reelsTopicLabels: {
           research: "Research & Meta-Analysis",

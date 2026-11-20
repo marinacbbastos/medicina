@@ -733,14 +733,25 @@
     }
 
     /* ========================================================================
-       5. PÚBLICO E ENGAJAMENTO AUDITADO
+       5 & 6. PÚBLICO-ALVO (DEMOGRAFIA) E ENGAJAMENTO AUDITADO
        ======================================================================== */
     .mk-audience-grid {
       display: grid;
       grid-template-columns: 1.15fr 0.85fr;
       gap: 2.5rem;
-      align-items: start;
+      align-items: center;
       margin-top: 2rem;
+    }
+
+    .mk-age-note {
+      margin-top: 1.25rem;
+      padding: 0.85rem 1.05rem;
+      border-radius: 12px;
+      background: var(--mk-accent-soft);
+      border: 1px solid rgba(45, 79, 62, 0.16);
+      font-size: 0.84rem;
+      line-height: 1.5;
+      color: var(--mk-ink);
     }
 
     .mk-chart-card {
@@ -1135,7 +1146,7 @@
     }
 
     /* ========================================================================
-       EXPORTAÇÃO PARA PDF: 10 SLIDES EXATOS EM A4 PAISAGEM (1 SEÇÃO = 1 PÁGINA)
+       EXPORTAÇÃO PARA PDF: 12 SLIDES EXATOS EM A4 PAISAGEM (1 SEÇÃO = 1 PÁGINA)
        ======================================================================== */
     @page {
       size: A4 landscape;
@@ -1258,6 +1269,20 @@
       .mk-donut-card {
         padding: 1.15rem 1.25rem !important;
         box-shadow: none !important;
+      }
+
+      .mk-bar-row {
+        margin-bottom: 0.58rem !important;
+      }
+
+      .mk-bar-track {
+        height: 24px !important;
+      }
+
+      .mk-age-note {
+        margin-top: 0.85rem !important;
+        padding: 0.65rem 0.9rem !important;
+        font-size: 0.8rem !important;
       }
 
       .mk-donut-svg {
@@ -1488,15 +1513,61 @@
       </div>
     </section>
 
-    <!-- SLIDE 5: PÚBLICO E ENGAJAMENTO AUDITADO -->
+    <!-- SLIDE 5: PÚBLICO-ALVO (FAIXA ETÁRIA, GÊNERO E ORIGEM) -->
     <section class="mk-slide mk-section mk-section-stone" id="publico">
       <div class="mk-container">
         <span class="mk-pill-label" style="margin-bottom: 1rem;">
           <span class="mk-sparkle" aria-hidden="true">✦</span>
-          <span id="audience-pill">Público e engajamento</span>
+          <span id="demographics-pill">público-alvo</span>
         </span>
 
-        <div class="mk-prose" style="max-width: 720px;">
+        <div class="mk-prose" style="max-width: 740px;">
+          <p id="demographics-intro"></p>
+        </div>
+
+        <div class="mk-audience-grid">
+          <div class="mk-chart-card">
+            <p class="mk-chart-subtitle" id="chart-age-title"></p>
+            <div id="chart-age-bars"></div>
+            <div class="mk-age-note" id="chart-age-note"></div>
+          </div>
+
+          <div class="mk-donuts-wrap">
+            <div class="mk-donut-card">
+              <svg class="mk-donut-svg" viewBox="0 0 140 140" role="img" aria-label="Distribuição por gênero do público">
+                <circle cx="70" cy="70" r="52" fill="none" stroke="#DFDDD6" stroke-width="17"/>
+                <circle id="donut-gender-arc" cx="70" cy="70" r="52" fill="none" stroke="#2D4F3E" stroke-width="17"
+                  stroke-dasharray="179.7 326.7" stroke-linecap="round" transform="rotate(-90 70 70)"/>
+                <text id="donut-gender-pct" x="70" y="67" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="22" font-weight="800" fill="#1B1D1C">55%</text>
+                <text id="donut-gender-sub" x="70" y="84" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="11" font-weight="600" fill="#555956">feminino</text>
+              </svg>
+              <p class="mk-donut-caption" id="donut-gender-caption"></p>
+            </div>
+
+            <div class="mk-donut-card">
+              <svg class="mk-donut-svg" viewBox="0 0 140 140" role="img" aria-label="Localização do público">
+                <circle cx="70" cy="70" r="52" fill="none" stroke="#DFDDD6" stroke-width="17"/>
+                <circle id="donut-country-arc" cx="70" cy="70" r="52" fill="none" stroke="#A86B4C" stroke-width="17"
+                  stroke-dasharray="300.6 326.7" stroke-linecap="round" transform="rotate(-90 70 70)"/>
+                <text id="donut-country-pct" x="70" y="67" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="22" font-weight="800" fill="#1B1D1C">92%</text>
+                <text id="donut-country-sub" x="70" y="84" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="11" font-weight="600" fill="#555956">brasileiro</text>
+              </svg>
+              <p class="mk-donut-caption" id="donut-country-caption"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 6: COMPORTAMENTO E ENGAJAMENTO AUDITADO (30 DIAS) -->
+    <section class="mk-slide mk-section" id="engajamento">
+      <div class="mk-container">
+        <span class="mk-pill-label" style="margin-bottom: 1rem;">
+          <span class="mk-sparkle" aria-hidden="true">✦</span>
+          <span id="audience-pill">comportamento e engajamento</span>
+        </span>
+
+        <div class="mk-prose" style="max-width: 740px;">
           <p id="audience-intro"></p>
         </div>
 
@@ -1513,7 +1584,7 @@
             <div class="mk-donut-card">
               <svg class="mk-donut-svg" viewBox="0 0 140 140" role="img" aria-label="Salvamentos em Pesquisa e Meta-Análise">
                 <circle cx="70" cy="70" r="52" fill="none" stroke="#DFDDD6" stroke-width="17"/>
-                <circle cx="70" cy="70" r="52" fill="none" stroke="#2D4F3E" stroke-width="17"
+                <circle id="donut1-arc" cx="70" cy="70" r="52" fill="none" stroke="#2D4F3E" stroke-width="17"
                   stroke-dasharray="291.4 326.7" stroke-linecap="round" transform="rotate(-90 70 70)"/>
                 <text id="donut1-pct" x="70" y="67" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="21" font-weight="800" fill="#1B1D1C">89,2%</text>
                 <text id="donut1-sub" x="70" y="84" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="10.5" font-weight="600" fill="#555956">salvamentos</text>
@@ -1524,7 +1595,7 @@
             <div class="mk-donut-card">
               <svg class="mk-donut-svg" viewBox="0 0 140 140" role="img" aria-label="Visualizações em Stories">
                 <circle cx="70" cy="70" r="52" fill="none" stroke="#DFDDD6" stroke-width="17"/>
-                <circle cx="70" cy="70" r="52" fill="none" stroke="#A86B4C" stroke-width="17"
+                <circle id="donut2-arc" cx="70" cy="70" r="52" fill="none" stroke="#A86B4C" stroke-width="17"
                   stroke-dasharray="214.0 326.7" stroke-linecap="round" transform="rotate(-90 70 70)"/>
                 <text id="donut2-pct" x="70" y="67" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="21" font-weight="800" fill="#1B1D1C">65,5%</text>
                 <text id="donut2-sub" x="70" y="84" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="10.5" font-weight="600" fill="#555956">em Stories</text>
@@ -1536,8 +1607,8 @@
       </div>
     </section>
 
-    <!-- SLIDE 6: FORMAS DE PARCERIA -->
-    <section class="mk-slide mk-section" id="parcerias">
+    <!-- SLIDE 7: FORMAS DE PARCERIA -->
+    <section class="mk-slide mk-section mk-section-stone" id="parcerias">
       <div class="mk-container">
         <div class="mk-partner-grid">
           <div class="mk-screen-card">
@@ -1557,8 +1628,8 @@
       </div>
     </section>
 
-    <!-- SLIDE 7: EXEMPLOS DE PARCERIAS · INSTITUIÇÕES -->
-    <section class="mk-slide mk-section mk-section-stone" id="exemplos-instituicoes">
+    <!-- SLIDE 8: EXEMPLOS DE PARCERIAS · INSTITUIÇÕES -->
+    <section class="mk-slide mk-section" id="exemplos-instituicoes">
       <div class="mk-container">
         <div class="mk-cases-header">
           <span class="mk-pill-label">
@@ -1598,8 +1669,8 @@
       </div>
     </section>
 
-    <!-- SLIDE 8: EXEMPLOS DE PARCERIAS · EVENTOS -->
-    <section class="mk-slide mk-section" id="exemplos-eventos">
+    <!-- SLIDE 9: EXEMPLOS DE PARCERIAS · EVENTOS -->
+    <section class="mk-slide mk-section mk-section-stone" id="exemplos-eventos">
       <div class="mk-container">
         <div class="mk-cases-header">
           <span class="mk-pill-label">
@@ -1639,8 +1710,8 @@
       </div>
     </section>
 
-    <!-- SLIDE 9: EXEMPLOS DE PARCERIAS · TIKTOK -->
-    <section class="mk-slide mk-section mk-section-stone" id="exemplos-tiktok">
+    <!-- SLIDE 10: EXEMPLOS DE PARCERIAS · TIKTOK -->
+    <section class="mk-slide mk-section" id="exemplos-tiktok">
       <div class="mk-container">
         <div class="mk-cases-header">
           <span class="mk-pill-label">
@@ -1680,8 +1751,8 @@
       </div>
     </section>
 
-    <!-- SLIDE 10: PILARES -->
-    <section class="mk-slide mk-section" id="pilares">
+    <!-- SLIDE 11: PILARES -->
+    <section class="mk-slide mk-section mk-section-stone" id="pilares">
       <div class="mk-container">
         <div class="mk-pillars-grid">
           <div class="mk-pillars-stack" id="pillars-stack"></div>
@@ -1699,7 +1770,7 @@
       </div>
     </section>
 
-    <!-- SLIDE 10: CONTATO -->
+    <!-- SLIDE 12: CONTATO -->
     <section class="mk-slide mk-contact" id="contato">
       <div class="mk-container">
         <div class="mk-contact-box">
@@ -1739,12 +1810,13 @@
     </section>
   </main>
 
-  <script src="midia-kit-dados.js?v=20261120b"></script>
+  <script src="midia-kit-dados.js?v=20261120c"></script>
   <script>
     (function () {
       if (typeof MIDIA_KIT_DATA === "undefined") return;
 
       const { metrics, contact, i18n } = MIDIA_KIT_DATA;
+      const DONUT_CIRC = 2 * Math.PI * 52;
 
       // Idioma padrão ao abrir a página é SEMPRE Português (PT).
       // Opcionalmente aceita ?lang=en na URL caso deseje compartilhar um link direto em inglês.
@@ -1762,11 +1834,25 @@
         }) + "%";
       }
 
+      function formatWholePct(n, lang) {
+        return Number(n).toLocaleString(lang === "en" ? "en-US" : "pt-BR", {
+          maximumFractionDigits: 0
+        }) + "%";
+      }
+
+      function setDonutArc(elId, pct) {
+        const el = document.getElementById(elId);
+        if (!el) return;
+        const dash = ((Number(pct) / 100) * DONUT_CIRC).toFixed(1);
+        el.setAttribute("stroke-dasharray", `${dash} ${DONUT_CIRC.toFixed(1)}`);
+      }
+
       function renderLanguage(lang) {
         currentLang = lang;
         const t = i18n[lang];
         const fmt = (n) => formatInt(n, lang);
         const fmtP = (n) => formatPct(n, lang);
+        const fmtW = (n) => formatWholePct(n, lang);
 
         document.documentElement.lang = t.htmlLang;
         document.title = t.pageTitle;
@@ -1861,7 +1947,37 @@
           .map((p) => `<p>${p}</p>`)
           .join("");
 
-        // Slide 5: Público & Engajamento Auditado
+        // Slide 5: Público-alvo (Demografia: Faixa etária, Gênero e Origem)
+        const demo = metrics.audienceDemographics;
+        document.getElementById("demographics-pill").textContent = t.demographicsSection.pill;
+        document.getElementById("demographics-intro").textContent = t.demographicsSection.intro;
+        document.getElementById("chart-age-title").textContent = t.demographicsSection.ageChartTitle;
+        document.getElementById("chart-age-bars").innerHTML = demo.ageBars
+          .map(
+            (b) => `
+            <div class="mk-bar-row">
+              <span class="mk-bar-label">${t.demographicsSection.ageLabels[b.key]}</span>
+              <div class="mk-bar-track">
+                <div class="mk-bar-fill" style="width: ${b.barWidth}%;"></div>
+                <span class="mk-bar-tip">${fmtP(b.pct)}</span>
+              </div>
+            </div>
+          `
+          )
+          .join("");
+        document.getElementById("chart-age-note").innerHTML = t.demographicsSection.ageNoteHtml(demo, fmtP);
+
+        setDonutArc("donut-gender-arc", demo.genderFemalePct);
+        document.getElementById("donut-gender-pct").textContent = fmtW(demo.genderFemalePct);
+        document.getElementById("donut-gender-sub").textContent = t.demographicsSection.genderSub;
+        document.getElementById("donut-gender-caption").innerHTML = t.demographicsSection.genderCaption(demo, fmtW);
+
+        setDonutArc("donut-country-arc", demo.countryBrazilPct);
+        document.getElementById("donut-country-pct").textContent = fmtW(demo.countryBrazilPct);
+        document.getElementById("donut-country-sub").textContent = t.demographicsSection.countrySub;
+        document.getElementById("donut-country-caption").innerHTML = t.demographicsSection.countryCaption(demo, fmtW);
+
+        // Slide 6: Comportamento & Engajamento Auditado (30 dias)
         document.getElementById("audience-pill").textContent = t.audienceSection.pill;
         document.getElementById("audience-intro").textContent = t.audienceSection.intro;
         document.getElementById("chart-reels-title").textContent = t.audienceSection.reelsChartTitle(metrics, fmt);
@@ -1894,10 +2010,12 @@
           )
           .join("");
 
+        setDonutArc("donut1-arc", metrics.donutSavesPct);
         document.getElementById("donut1-pct").textContent = fmtP(metrics.donutSavesPct);
         document.getElementById("donut1-sub").textContent = t.audienceSection.donut1Sub;
         document.getElementById("donut1-caption").innerHTML = t.audienceSection.donut1Caption(metrics, fmt);
 
+        setDonutArc("donut2-arc", metrics.donutStoriesPct);
         document.getElementById("donut2-pct").textContent = fmtP(metrics.donutStoriesPct);
         document.getElementById("donut2-sub").textContent = t.audienceSection.donut2Sub;
         document.getElementById("donut2-caption").innerHTML = t.audienceSection.donut2Caption(metrics, fmt);
