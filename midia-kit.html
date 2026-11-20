@@ -94,13 +94,13 @@
     .mk-nav-links {
       display: flex;
       align-items: center;
-      gap: 1.35rem;
+      gap: 1.25rem;
     }
 
     .mk-nav-links a {
       text-decoration: none;
       color: var(--mk-muted);
-      font-size: 0.82rem;
+      font-size: 0.81rem;
       font-weight: 500;
       transition: color 0.2s ease;
     }
@@ -109,11 +109,79 @@
       color: var(--mk-ink);
     }
 
+    .mk-topbar-actions {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    /* Interruptor moderno PT / EN (estilo switch on/off) */
+    .mk-lang-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.28rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid var(--mk-line-soft);
+      background: rgba(255, 255, 255, 0.75);
+      cursor: pointer;
+      user-select: none;
+      font-family: var(--mk-font-sans);
+      transition: border-color 0.2s ease, background-color 0.2s ease;
+    }
+
+    .mk-lang-toggle:hover {
+      border-color: var(--mk-accent);
+      background: #FFFFFF;
+    }
+
+    .mk-lang-code {
+      font-size: 0.73rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--mk-muted);
+      transition: color 0.2s ease;
+    }
+
+    .mk-lang-code.active {
+      color: var(--mk-accent);
+    }
+
+    .mk-switch-track {
+      position: relative;
+      width: 34px;
+      height: 18px;
+      border-radius: 999px;
+      background: #D5D2CA;
+      transition: background-color 0.22s ease;
+      display: inline-block;
+    }
+
+    .mk-lang-toggle[aria-checked="true"] .mk-switch-track {
+      background: var(--mk-accent);
+    }
+
+    .mk-switch-thumb {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+      transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .mk-lang-toggle[aria-checked="true"] .mk-switch-thumb {
+      transform: translateX(16px);
+    }
+
     .mk-btn-print {
       display: inline-flex;
       align-items: center;
       gap: 0.45rem;
-      padding: 0.48rem 1.05rem;
+      padding: 0.46rem 1.02rem;
       border-radius: 999px;
       border: 1px solid var(--mk-ink);
       background: transparent;
@@ -382,7 +450,7 @@
     }
 
     /* ========================================================================
-       3. MÉTRICAS EM 30 DIAS (Fundo Grafite Escuro)
+       3. MÉTRICAS EM 30 DIAS
        ======================================================================== */
     .mk-section-dark {
       background:
@@ -524,7 +592,7 @@
     }
 
     /* ========================================================================
-       4. @MARINABASTOSMED (Perfil Real Atualizado)
+       4. @MARINABASTOSMED
        ======================================================================== */
     .mk-profile-grid {
       display: grid;
@@ -665,7 +733,7 @@
     }
 
     /* ========================================================================
-       5. COMPORTAMENTO DA AUDIÊNCIA (100% AUDITADO NOS CSVs — ZERO DADOS INVENTADOS)
+       5. PÚBLICO E ENGAJAMENTO AUDITADO
        ======================================================================== */
     .mk-audience-grid {
       display: grid;
@@ -694,7 +762,7 @@
 
     .mk-bar-row {
       display: grid;
-      grid-template-columns: 148px 1fr;
+      grid-template-columns: 158px 1fr;
       align-items: center;
       gap: 0.85rem;
       margin-bottom: 0.9rem;
@@ -705,7 +773,7 @@
     }
 
     .mk-bar-label {
-      font-size: 0.83rem;
+      font-size: 0.82rem;
       font-weight: 700;
       color: var(--mk-ink);
       line-height: 1.25;
@@ -808,7 +876,7 @@
     }
 
     /* ========================================================================
-       7 & 8. EXEMPLOS DE PARCERIAS (Mockups Limpos — 1 Slide por Grupo no PDF)
+       7 & 8. EXEMPLOS DE PARCERIAS
        ======================================================================== */
     .mk-cases-header {
       text-align: center;
@@ -831,9 +899,9 @@
     .mk-phone-mockup {
       position: relative;
       width: 100%;
-      max-width: 265px;
-      aspect-ratio: 9 / 14.5;
-      background: #181A19;
+      max-width: 245px;
+      aspect-ratio: 471 / 968;
+      background: #141615;
       border-radius: 30px;
       padding: 8px;
       box-shadow: 0 20px 44px rgba(20, 24, 22, 0.15);
@@ -848,29 +916,15 @@
       height: 100%;
       border-radius: 22px;
       overflow: hidden;
-      background: #181A19;
+      background: #0E100F;
     }
 
     .mk-phone-screen img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      object-position: center top;
+      object-fit: contain;
+      object-position: center;
       display: block;
-    }
-
-    .mk-reel-badge {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      padding: 1.25rem 0.85rem 0.65rem;
-      background: linear-gradient(to top, rgba(20, 22, 21, 0.92) 0%, rgba(20, 22, 21, 0.55) 60%, transparent 100%);
-      color: #FFFFFF;
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.02em;
-      text-align: left;
     }
 
     .mk-case-caption {
@@ -882,7 +936,7 @@
     }
 
     /* ========================================================================
-       9. PILARES: MEDICINA · ESTRATÉGIA · AMBIÇÃO
+       9. PILARES
        ======================================================================== */
     .mk-pillars-grid {
       display: grid;
@@ -1103,7 +1157,8 @@
         font-size: 13.5px;
       }
 
-      .mk-topbar {
+      .mk-topbar,
+      .mk-lang-toggle {
         display: none !important;
       }
 
@@ -1234,10 +1289,11 @@
       }
 
       .mk-phone-mockup {
-        max-width: 62mm !important;
-        height: 114mm !important;
-        aspect-ratio: auto !important;
-        margin-bottom: 0.65rem !important;
+        width: auto !important;
+        max-width: none !important;
+        height: 128mm !important;
+        aspect-ratio: 471 / 968 !important;
+        margin-bottom: 0.55rem !important;
         box-shadow: none !important;
       }
 
@@ -1254,28 +1310,47 @@
 </head>
 <body>
 
-  <!-- Barra Superior Discreta -->
+  <!-- Barra Superior Discreta (Oculta no PDF) -->
   <header class="mk-topbar">
     <div class="mk-container mk-topbar-inner">
       <a href="#capa" class="mk-topbar-brand">
         <span class="mk-topbar-dot"></span>
-        <span>Mídia Kit · @marinabastosmed</span>
+        <span id="topbar-brand">Mídia Kit · @marinabastosmed</span>
       </a>
 
       <nav class="mk-nav-links" aria-label="Seções do Mídia Kit">
-        <a href="#quem-sou">Quem sou</a>
-        <a href="#metricas">Métricas</a>
-        <a href="#perfil">Perfil</a>
-        <a href="#publico">Audiência</a>
-        <a href="#parcerias">Parcerias</a>
-        <a href="#exemplos-instituicoes">Exemplos</a>
-        <a href="#contato">Contato</a>
+        <a href="#quem-sou" id="nav-about">Quem sou</a>
+        <a href="#metricas" id="nav-metrics">Métricas</a>
+        <a href="#perfil" id="nav-profile">Perfil</a>
+        <a href="#publico" id="nav-audience">Audiência</a>
+        <a href="#parcerias" id="nav-partnerships">Parcerias</a>
+        <a href="#exemplos-instituicoes" id="nav-examples">Exemplos</a>
+        <a href="#contato" id="nav-contact">Contato</a>
       </nav>
 
-      <button type="button" class="mk-btn-print" onclick="window.print()" title="Salve como PDF em modo paisagem (1 slide por página)">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
-        <span>Exportar PDF</span>
-      </button>
+      <div class="mk-topbar-actions">
+        <!-- Seletor Bilíngue Toggle PT / EN (Padrão: PT) -->
+        <button
+          type="button"
+          class="mk-lang-toggle"
+          id="lang-toggle"
+          role="switch"
+          aria-checked="false"
+          aria-label="Alternar idioma entre Português e Inglês"
+          title="Alternar entre Português (PT) e Inglês (EN)"
+        >
+          <span class="mk-lang-code active" id="code-pt">PT</span>
+          <span class="mk-switch-track" aria-hidden="true">
+            <span class="mk-switch-thumb"></span>
+          </span>
+          <span class="mk-lang-code" id="code-en">EN</span>
+        </button>
+
+        <button type="button" class="mk-btn-print" id="btn-export-pdf" title="Exportar Mídia Kit em Português (A4 Paisagem, 1 slide por página)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
+          <span id="export-pdf-label">Exportar PDF</span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -1285,8 +1360,8 @@
       <div class="mk-container">
         <div class="mk-hero-box">
           <div class="mk-hero-kicker">
-            <span class="word-midia">mídia</span>
-            <span class="word-kit">kit</span>
+            <span class="word-midia" id="hero-word-1">mídia</span>
+            <span class="word-kit" id="hero-word-2">kit</span>
           </div>
 
           <div class="mk-hero-name-box">
@@ -1299,9 +1374,9 @@
             </span>
           </div>
 
-          <p class="mk-hero-subtitle">influenciadora | medicina e pesquisa</p>
+          <p class="mk-hero-subtitle" id="hero-subtitle">influenciadora | medicina e pesquisa</p>
 
-          <div class="mk-hero-meta">
+          <div class="mk-hero-meta" id="hero-chips">
             <span class="mk-chip">@marinabastosmed</span>
             <span class="mk-chip">Medicina UFSJ · 8º Período</span>
             <span class="mk-chip">Dados auditados · Nov 2026</span>
@@ -1321,24 +1396,13 @@
                 <path d="M23 15 L23.9 18.1 L27 19 L23.9 19.9 L23 23 L22.1 19.9 L19 19 L22.1 18.1 Z"/>
               </svg>
             </span>
-            <img src="assets/midia-kit/marina-jaleco.jpg?v=3" alt="Marina Bastos de jaleco da Medicina UFSJ" />
+            <img id="about-photo-img" src="assets/midia-kit/marina-jaleco.jpg?v=3" alt="Marina Bastos de jaleco da Medicina UFSJ" />
           </div>
 
           <div class="mk-screen-card">
-            <h2 class="mk-section-title">Quem sou</h2>
-            <div class="mk-prose">
-              <p>Natural de Belo Horizonte, 24 anos, sou acadêmica do 8º período de Medicina na Universidade Federal de São João del Rei (UFSJ). Minha jornada é marcada pela paixão pelo ensino, saúde, gestão, tecnologia e inovação.</p>
-              <p>Com conhecimentos em programação de websites, desenvolvimento de aplicativos e edição de mídias, venho construindo minha presença digital com consistência e estratégia. A busca por um currículo de destaque me levou a representar o Meta Analysis Academy, o MedCof e a Sociedade de Acadêmicos de Medicina de Minas Gerais (SAMMG), além de publicar meta-análise no periódico internacional <em>The American Surgeon</em> e apresentar trabalho como primeira autora no XXXII Congresso Brasileiro de Neurologia.</p>
-              <p>Sou inspirada a ensinar e a compartilhar conteúdo prático, tendo já atuado como professora de estatística, de alemão e de inglês. Hoje, meu foco está no compartilhamento de conteúdo em medicina baseada em evidências, em linguagem acessível e bem-humorada. Meu objetivo é mostrar um caminho ético, real e possível para a construção de uma carreira médica de sucesso no Brasil.</p>
-            </div>
-
-            <div class="mk-credentials-row">
-              <span class="mk-credential-tag">Embaixadora MedCof</span>
-              <span class="mk-credential-tag">Meta Analysis Academy</span>
-              <span class="mk-credential-tag">SAMMG</span>
-              <span class="mk-credential-tag">Publicação no PubMed</span>
-              <span class="mk-credential-tag">Professora de Estatística & Idiomas</span>
-            </div>
+            <h2 class="mk-section-title" id="about-title">Quem sou</h2>
+            <div class="mk-prose" id="about-paragraphs"></div>
+            <div class="mk-credentials-row" id="about-credentials"></div>
           </div>
         </div>
       </div>
@@ -1351,83 +1415,27 @@
           <div>
             <span class="mk-pill-label mk-pill-label-dark">
               <span class="mk-sparkle" aria-hidden="true">✦</span>
-              <span>métricas em 30 dias</span>
+              <span id="metrics-pill">métricas em 30 dias</span>
             </span>
-            <h2 class="mk-metrics-title">Resultados reais no Instagram</h2>
+            <h2 class="mk-metrics-title" id="metrics-title">Resultados reais no Instagram</h2>
           </div>
-          <p class="mk-metrics-period">
-            Dados auditados via Instagram Insights no período de <strong>20 de outubro a 20 de novembro de 2026</strong>, somando 40 conteúdos publicados (30 Stories e 10 Reels).
-          </p>
+          <p class="mk-metrics-period" id="metrics-period"></p>
         </div>
 
-        <div class="mk-kpi-grid">
-          <div class="mk-kpi-card">
-            <span class="mk-kpi-label">seguidores</span>
-            <span class="mk-kpi-value">1.255</span>
-            <p class="mk-kpi-sub">Base orgânica qualificada em Medicina e pesquisa científica (53 publicações no feed).</p>
-          </div>
-
-          <div class="mk-kpi-card">
-            <span class="mk-kpi-label">visualizações totais</span>
-            <span class="mk-kpi-value">25.320</span>
-            <p class="mk-kpi-sub">16.588 em Stories (média de 553 por Story) e 8.732 em Reels (média de 873 por Reel).</p>
-          </div>
-
-          <div class="mk-kpi-card">
-            <span class="mk-kpi-label">visualizações em stories</span>
-            <span class="mk-kpi-value">16.588</span>
-            <p class="mk-kpi-sub">Pico de 1.741 visualizações e 1.275 contas alcançadas em um único Story no período.</p>
-          </div>
-
-          <div class="mk-kpi-card">
-            <span class="mk-kpi-label">pico de alcance único</span>
-            <span class="mk-kpi-value">2.276</span>
-            <p class="mk-kpi-sub">Contas únicas alcançadas em um único Reel educativo e promocional (2.746 visualizações).</p>
-          </div>
-
-          <div class="mk-kpi-card">
-            <span class="mk-kpi-label">interações diretas</span>
-            <span class="mk-kpi-value">889</span>
-            <p class="mk-kpi-sub">617 curtidas, 120 salvamentos, 70 comentários, 43 compartilhamentos e 39 respostas.</p>
-          </div>
-
-          <div class="mk-kpi-card">
-            <span class="mk-kpi-label">ações de engajamento</span>
-            <span class="mk-kpi-value">1.089</span>
-            <p class="mk-kpi-sub">Inclui 188 toques em figurinhas, 12 cliques em links e 78 visitas ao perfil via Stories.</p>
-          </div>
-        </div>
+        <div class="mk-kpi-grid" id="metrics-kpi-grid"></div>
 
         <div class="mk-highlights-box">
           <div class="mk-highlights-head">
-            <span class="mk-highlights-title">Principais destaques de conteúdo no período</span>
-            <span style="font-size: 0.78rem; color: #A7B3AC;">Auditado diretamente dos relatórios CSV do Instagram</span>
+            <span class="mk-highlights-title" id="metrics-highlights-title">Principais destaques de conteúdo no período</span>
+            <span style="font-size: 0.78rem; color: #A7B3AC;" id="metrics-highlights-note">Auditado diretamente dos relatórios CSV do Instagram</span>
           </div>
 
-          <div class="mk-top-posts-grid">
-            <div class="mk-top-post">
-              <span class="mk-top-post-type">Destaque Reel · Parceria & Educação</span>
-              <p class="mk-top-post-name">Fatores confundidores em meta-análises e convite Meta Analysis Academy</p>
-              <p class="mk-top-post-stats">2.746 visualizações · 2.276 alcançadas · 104 curtidas · 75 salvamentos</p>
-            </div>
-
-            <div class="mk-top-post">
-              <span class="mk-top-post-type">Destaque Story · Extensão UFSJ</span>
-              <p class="mk-top-post-name">Prêmio de extensão universitária do projeto QualiRenal na UFSJ</p>
-              <p class="mk-top-post-stats">1.741 visualizações · 1.275 alcançadas · 25 toques em figurinhas</p>
-            </div>
-
-            <div class="mk-top-post">
-              <span class="mk-top-post-type">Destaque Story · Pesquisa Médica</span>
-              <p class="mk-top-post-name">Bastidores e celebração de publicação científica com equipe de pesquisa</p>
-              <p class="mk-top-post-stats">1.648 visualizações · 1.088 alcançadas · 24 curtidas · 6 respostas</p>
-            </div>
-          </div>
+          <div class="mk-top-posts-grid" id="metrics-top-posts"></div>
         </div>
       </div>
     </section>
 
-    <!-- SLIDE 4: @MARINABASTOSMED (ATUALIZADO COM PRINT REAL DO PERFIL) -->
+    <!-- SLIDE 4: @MARINABASTOSMED -->
     <section class="mk-slide mk-section" id="perfil">
       <div class="mk-container">
         <div class="mk-profile-grid">
@@ -1436,46 +1444,34 @@
               <img src="assets/midia-kit/marina-perfil.jpg?v=3" alt="Foto de perfil de Marina Bastos" class="mk-ig-avatar" />
               <div>
                 <div class="mk-ig-handle">@marinabastosmed</div>
-                <div class="mk-ig-name">Marina Bastos | Pesquisa Médica</div>
+                <div class="mk-ig-name" id="ig-account-title">Marina Bastos | Pesquisa Médica</div>
               </div>
             </div>
 
             <div class="mk-ig-stats">
               <div>
-                <span class="mk-ig-stat-num">53</span>
-                <span class="mk-ig-stat-lbl">posts</span>
+                <span class="mk-ig-stat-num" id="ig-stat-posts">53</span>
+                <span class="mk-ig-stat-lbl" id="ig-lbl-posts">posts</span>
               </div>
               <div>
-                <span class="mk-ig-stat-num">1.255</span>
-                <span class="mk-ig-stat-lbl">seguidores</span>
+                <span class="mk-ig-stat-num" id="ig-stat-followers">1.255</span>
+                <span class="mk-ig-stat-lbl" id="ig-lbl-followers">seguidores</span>
               </div>
               <div>
-                <span class="mk-ig-stat-num">1.400</span>
-                <span class="mk-ig-stat-lbl">seguindo</span>
+                <span class="mk-ig-stat-num" id="ig-stat-following">1.400</span>
+                <span class="mk-ig-stat-lbl" id="ig-lbl-following">seguindo</span>
               </div>
             </div>
 
-            <div class="mk-ig-bio">
-              Sua futura médica pela UFSJ<br />
-              Vida real tentando conciliar vida + estudo + pesquisa + finanças &amp; blogueiragens 🙈<br />
-              <a href="https://marinabastosmed.com.br/links.html" target="_blank" rel="noopener noreferrer" class="mk-ig-bio-link">marinabastosmed.com.br/links.html</a>
-            </div>
+            <div class="mk-ig-bio" id="ig-bio-box"></div>
 
-            <div class="mk-ig-highlights" aria-label="Destaques do perfil">
-              <span class="mk-ig-hl-pill">YouTube</span>
-              <span class="mk-ig-hl-pill">Paliativismo</span>
-              <span class="mk-ig-hl-pill">Extensão</span>
-              <span class="mk-ig-hl-pill">Neuro</span>
-              <span class="mk-ig-hl-pill">Fé</span>
-              <span class="mk-ig-hl-pill">Projetos</span>
-              <span class="mk-ig-hl-pill">Lazer</span>
-            </div>
+            <div class="mk-ig-highlights" id="ig-highlights" aria-label="Destaques do perfil"></div>
 
             <div class="mk-ig-photo-preview">
               <img src="assets/midia-kit/marina-perfil.jpg?v=3" alt="Marina Bastos com estetoscópio" />
             </div>
 
-            <a href="https://www.instagram.com/marinabastosmed" target="_blank" rel="noopener noreferrer" class="mk-ig-btn">
+            <a href="https://www.instagram.com/marinabastosmed" target="_blank" rel="noopener noreferrer" class="mk-ig-btn" id="ig-btn-open">
               Abrir @marinabastosmed no Instagram ↗
             </a>
           </aside>
@@ -1486,120 +1482,54 @@
               <span>@marinabastosmed</span>
             </span>
 
-            <div class="mk-prose">
-              <p>O <strong>@marinabastosmed</strong> é um diário de bordo honesto, focado em transmissão de conhecimento e bastidores. Nele, inspiro estudantes de Medicina a equilibrarem os estudos da faculdade com trabalho remunerado, estilo de vida saudável, lazer prudente e fé cristã.</p>
-              <p>Minha experiência como professora me permite explicar os diferenciais de produtos e serviços de forma clara, convincente e que gera conversão. Isso se reflete diretamente nos dados: conteúdos educativos com recomendação de parceiros concentram os maiores índices de alcance e salvamentos do perfil.</p>
-              <p>Meu conteúdo é centrado em esforço, estratégia e busca por destaque, justificando sempre o custo-benefício real dos meus investimentos para uma audiência exigente e qualificada.</p>
-            </div>
+            <div class="mk-prose" id="profile-paragraphs"></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SLIDE 5: PÚBLICO E COMPORTAMENTO AUDITADO (100% DADOS DOS CSVs) -->
+    <!-- SLIDE 5: PÚBLICO E ENGAJAMENTO AUDITADO -->
     <section class="mk-slide mk-section mk-section-stone" id="publico">
       <div class="mk-container">
         <span class="mk-pill-label" style="margin-bottom: 1rem;">
           <span class="mk-sparkle" aria-hidden="true">✦</span>
-          <span>Público e engajamento</span>
+          <span id="audience-pill">Público e engajamento</span>
         </span>
 
         <div class="mk-prose" style="max-width: 720px;">
-          <p>Diferente de perfis que focam apenas em lifestyle, meu conteúdo aprofunda em temas como pesquisa médica, medicina baseada em evidências e estatística, atraindo estudantes dedicados e jovens médicos que investem tempo e recursos na carreira. Os dados abaixo refletem exclusivamente os relatórios reais dos últimos 30 dias.</p>
+          <p id="audience-intro"></p>
         </div>
 
         <div class="mk-audience-grid">
           <div class="mk-chart-card">
-            <p class="mk-chart-subtitle">Visualizações em Reels por tema (8.732 views)</p>
+            <p class="mk-chart-subtitle" id="chart-reels-title"></p>
+            <div id="chart-reels-bars"></div>
 
-            <div class="mk-bar-row">
-              <span class="mk-bar-label">Pesquisa &amp; Meta-Análise</span>
-              <div class="mk-bar-track">
-                <div class="mk-bar-fill" style="width: 66%;"></div>
-                <span class="mk-bar-tip">45,1%</span>
-              </div>
-            </div>
-
-            <div class="mk-bar-row">
-              <span class="mk-bar-label">Rotina, Estudo &amp; Fé</span>
-              <div class="mk-bar-track">
-                <div class="mk-bar-fill" style="width: 48%;"></div>
-                <span class="mk-bar-tip">32,9%</span>
-              </div>
-            </div>
-
-            <div class="mk-bar-row">
-              <span class="mk-bar-label">Neurologia &amp; Congresso</span>
-              <div class="mk-bar-track">
-                <div class="mk-bar-fill" style="width: 32%;"></div>
-                <span class="mk-bar-tip">22,0%</span>
-              </div>
-            </div>
-
-            <p class="mk-chart-subtitle" style="margin-top: 1.5rem;">Ações de engajamento totais (1.089 ações)</p>
-
-            <div class="mk-bar-row">
-              <span class="mk-bar-label">Curtidas</span>
-              <div class="mk-bar-track">
-                <div class="mk-bar-fill mk-bar-fill-bronze" style="width: 78%;"></div>
-                <span class="mk-bar-tip">56,7%</span>
-              </div>
-            </div>
-
-            <div class="mk-bar-row">
-              <span class="mk-bar-label">Toques em figurinhas</span>
-              <div class="mk-bar-track">
-                <div class="mk-bar-fill mk-bar-fill-bronze" style="width: 26%;"></div>
-                <span class="mk-bar-tip">17,3%</span>
-              </div>
-            </div>
-
-            <div class="mk-bar-row">
-              <span class="mk-bar-label">Salvamentos (Reels)</span>
-              <div class="mk-bar-track">
-                <div class="mk-bar-fill mk-bar-fill-bronze" style="width: 18%;"></div>
-                <span class="mk-bar-tip">11,0%</span>
-              </div>
-            </div>
-
-            <div class="mk-bar-row">
-              <span class="mk-bar-label">Comentários &amp; Resp.</span>
-              <div class="mk-bar-track">
-                <div class="mk-bar-fill mk-bar-fill-bronze" style="width: 16%;"></div>
-                <span class="mk-bar-tip">10,0%</span>
-              </div>
-            </div>
-
-            <div class="mk-bar-row">
-              <span class="mk-bar-label">Compart. &amp; Cliques</span>
-              <div class="mk-bar-track">
-                <div class="mk-bar-fill mk-bar-fill-bronze" style="width: 9%;"></div>
-                <span class="mk-bar-tip">5,0%</span>
-              </div>
-            </div>
+            <p class="mk-chart-subtitle" style="margin-top: 1.5rem;" id="chart-engagement-title"></p>
+            <div id="chart-engagement-bars"></div>
           </div>
 
           <div class="mk-donuts-wrap">
             <div class="mk-donut-card">
-              <svg class="mk-donut-svg" viewBox="0 0 140 140" role="img" aria-label="89,2% dos salvamentos vêm de Pesquisa e Meta-Análise">
+              <svg class="mk-donut-svg" viewBox="0 0 140 140" role="img" aria-label="Salvamentos em Pesquisa e Meta-Análise">
                 <circle cx="70" cy="70" r="52" fill="none" stroke="#DFDDD6" stroke-width="17"/>
                 <circle cx="70" cy="70" r="52" fill="none" stroke="#2D4F3E" stroke-width="17"
                   stroke-dasharray="291.4 326.7" stroke-linecap="round" transform="rotate(-90 70 70)"/>
-                <text x="70" y="67" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="21" font-weight="800" fill="#1B1D1C">89,2%</text>
-                <text x="70" y="84" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="10.5" font-weight="600" fill="#555956">salvamentos</text>
+                <text id="donut1-pct" x="70" y="67" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="21" font-weight="800" fill="#1B1D1C">89,2%</text>
+                <text id="donut1-sub" x="70" y="84" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="10.5" font-weight="600" fill="#555956">salvamentos</text>
               </svg>
-              <p class="mk-donut-caption"><strong>107 de 120 salvamentos</strong> em Reels vieram de conteúdo de Pesquisa &amp; Meta-Análise</p>
+              <p class="mk-donut-caption" id="donut1-caption"></p>
             </div>
 
             <div class="mk-donut-card">
-              <svg class="mk-donut-svg" viewBox="0 0 140 140" role="img" aria-label="65,5% das visualizações vêm de Stories">
+              <svg class="mk-donut-svg" viewBox="0 0 140 140" role="img" aria-label="Visualizações em Stories">
                 <circle cx="70" cy="70" r="52" fill="none" stroke="#DFDDD6" stroke-width="17"/>
                 <circle cx="70" cy="70" r="52" fill="none" stroke="#A86B4C" stroke-width="17"
                   stroke-dasharray="214.0 326.7" stroke-linecap="round" transform="rotate(-90 70 70)"/>
-                <text x="70" y="67" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="21" font-weight="800" fill="#1B1D1C">65,5%</text>
-                <text x="70" y="84" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="10.5" font-weight="600" fill="#555956">em Stories</text>
+                <text id="donut2-pct" x="70" y="67" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="21" font-weight="800" fill="#1B1D1C">65,5%</text>
+                <text id="donut2-sub" x="70" y="84" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="10.5" font-weight="600" fill="#555956">em Stories</text>
               </svg>
-              <p class="mk-donut-caption"><strong>16.588 de 25.320 visualizações</strong> vindas de Stories recorrentes no dia a dia</p>
+              <p class="mk-donut-caption" id="donut2-caption"></p>
             </div>
           </div>
         </div>
@@ -1611,29 +1541,17 @@
       <div class="mk-container">
         <div class="mk-partner-grid">
           <div class="mk-screen-card">
-            <h2 class="mk-section-title" style="margin-bottom: 1.2rem;">Formatos comerciais e parcerias</h2>
-            <ul class="mk-partner-list">
-              <li class="mk-partner-item"><span class="mk-partner-bullet"></span><span>Combo Reels + Sequência de Stories</span></li>
-              <li class="mk-partner-item"><span class="mk-partner-bullet"></span><span>Publi multiplataforma (Instagram + TikTok)</span></li>
-              <li class="mk-partner-item"><span class="mk-partner-bullet"></span><span>Cupom de desconto / Link rastreável</span></li>
-              <li class="mk-partner-item"><span class="mk-partner-bullet"></span><span>Produção de UGC (vídeos para a própria marca anunciar)</span></li>
-              <li class="mk-partner-item"><span class="mk-partner-bullet"></span><span>Cobertura de eventos e congressos médicos</span></li>
-              <li class="mk-partner-item"><span class="mk-partner-bullet"></span><span>Ministração de palestras e aulas</span></li>
-              <li class="mk-partner-item"><span class="mk-partner-bullet"></span><span>Intermediação entre entidades acadêmicas</span></li>
-              <li class="mk-partner-item"><span class="mk-partner-bullet"></span><span>Representação regional e embaixadoria</span></li>
-            </ul>
+            <h2 class="mk-section-title" style="margin-bottom: 1.2rem;" id="partnerships-title">Formatos comerciais e parcerias</h2>
+            <ul class="mk-partner-list" id="partnerships-list"></ul>
           </div>
 
           <div>
             <span class="mk-pill-label" style="margin-bottom: 1.5rem;">
               <span class="mk-sparkle" aria-hidden="true">✦</span>
-              <span>formas de parceria</span>
+              <span id="partnerships-pill">formas de parceria</span>
             </span>
 
-            <div class="mk-prose">
-              <p>Como representante da Sociedade de Acadêmicos de Medicina de Minas Gerais (SAMMG), embaixadora do MedCof e representante do Meta Analysis Academy, instituições altamente respeitadas, minhas recomendações ganham peso adicional dentro da comunidade acadêmica.</p>
-              <p>Por selecionar apenas produtos, cursos, eventos e soluções em que realmente confio e utilizo na minha rotina de estudos e pesquisa, cada recomendação feita nos meus canais é recebida pela audiência como um selo de qualidade.</p>
-            </div>
+            <div class="mk-prose" id="partnerships-paragraphs"></div>
           </div>
         </div>
       </div>
@@ -1645,7 +1563,7 @@
         <div class="mk-cases-header">
           <span class="mk-pill-label">
             <span class="mk-sparkle" aria-hidden="true">✦</span>
-            <span>exemplos de parcerias · instituições</span>
+            <span id="cases-inst-pill">exemplos de parcerias · instituições</span>
           </span>
         </div>
 
@@ -1653,29 +1571,28 @@
           <figure class="mk-phone-case">
             <div class="mk-phone-mockup">
               <div class="mk-phone-screen">
-                <img src="assets/midia-kit/parceria-ufsj.jpg?v=3" alt="Representação presencial regional na UFSJ" />
+                <img src="assets/midia-kit/parceria-ufsj.jpg?v=4" alt="Representação presencial regional na UFSJ" />
               </div>
             </div>
-            <figcaption class="mk-case-caption">Representação presencial regional</figcaption>
+            <figcaption class="mk-case-caption" id="case-inst-1">Representação presencial regional</figcaption>
           </figure>
 
           <figure class="mk-phone-case">
             <div class="mk-phone-mockup">
               <div class="mk-phone-screen">
-                <img src="assets/midia-kit/parceria-sammg.jpg?v=3" alt="Cobertura de eventos e representação regional na SAMMG" />
+                <img src="assets/midia-kit/parceria-sammg.jpg?v=4" alt="Cobertura de eventos e representação regional na SAMMG" />
               </div>
             </div>
-            <figcaption class="mk-case-caption">Cobertura de eventos e representação regional</figcaption>
+            <figcaption class="mk-case-caption" id="case-inst-2">Cobertura de eventos e representação regional</figcaption>
           </figure>
 
           <figure class="mk-phone-case">
             <div class="mk-phone-mockup">
               <div class="mk-phone-screen">
-                <img src="assets/midia-kit/parceria-meta.jpg?v=3" alt="Reel educacional e promocional para curso do Meta Analysis Academy" />
-                <div class="mk-reel-badge">2.746 views · 104 curtidas · 75 salvamentos</div>
+                <img src="assets/midia-kit/parceria-meta.jpg?v=4" alt="Reel educacional e promocional para curso do Meta Analysis Academy" />
               </div>
             </div>
-            <figcaption class="mk-case-caption">Reel educacional e promocional para curso do Meta Analysis Academy</figcaption>
+            <figcaption class="mk-case-caption" id="case-inst-3">Reel educacional e promocional para curso do Meta Analysis Academy</figcaption>
           </figure>
         </div>
       </div>
@@ -1687,7 +1604,7 @@
         <div class="mk-cases-header">
           <span class="mk-pill-label">
             <span class="mk-sparkle" aria-hidden="true">✦</span>
-            <span>exemplos de parcerias · eventos</span>
+            <span id="cases-ev-pill">exemplos de parcerias · eventos</span>
           </span>
         </div>
 
@@ -1695,57 +1612,79 @@
           <figure class="mk-phone-case">
             <div class="mk-phone-mockup">
               <div class="mk-phone-screen">
-                <img src="assets/midia-kit/parceria-neuro.jpg?v=3" alt="Reel para Congresso de Neurologia" />
-                <div class="mk-reel-badge">1.500+ views · 58 curtidas · 12 comentários</div>
+                <img src="assets/midia-kit/parceria-neuro.jpg?v=4" alt="Reel para Congresso de Neurologia" />
               </div>
             </div>
-            <figcaption class="mk-case-caption">Reel para Congresso de Neurologia</figcaption>
+            <figcaption class="mk-case-caption" id="case-ev-1">Reel para Congresso de Neurologia</figcaption>
           </figure>
 
           <figure class="mk-phone-case">
             <div class="mk-phone-mockup">
               <div class="mk-phone-screen">
-                <img src="assets/midia-kit/parceria-mrcc.jpg?v=3" alt="Reel para Medical Research and Career Conference" />
+                <img src="assets/midia-kit/parceria-mrcc.jpg?v=4" alt="Reel para Medical Research and Career Conference" />
               </div>
             </div>
-            <figcaption class="mk-case-caption">Reel para Medical Research and Career Conference</figcaption>
+            <figcaption class="mk-case-caption" id="case-ev-2">Reel para Medical Research and Career Conference</figcaption>
           </figure>
 
           <figure class="mk-phone-case">
             <div class="mk-phone-mockup">
               <div class="mk-phone-screen">
-                <img src="assets/midia-kit/parceria-curem.jpg?v=3" alt="Story para Congresso de Urgência e Emergência" />
+                <img src="assets/midia-kit/parceria-curem.jpg?v=4" alt="Story para Congresso de Urgência e Emergência" />
               </div>
             </div>
-            <figcaption class="mk-case-caption">Story para Congresso de Urgência e Emergência</figcaption>
+            <figcaption class="mk-case-caption" id="case-ev-3">Story para Congresso de Urgência e Emergência</figcaption>
           </figure>
         </div>
       </div>
     </section>
 
-    <!-- SLIDE 9: PILARES -->
-    <section class="mk-slide mk-section mk-section-stone" id="pilares">
+    <!-- SLIDE 9: EXEMPLOS DE PARCERIAS · TIKTOK -->
+    <section class="mk-slide mk-section mk-section-stone" id="exemplos-tiktok">
+      <div class="mk-container">
+        <div class="mk-cases-header">
+          <span class="mk-pill-label">
+            <span class="mk-sparkle" aria-hidden="true">✦</span>
+            <span id="cases-tt-pill">exemplos de parcerias · tiktok</span>
+          </span>
+        </div>
+
+        <div class="mk-phones-grid">
+          <figure class="mk-phone-case">
+            <div class="mk-phone-mockup">
+              <div class="mk-phone-screen">
+                <img src="assets/midia-kit/parceria-tiktok-mrcc.jpg?v=4" alt="TikTok promocional Medical Research and Career Conference" />
+              </div>
+            </div>
+            <figcaption class="mk-case-caption" id="case-tt-1">TikTok promocional · Medical Research and Career Conference (1.764 visualizações)</figcaption>
+          </figure>
+
+          <figure class="mk-phone-case">
+            <div class="mk-phone-mockup">
+              <div class="mk-phone-screen">
+                <img src="assets/midia-kit/parceria-tiktok-pesquisa.jpg?v=4" alt="TikTok promocional Meta Analysis Academy sobre o melhor tipo de pesquisa" />
+              </div>
+            </div>
+            <figcaption class="mk-case-caption" id="case-tt-2">TikTok promocional Meta Analysis Academy · Melhor tipo de pesquisa (2.023 visualizações)</figcaption>
+          </figure>
+
+          <figure class="mk-phone-case">
+            <div class="mk-phone-mockup">
+              <div class="mk-phone-screen">
+                <img src="assets/midia-kit/parceria-tiktok-rayyan.jpg?v=4" alt="TikTok tutorial de como usar o Rayyan promocional para Meta Analysis Academy" />
+              </div>
+            </div>
+            <figcaption class="mk-case-caption" id="case-tt-3">TikTok tutorial de Rayyan · Promocional Meta Analysis Academy (7.367 visualizações)</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 10: PILARES -->
+    <section class="mk-slide mk-section" id="pilares">
       <div class="mk-container">
         <div class="mk-pillars-grid">
-          <div class="mk-pillars-stack">
-            <div class="mk-pillar-pill">
-              <span class="mk-sparkle" aria-hidden="true" style="font-size: 1.2rem; color: var(--mk-accent);">✦</span>
-              <span class="mk-pillar-word">medicina</span>
-              <span class="mk-pillar-note">Prática clínica baseada em evidências e formação ética</span>
-            </div>
-
-            <div class="mk-pillar-pill">
-              <span class="mk-sparkle" aria-hidden="true" style="font-size: 1.2rem; color: var(--mk-accent);">✦</span>
-              <span class="mk-pillar-word">estratégia</span>
-              <span class="mk-pillar-note">Comunicação didática orientada a valor e conversão</span>
-            </div>
-
-            <div class="mk-pillar-pill">
-              <span class="mk-sparkle" aria-hidden="true" style="font-size: 1.2rem; color: var(--mk-accent);">✦</span>
-              <span class="mk-pillar-word">ambição</span>
-              <span class="mk-pillar-note">Construção ativa de currículo, pesquisa e inovação</span>
-            </div>
-          </div>
+          <div class="mk-pillars-stack" id="pillars-stack"></div>
 
           <div class="mk-photo-frame mk-esteto-photo">
             <span class="mk-photo-sparkle" aria-hidden="true">
@@ -1766,49 +1705,289 @@
         <div class="mk-contact-box">
           <span class="mk-pill-label mk-pill-label-dark">
             <span class="mk-sparkle" aria-hidden="true">✦</span>
-            <span>contato</span>
+            <span id="contact-pill">contato</span>
           </span>
 
-          <h2 class="mk-contact-name">Marina C. B. Bastos</h2>
+          <h2 class="mk-contact-name" id="contact-name">Marina C. B. Bastos</h2>
 
           <div class="mk-contact-list">
-            <a href="https://wa.me/5531995008497" target="_blank" rel="noopener noreferrer" class="mk-contact-item">
+            <a id="contact-wa-link" href="https://wa.me/5531995008497" target="_blank" rel="noopener noreferrer" class="mk-contact-item">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              <span>+55 (31) 99500-8497</span>
+              <span id="contact-phone">+55 (31) 99500-8497</span>
             </a>
 
-            <a href="mailto:marinabastosmed@gmail.com" class="mk-contact-item">
+            <a id="contact-email-link" href="mailto:marinabastosmed@gmail.com" class="mk-contact-item">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-              <span>marinabastosmed@gmail.com</span>
+              <span id="contact-email">marinabastosmed@gmail.com</span>
             </a>
 
             <div class="mk-contact-item" style="cursor: default;">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-              <span>Instagram, YouTube e TikTok: @marinabastosmed</span>
+              <span id="contact-social-line">Instagram, YouTube e TikTok: @marinabastosmed</span>
             </div>
           </div>
 
           <div class="mk-contact-cta-row">
-            <a href="mailto:marinabastosmed@gmail.com?subject=Proposta%20de%20Parceria%20%7C%20M%C3%ADdia%20Kit" class="mk-btn-light">
-              Enviar proposta por e-mail ↗
-            </a>
-            <a href="https://wa.me/5531995008497" target="_blank" rel="noopener noreferrer" class="mk-btn-ghost">
-              WhatsApp ↗
-            </a>
-            <a href="https://www.instagram.com/marinabastosmed" target="_blank" rel="noopener noreferrer" class="mk-btn-ghost">
-              Instagram ↗
-            </a>
-            <a href="https://www.youtube.com/@marinabastosmed" target="_blank" rel="noopener noreferrer" class="mk-btn-ghost">
-              YouTube ↗
-            </a>
-            <a href="https://www.tiktok.com/@marinabastosmed?_r=1&_t=ZS-9BLOuofepfy" target="_blank" rel="noopener noreferrer" class="mk-btn-ghost">
-              TikTok ↗
-            </a>
+            <a id="cta-email" href="mailto:marinabastosmed@gmail.com" class="mk-btn-light">Enviar proposta por e-mail ↗</a>
+            <a id="cta-whatsapp" href="https://wa.me/5531995008497" target="_blank" rel="noopener noreferrer" class="mk-btn-ghost">WhatsApp ↗</a>
+            <a id="cta-instagram" href="https://www.instagram.com/marinabastosmed" target="_blank" rel="noopener noreferrer" class="mk-btn-ghost">Instagram ↗</a>
+            <a id="cta-youtube" href="https://www.youtube.com/@marinabastosmed" target="_blank" rel="noopener noreferrer" class="mk-btn-ghost">YouTube ↗</a>
+            <a id="cta-tiktok" href="https://www.tiktok.com/@marinabastosmed?_r=1&_t=ZS-9BLOuofepfy" target="_blank" rel="noopener noreferrer" class="mk-btn-ghost">TikTok ↗</a>
           </div>
         </div>
       </div>
     </section>
   </main>
+
+  <script src="midia-kit-dados.js?v=20261120b"></script>
+  <script>
+    (function () {
+      if (typeof MIDIA_KIT_DATA === "undefined") return;
+
+      const { metrics, contact, i18n } = MIDIA_KIT_DATA;
+
+      // Idioma padrão ao abrir a página é SEMPRE Português (PT).
+      // Opcionalmente aceita ?lang=en na URL caso deseje compartilhar um link direto em inglês.
+      const params = new URLSearchParams(window.location.search);
+      let currentLang = params.get("lang") === "en" ? "en" : "pt";
+
+      function formatInt(n, lang) {
+        return Number(n).toLocaleString(lang === "en" ? "en-US" : "pt-BR");
+      }
+
+      function formatPct(n, lang) {
+        return Number(n).toLocaleString(lang === "en" ? "en-US" : "pt-BR", {
+          minimumFractionDigits: 1,
+          maximumFractionDigits: 1
+        }) + "%";
+      }
+
+      function renderLanguage(lang) {
+        currentLang = lang;
+        const t = i18n[lang];
+        const fmt = (n) => formatInt(n, lang);
+        const fmtP = (n) => formatPct(n, lang);
+
+        document.documentElement.lang = t.htmlLang;
+        document.title = t.pageTitle;
+
+        // Estado visual do interruptor PT / EN
+        const toggleBtn = document.getElementById("lang-toggle");
+        const codePt = document.getElementById("code-pt");
+        const codeEn = document.getElementById("code-en");
+        toggleBtn.setAttribute("aria-checked", lang === "en" ? "true" : "false");
+        codePt.classList.toggle("active", lang === "pt");
+        codeEn.classList.toggle("active", lang === "en");
+
+        // Topbar & Navegação
+        document.getElementById("topbar-brand").textContent = t.topbarBrand;
+        document.getElementById("export-pdf-label").textContent = t.exportPdfBtn;
+        document.getElementById("btn-export-pdf").title = t.exportPdfTitle;
+        document.getElementById("nav-about").textContent = t.nav.about;
+        document.getElementById("nav-metrics").textContent = t.nav.metrics;
+        document.getElementById("nav-profile").textContent = t.nav.profile;
+        document.getElementById("nav-audience").textContent = t.nav.audience;
+        document.getElementById("nav-partnerships").textContent = t.nav.partnerships;
+        document.getElementById("nav-examples").textContent = t.nav.examples;
+        document.getElementById("nav-contact").textContent = t.nav.contact;
+
+        // Slide 1: Capa
+        document.getElementById("hero-word-1").textContent = t.hero.word1;
+        document.getElementById("hero-word-2").textContent = t.hero.word2;
+        document.getElementById("hero-subtitle").textContent = t.hero.subtitle;
+        document.getElementById("hero-chips").innerHTML = t.hero.chips
+          .map((c) => `<span class="mk-chip">${c}</span>`)
+          .join("");
+
+        // Slide 2: Quem sou
+        document.getElementById("about-photo-img").alt = t.about.photoAlt;
+        document.getElementById("about-title").textContent = t.about.title;
+        document.getElementById("about-paragraphs").innerHTML = t.about.paragraphs
+          .map((p) => `<p>${p}</p>`)
+          .join("");
+        document.getElementById("about-credentials").innerHTML = t.about.credentials
+          .map((c) => `<span class="mk-credential-tag">${c}</span>`)
+          .join("");
+
+        // Slide 3: Métricas
+        document.getElementById("metrics-pill").textContent = t.metricsSection.pill;
+        document.getElementById("metrics-title").textContent = t.metricsSection.title;
+        document.getElementById("metrics-period").innerHTML = t.metricsSection.periodHtml(metrics, fmt);
+        document.getElementById("metrics-kpi-grid").innerHTML = t.metricsSection
+          .kpis(metrics, fmt)
+          .map(
+            (k) => `
+            <div class="mk-kpi-card">
+              <span class="mk-kpi-label">${k.label}</span>
+              <span class="mk-kpi-value">${k.value}</span>
+              <p class="mk-kpi-sub">${k.sub}</p>
+            </div>
+          `
+          )
+          .join("");
+        document.getElementById("metrics-highlights-title").textContent = t.metricsSection.highlightsTitle;
+        document.getElementById("metrics-highlights-note").textContent = t.metricsSection.highlightsNote;
+        document.getElementById("metrics-top-posts").innerHTML = t.metricsSection
+          .topPosts(metrics, fmt)
+          .map(
+            (p) => `
+            <div class="mk-top-post">
+              <span class="mk-top-post-type">${p.type}</span>
+              <p class="mk-top-post-name">${p.name}</p>
+              <p class="mk-top-post-stats">${p.stats}</p>
+            </div>
+          `
+          )
+          .join("");
+
+        // Slide 4: Perfil @marinabastosmed
+        document.getElementById("ig-account-title").textContent = t.profileSection.accountTitle;
+        document.getElementById("ig-stat-posts").textContent = fmt(metrics.postsCount);
+        document.getElementById("ig-lbl-posts").textContent = t.profileSection.statPosts;
+        document.getElementById("ig-stat-followers").textContent = fmt(metrics.followers);
+        document.getElementById("ig-lbl-followers").textContent = t.profileSection.statFollowers;
+        document.getElementById("ig-stat-following").textContent = fmt(metrics.following);
+        document.getElementById("ig-lbl-following").textContent = t.profileSection.statFollowing;
+        document.getElementById("ig-bio-box").innerHTML = `
+          ${t.profileSection.bioLine1}<br />
+          ${t.profileSection.bioLine2}<br />
+          <a href="${contact.bioLinkUrl}" target="_blank" rel="noopener noreferrer" class="mk-ig-bio-link">${contact.bioLinkDisplay}</a>
+        `;
+        document.getElementById("ig-highlights").innerHTML = t.profileSection.highlights
+          .map((h) => `<span class="mk-ig-hl-pill">${h}</span>`)
+          .join("");
+        document.getElementById("ig-btn-open").textContent = t.profileSection.igBtn;
+        document.getElementById("profile-paragraphs").innerHTML = t.profileSection.paragraphs
+          .map((p) => `<p>${p}</p>`)
+          .join("");
+
+        // Slide 5: Público & Engajamento Auditado
+        document.getElementById("audience-pill").textContent = t.audienceSection.pill;
+        document.getElementById("audience-intro").textContent = t.audienceSection.intro;
+        document.getElementById("chart-reels-title").textContent = t.audienceSection.reelsChartTitle(metrics, fmt);
+        document.getElementById("chart-reels-bars").innerHTML = metrics.reelsTopicBars
+          .map(
+            (b) => `
+            <div class="mk-bar-row">
+              <span class="mk-bar-label">${t.audienceSection.reelsTopicLabels[b.key]}</span>
+              <div class="mk-bar-track">
+                <div class="mk-bar-fill" style="width: ${b.barWidth}%;"></div>
+                <span class="mk-bar-tip">${fmtP(b.pct)}</span>
+              </div>
+            </div>
+          `
+          )
+          .join("");
+
+        document.getElementById("chart-engagement-title").textContent = t.audienceSection.engagementChartTitle(metrics, fmt);
+        document.getElementById("chart-engagement-bars").innerHTML = metrics.engagementBars
+          .map(
+            (b) => `
+            <div class="mk-bar-row">
+              <span class="mk-bar-label">${t.audienceSection.engagementLabels[b.key]}</span>
+              <div class="mk-bar-track">
+                <div class="mk-bar-fill mk-bar-fill-bronze" style="width: ${b.barWidth}%;"></div>
+                <span class="mk-bar-tip">${fmtP(b.pct)}</span>
+              </div>
+            </div>
+          `
+          )
+          .join("");
+
+        document.getElementById("donut1-pct").textContent = fmtP(metrics.donutSavesPct);
+        document.getElementById("donut1-sub").textContent = t.audienceSection.donut1Sub;
+        document.getElementById("donut1-caption").innerHTML = t.audienceSection.donut1Caption(metrics, fmt);
+
+        document.getElementById("donut2-pct").textContent = fmtP(metrics.donutStoriesPct);
+        document.getElementById("donut2-sub").textContent = t.audienceSection.donut2Sub;
+        document.getElementById("donut2-caption").innerHTML = t.audienceSection.donut2Caption(metrics, fmt);
+
+        // Slide 6: Formas de Parceria
+        document.getElementById("partnerships-title").textContent = t.partnershipsSection.title;
+        document.getElementById("partnerships-pill").textContent = t.partnershipsSection.pill;
+        document.getElementById("partnerships-list").innerHTML = t.partnershipsSection.items
+          .map((item) => `<li class="mk-partner-item"><span class="mk-partner-bullet"></span><span>${item}</span></li>`)
+          .join("");
+        document.getElementById("partnerships-paragraphs").innerHTML = t.partnershipsSection.paragraphs
+          .map((p) => `<p>${p}</p>`)
+          .join("");
+
+        // Slide 7: Exemplos · Instituições
+        document.getElementById("cases-inst-pill").textContent = t.casesInstitutions.pill;
+        document.getElementById("case-inst-1").textContent = t.casesInstitutions.c1Caption;
+        document.getElementById("case-inst-2").textContent = t.casesInstitutions.c2Caption;
+        document.getElementById("case-inst-3").textContent = t.casesInstitutions.c3Caption;
+
+        // Slide 8: Exemplos · Eventos
+        document.getElementById("cases-ev-pill").textContent = t.casesEvents.pill;
+        document.getElementById("case-ev-1").textContent = t.casesEvents.c1Caption;
+        document.getElementById("case-ev-2").textContent = t.casesEvents.c2Caption;
+        document.getElementById("case-ev-3").textContent = t.casesEvents.c3Caption;
+
+        // Slide 9: Exemplos · TikTok
+        document.getElementById("cases-tt-pill").textContent = t.casesTiktok.pill;
+        document.getElementById("case-tt-1").textContent = t.casesTiktok.c1Caption(metrics, fmt);
+        document.getElementById("case-tt-2").textContent = t.casesTiktok.c2Caption(metrics, fmt);
+        document.getElementById("case-tt-3").textContent = t.casesTiktok.c3Caption(metrics, fmt);
+
+        // Slide 9: Pilares
+        document.getElementById("pillars-stack").innerHTML = t.pillarsSection.items
+          .map(
+            (item) => `
+            <div class="mk-pillar-pill">
+              <span class="mk-sparkle" aria-hidden="true" style="font-size: 1.2rem; color: var(--mk-accent);">✦</span>
+              <span class="mk-pillar-word">${item.word}</span>
+              <span class="mk-pillar-note">${item.note}</span>
+            </div>
+          `
+          )
+          .join("");
+
+        // Slide 10: Contato (dados compartilhados de contact)
+        document.getElementById("contact-pill").textContent = t.contactSection.pill;
+        document.getElementById("contact-name").textContent = contact.formalName;
+        document.getElementById("contact-phone").textContent = contact.phoneDisplay;
+        document.getElementById("contact-wa-link").href = contact.whatsappUrl;
+        document.getElementById("contact-email").textContent = contact.email;
+        document.getElementById("contact-email-link").href = `mailto:${contact.email}`;
+        document.getElementById("contact-social-line").textContent = t.contactSection.socialLine;
+
+        const ctaEmail = document.getElementById("cta-email");
+        ctaEmail.textContent = t.contactSection.emailCta;
+        ctaEmail.href = `mailto:${contact.email}?subject=${encodeURIComponent(t.contactSection.emailSubject)}`;
+        document.getElementById("cta-whatsapp").href = contact.whatsappUrl;
+        document.getElementById("cta-whatsapp").textContent = t.contactSection.whatsappCta;
+        document.getElementById("cta-instagram").href = contact.instagramUrl;
+        document.getElementById("cta-youtube").href = contact.youtubeUrl;
+        document.getElementById("cta-tiktok").href = contact.tiktokUrl;
+      }
+
+      // Evento do seletor PT / EN
+      document.getElementById("lang-toggle").addEventListener("click", () => {
+        renderLanguage(currentLang === "pt" ? "en" : "pt");
+      });
+
+      // Exportação de PDF no idioma ativo com nome exato do arquivo
+      function exportLocalizedPdf() {
+        const t = i18n[currentLang];
+        const previousTitle = document.title;
+        document.title = t.pdfFileName; // Midia-Kit-Marina-Bastos-PT ou Media-Kit-Marina-Bastos-EN
+
+        const restoreTitle = () => {
+          document.title = previousTitle;
+          window.removeEventListener("afterprint", restoreTitle);
+        };
+        window.addEventListener("afterprint", restoreTitle);
+        window.print();
+        setTimeout(restoreTitle, 1500);
+      }
+
+      document.getElementById("btn-export-pdf").addEventListener("click", exportLocalizedPdf);
+
+      // Render inicial (PT por padrão)
+      renderLanguage(currentLang);
+    })();
+  </script>
 
 </body>
 </html>
