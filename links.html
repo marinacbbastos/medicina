@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=20261120a" />
   <style>
     .linktree-page {
       min-height: 100vh;
@@ -119,6 +119,17 @@
       border-color: var(--accent-primary-hover);
     }
 
+    .link-pill-terracotta {
+      background-color: var(--accent-bronze);
+      border-color: var(--accent-bronze);
+      color: #FFFFFF;
+    }
+
+    .link-pill-terracotta:hover {
+      background-color: #8E583D;
+      border-color: #8E583D;
+    }
+
     .link-pill-left {
       display: flex;
       align-items: center;
@@ -138,8 +149,9 @@
       flex-shrink: 0;
     }
 
-    .link-pill-featured .link-icon-box {
-      background-color: rgba(255, 255, 255, 0.14);
+    .link-pill-featured .link-icon-box,
+    .link-pill-terracotta .link-icon-box {
+      background-color: rgba(255, 255, 255, 0.16);
       color: #FFFFFF;
     }
 
@@ -164,13 +176,18 @@
       color: #CFE0D8;
     }
 
+    .link-pill-terracotta .link-caption {
+      color: #F6E7DE;
+    }
+
     .link-arrow {
       color: var(--text-muted);
       flex-shrink: 0;
       transition: transform 0.2s ease;
     }
 
-    .link-pill-featured .link-arrow {
+    .link-pill-featured .link-arrow,
+    .link-pill-terracotta .link-arrow {
       color: #FFFFFF;
     }
 
@@ -211,8 +228,8 @@
       <!-- Lista de Links (Todos exceto Instagram) -->
       <nav class="links-stack" aria-label="Links de Marina Bastos">
 
-        <!-- 1. Parcerias (Primeiro Retângulo Verde no Topo) -->
-        <a href="mailto:marinabastosmed@gmail.com" class="link-pill link-pill-featured">
+        <!-- 1. Parcerias (Primeiro Retângulo em Terracota no Topo) -->
+        <a href="mailto:marinabastosmed@gmail.com" class="link-pill link-pill-terracotta">
           <div class="link-pill-left">
             <span class="link-icon-box" aria-hidden="true">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
