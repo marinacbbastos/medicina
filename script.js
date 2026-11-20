@@ -1,5 +1,5 @@
 // ============================================================================
-// LÓGICA DO PORTFÓLIO ACADÊMICO — MARINA CASTELLO BRANCO BASTOS
+// LÓGICA DO PORTFÓLIO ACADÊMICO: MARINA CASTELLO BRANCO BASTOS
 // ============================================================================
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -204,8 +204,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const total = artigosFiltrados.length;
       contador.textContent =
         total === 1
-          ? "Exibindo 1 publicação verificada (PubMed & Crossref)"
-          : `Exibindo ${total} publicações verificadas (PubMed & Crossref)`;
+          ? "Exibindo 1 publicação verificada"
+          : `Exibindo ${total} publicações verificadas`;
     }
 
     if (artigosFiltrados.length === 0) {
@@ -252,6 +252,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 ${
                   artigo.arquivoPdf
                     ? `<a href="${encodeURI(artigo.arquivoPdf)}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">PDF Original ↗</a>`
+                    : ""
+                }
+                ${
+                  artigo.linkRevista
+                    ? `<a href="${artigo.linkRevista}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">Ver na Revista ↗</a>`
                     : ""
                 }
                 ${
@@ -547,10 +552,17 @@ document.addEventListener("DOMContentLoaded", () => {
           </a>
         `);
       }
+      if (artigo.linkRevista) {
+        botoes.push(`
+          <a href="${artigo.linkRevista}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+            Acessar Abstract na Revista ↗
+          </a>
+        `);
+      }
       if (artigo.linkPubmed) {
         botoes.push(`
           <a href="${artigo.linkPubmed}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
-            Ver no PubMed (PMID: 42528088) ↗
+            ${artigo.pmid ? `Ver no PubMed (PMID: ${artigo.pmid}) ↗` : "Ver no PubMed ↗"}
           </a>
         `);
       }

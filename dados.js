@@ -53,7 +53,13 @@ const DADOS_SITE = {
       descricao: "Curso Medicina na UFSJ, onde dedico minha formação ao raciocínio clínico, à medicina baseada em evidências e à participação ativa em projetos de pesquisa científica."
     },
     {
-      periodo: "2026",
+      periodo: "Outubro 2026",
+      cargo: "Primeira Autora de Resumo e Pôster Científico",
+      instituicao: "XXXII Congresso Brasileiro de Neurologia · Arquivos de Neuro-Psiquiatria",
+      descricao: "Apresentei como pôster, como primeira autora, a revisão sistemática e meta-análise 'The potential association between active smoking and sporadic ALS: a Systematic Review and Meta-Analysis', publicada nos anais da revista Arquivos de Neuro-Psiquiatria."
+    },
+    {
+      periodo: "Julho 2026",
       cargo: "Coautora de Revisão Sistemática e Meta-Análise",
       instituicao: "The American Surgeon (SAGE Journals)",
       descricao: "Participei como coautora, atuando diretamente na extração sistematizada de dados, do estudo 'CT for Detection, Fluoroscopy for Confirmation: A Meta-Analysis of Imaging in Suspected Esophageal Perforation', realizado em colaboração multicêntrica."
@@ -108,8 +114,47 @@ const DADOS_SITE = {
     }
   ],
 
-  // 4. LISTA DE ARTIGOS PUBLICADOS (PASTA "artigos/")
+  // 4. LISTA DE ARTIGOS E RESUMOS PUBLICADOS
   artigos: [
+    {
+      id: "bastos-2026-active-smoking-sporadic-als",
+      destaque: false,
+      titulo: "The potential association between active smoking and sporadic ALS: a Systematic Review and Meta-Analysis",
+      categoria: "Resumo de Congresso (Pôster)",
+      data: "7 Out 2026",
+      ano: 2026,
+      veiculo: "Arquivos de Neuro-Psiquiatria (Suplemento XXXII Congresso Brasileiro de Neurologia, p. S0252) · DOI: 10.65034/anpabstract_cbn260252",
+      autores: "Marina Castello Branco Bastos; Arthur Morato Moreira Fonseca; Victor Theodoro Silva Sampaio; Brenno Augustus Alves dos Santos; Victor Gonçalves Soares; Ocílio Ribeiro Gonçalves; Luciano Rivaroli; Kelson James Silva de Almeida",
+      tempoLeitura: "Pôster & Abstract",
+      resumo: "Apresentei este trabalho como pôster no XXXII Congresso Brasileiro de Neurologia, como primeira autora. Nesta revisão sistemática e meta-análise (12 estudos, sendo 8 de caso-controle e 4 de Randomização Mendeliana), avaliamos a possível associação entre o tabagismo ativo e a Esclerose Lateral Amiotrófica esporádica (ELAs). Na análise agrupada dos estudos caso-controle, não encontramos associação significativa (OR 1,03; IC 95%: 0,78 a 1,37; P = 0,819), com achados divergentes nos estudos de Randomização Mendeliana.",
+      palavrasChave: [
+        "Esclerose Lateral Amiotrófica (ELA)",
+        "Tabagismo Ativo",
+        "Neurologia",
+        "Revisão Sistemática & Meta-Análise",
+        "XXXII CBN 2026",
+        "DOI: 10.65034/anpabstract_cbn260252"
+      ],
+      linkRevista: "https://www.arquivosdeneuropsiquiatria.org/article/the-potential-association-between-active-smoking-and-sporadic-als-a-systematic-review-and-meta-analysis/",
+      linkExterno: "https://doi.org/10.65034/anpabstract_cbn260252",
+      chaveBibtex: "Bastos2026SmokingALS",
+      citacao: "Bastos MCB, Fonseca AMM, Sampaio VTS, Santos BAA, Soares VG, Gonçalves OR, Rivaroli L, Almeida KJS. The potential association between active smoking and sporadic ALS: a Systematic Review and Meta-Analysis. Arquivos de Neuro-Psiquiatria (Suplemento XXXII Congresso Brasileiro de Neurologia). 2026:S0252. doi:10.65034/anpabstract_cbn260252.",
+      conteudo: `
+        <h3>Sobre a Apresentação</h3>
+        <p>Este estudo foi apresentado por mim como <strong>pôster</strong> no <strong>XXXII Congresso Brasileiro de Neurologia</strong> (outubro de 2026), com o resumo publicado no suplemento oficial da revista <em>Arquivos de Neuro-Psiquiatria</em> (Academia Brasileira de Neurologia, p. S0252).</p>
+
+        <h3>Síntese do Estudo</h3>
+        <ul>
+          <li><strong>Contexto e Objetivo:</strong> Avaliamos a força epidemiológica da possível associação entre o tabagismo ativo e o risco de desenvolvimento de Esclerose Lateral Amiotrófica esporádica (ELAs), frequentemente aventada por mecanismos como estresse oxidativo, inflamação crônica e neurotoxicidade.</li>
+          <li><strong>Metodologia:</strong> Conduzimos a revisão sistemática e meta-análise seguindo as diretrizes Cochrane e PRISMA 2020 (protocolo PROSPERO #CRD42025603657), com buscas nas bases Scopus, PubMed/MEDLINE, Web of Science e BVS. Foram incluídos <strong>12 estudos</strong> ao todo: 8 estudos caso-controle e 4 estudos de Randomização Mendeliana.</li>
+          <li><strong>Principais Resultados:</strong> A meta-análise dos estudos caso-controle não demonstrou associação clara entre tabagismo ativo e ELA esporádica (<strong>OR 1,03</strong>; IC 95%: 0,78 a 1,37; <em>P</em> = 0,819), com consistência na análise de sensibilidade (<em>leave-one-out</em>) e ausência de indícios de viés de publicação no teste de Egger (<em>P</em> = 0,391). Nos estudos de Randomização Mendeliana, os achados foram heterogêneos entre publicações anteriores e análises mais recentes.</li>
+          <li><strong>Conclusão:</strong> A evidência epidemiológica agrupada atual não sustenta de forma definitiva uma associação entre tabagismo ativo e ELA esporádica, reforçando a importância de estudos de coorte prospectivos bem controlados para esclarecer o papel do tabagismo como fator de risco modificável.</li>
+        </ul>
+
+        <h3>Verificação de Metadados</h3>
+        <p>Registro verificado na base <strong>Crossref</strong> sob o DOI <a href="https://doi.org/10.65034/anpabstract_cbn260252" target="_blank" rel="noopener noreferrer">10.65034/anpabstract_cbn260252</a> (<em>ANPAbstract_CBN26</em>, Academia Brasileira de Neurologia, 7 de outubro de 2026) e publicado na íntegra na página oficial da revista <a href="https://www.arquivosdeneuropsiquiatria.org/article/the-potential-association-between-active-smoking-and-sporadic-als-a-systematic-review-and-meta-analysis/" target="_blank" rel="noopener noreferrer">Arquivos de Neuro-Psiquiatria</a>.</p>
+      `
+    },
     {
       id: "oliveira-2026-ct-fluoroscopy-esophageal-perforation",
       destaque: true,
@@ -131,6 +176,7 @@ const DADOS_SITE = {
       ],
       linkExterno: "https://doi.org/10.1177/00031348261472868",
       linkPubmed: "https://pubmed.ncbi.nlm.nih.gov/42528088/",
+      pmid: "42528088",
       arquivoPdf: "artigos/da-nobrega-oliveira-et-al-2026-ct-for-detection-fluoroscopy-for-confirmation-a-meta-analysis-of-imaging-in-suspected (1).pdf",
       chaveBibtex: "Oliveira2026CTFluoroscopy",
       citacao: "da Nobrega Oliveira REN, Delgado LM, Gonçalves LB, Bastos MCB, Passos FS, Faria I, Petrov R. CT for Detection, Fluoroscopy for Confirmation: A Meta-Analysis of Imaging in Suspected Esophageal Perforation. The American Surgeon. 2026;0(0):1-10. doi:10.1177/00031348261472868. PMID: 42528088.",
