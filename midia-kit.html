@@ -847,6 +847,217 @@
       line-height: 1.45;
     }
 
+    /* Layout dedicado do Slide 5: Público-alvo (Faixa etária & gênero + Cidades + Países) */
+    .mk-demo-grid {
+      display: grid;
+      grid-template-columns: 1.06fr 0.94fr;
+      gap: 1.5rem;
+      align-items: stretch;
+      margin-top: 1.75rem;
+    }
+
+    .mk-demo-age-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .mk-age-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-bottom: 1.05rem;
+    }
+
+    .mk-age-head .mk-chart-subtitle {
+      margin-bottom: 0;
+    }
+
+    .mk-gender-legend {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.85rem;
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: var(--mk-muted);
+    }
+
+    .mk-legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.36rem;
+    }
+
+    .mk-legend-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 3px;
+      display: inline-block;
+      flex-shrink: 0;
+    }
+
+    .mk-legend-dot-f {
+      background: var(--mk-accent);
+    }
+
+    .mk-legend-dot-m {
+      background: var(--mk-bronze);
+    }
+
+    .mk-bar-row-age {
+      grid-template-columns: 102px 1fr;
+      gap: 0.75rem;
+      margin-bottom: 0.72rem;
+    }
+
+    .mk-bar-track-stacked {
+      gap: 2px;
+    }
+
+    .mk-bar-seg {
+      height: 100%;
+      flex-shrink: 0;
+    }
+
+    .mk-bar-seg-f {
+      background: linear-gradient(90deg, var(--mk-accent), #4E7A64);
+      border-radius: 8px 3px 3px 8px;
+    }
+
+    .mk-bar-seg-m {
+      background: linear-gradient(90deg, var(--mk-bronze), #C68A6B);
+      border-radius: 3px 8px 8px 3px;
+    }
+
+    .mk-demo-right {
+      display: flex;
+      flex-direction: column;
+      gap: 1.15rem;
+    }
+
+    .mk-gender-card {
+      background: #FFFFFF;
+      border: 1px solid var(--mk-line-soft);
+      border-radius: 22px;
+      padding: 1.25rem 1.5rem;
+      box-shadow: 0 12px 32px rgba(27, 29, 28, 0.05);
+      display: flex;
+      align-items: center;
+      gap: 1.35rem;
+    }
+
+    .mk-gender-donut {
+      width: 108px;
+      height: 108px;
+      flex-shrink: 0;
+      display: block;
+    }
+
+    .mk-gender-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .mk-gender-info .mk-chart-subtitle {
+      margin-bottom: 0.55rem;
+    }
+
+    .mk-gender-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.55rem;
+    }
+
+    .mk-gender-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.28rem 0.68rem;
+      border-radius: 999px;
+      background: var(--mk-paper);
+      border: 1px solid var(--mk-line-soft);
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--mk-ink);
+    }
+
+    .mk-gender-pill strong {
+      font-weight: 800;
+    }
+
+    .mk-gender-caption {
+      font-size: 0.78rem;
+      color: var(--mk-muted);
+      line-height: 1.42;
+    }
+
+    .mk-geo-card {
+      background: #FFFFFF;
+      border: 1px solid var(--mk-line-soft);
+      border-radius: 22px;
+      padding: 1.35rem 1.5rem;
+      box-shadow: 0 12px 32px rgba(27, 29, 28, 0.05);
+      flex: 1;
+    }
+
+    .mk-geo-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 1.35rem;
+    }
+
+    .mk-geo-col .mk-chart-subtitle {
+      margin-bottom: 0.72rem;
+    }
+
+    .mk-geo-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.32rem;
+    }
+
+    .mk-geo-item {
+      display: flex;
+      align-items: center;
+      gap: 0.52rem;
+      font-size: 0.79rem;
+      font-weight: 500;
+      color: var(--mk-ink);
+      line-height: 1.3;
+    }
+
+    .mk-geo-item.is-top {
+      font-weight: 700;
+    }
+
+    .mk-geo-rank {
+      width: 20px;
+      height: 20px;
+      border-radius: 6px;
+      background: var(--mk-paper);
+      color: var(--mk-muted);
+      font-size: 0.69rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .mk-geo-item.is-top .mk-geo-rank {
+      background: var(--mk-accent-soft);
+      color: var(--mk-accent);
+    }
+
+    .mk-geo-col-countries .mk-geo-item.is-top .mk-geo-rank {
+      background: rgba(168, 107, 76, 0.14);
+      color: var(--mk-bronze);
+    }
+
     /* ========================================================================
        6. FORMAS DE PARCERIA
        ======================================================================== */
@@ -1106,10 +1317,15 @@
       .mk-about-grid,
       .mk-profile-grid,
       .mk-audience-grid,
+      .mk-demo-grid,
       .mk-partner-grid,
       .mk-pillars-grid {
         grid-template-columns: 1fr;
         gap: 2.25rem;
+      }
+
+      .mk-geo-grid {
+        grid-template-columns: 1fr 1fr;
       }
 
       .mk-about-photo,
@@ -1142,6 +1358,33 @@
       .mk-hero {
         min-height: 62vh;
         background-position: center;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .mk-chart-card,
+      .mk-gender-card,
+      .mk-geo-card {
+        padding: 1.2rem 1.15rem;
+      }
+
+      .mk-bar-row-age {
+        grid-template-columns: 86px 1fr;
+        gap: 0.5rem;
+      }
+
+      .mk-gender-card {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .mk-gender-pills {
+        justify-content: center;
+      }
+
+      .mk-geo-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
       }
     }
 
@@ -1265,14 +1508,60 @@
         margin-top: 1rem !important;
       }
 
+      .mk-demo-grid {
+        grid-template-columns: 1.06fr 0.94fr !important;
+        gap: 7mm !important;
+        margin-top: 0.95rem !important;
+      }
+
       .mk-chart-card,
-      .mk-donut-card {
-        padding: 1.15rem 1.25rem !important;
+      .mk-donut-card,
+      .mk-gender-card,
+      .mk-geo-card {
+        padding: 1rem 1.2rem !important;
         box-shadow: none !important;
+      }
+
+      .mk-demo-right {
+        gap: 0.7rem !important;
+      }
+
+      .mk-gender-card {
+        gap: 1rem !important;
+      }
+
+      .mk-gender-donut {
+        width: 88px !important;
+        height: 88px !important;
+      }
+
+      .mk-geo-grid {
+        grid-template-columns: 1.26fr 0.74fr !important;
+        gap: 0.85rem !important;
+      }
+
+      .mk-geo-list {
+        gap: 0.22rem !important;
+      }
+
+      .mk-geo-item {
+        font-size: 0.74rem !important;
+        gap: 0.42rem !important;
+      }
+
+      .mk-geo-rank {
+        width: 17px !important;
+        height: 17px !important;
+        font-size: 0.64rem !important;
       }
 
       .mk-bar-row {
         margin-bottom: 0.58rem !important;
+      }
+
+      .mk-bar-row-age {
+        grid-template-columns: 92px 1fr !important;
+        margin-bottom: 0.5rem !important;
       }
 
       .mk-bar-track {
@@ -1513,46 +1802,77 @@
       </div>
     </section>
 
-    <!-- SLIDE 5: PÚBLICO-ALVO (FAIXA ETÁRIA, GÊNERO E ORIGEM) -->
+    <!-- SLIDE 5: PÚBLICO-ALVO (FAIXA ETÁRIA, GÊNERO, CIDADES E PAÍSES) -->
     <section class="mk-slide mk-section mk-section-stone" id="publico">
       <div class="mk-container">
-        <span class="mk-pill-label" style="margin-bottom: 1rem;">
+        <span class="mk-pill-label" style="margin-bottom: 0.95rem;">
           <span class="mk-sparkle" aria-hidden="true">✦</span>
           <span id="demographics-pill">público-alvo</span>
         </span>
 
-        <div class="mk-prose" style="max-width: 740px;">
+        <div class="mk-prose" style="max-width: 780px;">
           <p id="demographics-intro"></p>
         </div>
 
-        <div class="mk-audience-grid">
-          <div class="mk-chart-card">
-            <p class="mk-chart-subtitle" id="chart-age-title"></p>
-            <div id="chart-age-bars"></div>
+        <div class="mk-demo-grid">
+          <div class="mk-chart-card mk-demo-age-card">
+            <div>
+              <div class="mk-age-head">
+                <p class="mk-chart-subtitle" id="chart-age-title"></p>
+                <div class="mk-gender-legend" aria-label="Legenda de gênero">
+                  <span class="mk-legend-item">
+                    <span class="mk-legend-dot mk-legend-dot-f"></span>
+                    <span id="legend-female">Mulheres</span>
+                  </span>
+                  <span class="mk-legend-item">
+                    <span class="mk-legend-dot mk-legend-dot-m"></span>
+                    <span id="legend-male">Homens</span>
+                  </span>
+                </div>
+              </div>
+              <div id="chart-age-bars"></div>
+            </div>
             <div class="mk-age-note" id="chart-age-note"></div>
           </div>
 
-          <div class="mk-donuts-wrap">
-            <div class="mk-donut-card">
-              <svg class="mk-donut-svg" viewBox="0 0 140 140" role="img" aria-label="Distribuição por gênero do público">
-                <circle cx="70" cy="70" r="52" fill="none" stroke="#DFDDD6" stroke-width="17"/>
-                <circle id="donut-gender-arc" cx="70" cy="70" r="52" fill="none" stroke="#2D4F3E" stroke-width="17"
-                  stroke-dasharray="179.7 326.7" stroke-linecap="round" transform="rotate(-90 70 70)"/>
+          <div class="mk-demo-right">
+            <div class="mk-gender-card">
+              <svg class="mk-gender-donut" viewBox="0 0 140 140" role="img" aria-label="Distribuição por gênero do público">
+                <circle cx="70" cy="70" r="52" fill="none" stroke="#A86B4C" stroke-width="18"/>
+                <circle id="donut-gender-arc" cx="70" cy="70" r="52" fill="none" stroke="#2D4F3E" stroke-width="18"
+                  stroke-dasharray="179.7 326.7" transform="rotate(-90 70 70)"/>
                 <text id="donut-gender-pct" x="70" y="67" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="22" font-weight="800" fill="#1B1D1C">55%</text>
-                <text id="donut-gender-sub" x="70" y="84" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="11" font-weight="600" fill="#555956">feminino</text>
+                <text id="donut-gender-sub" x="70" y="84" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="11" font-weight="600" fill="#555956">mulheres</text>
               </svg>
-              <p class="mk-donut-caption" id="donut-gender-caption"></p>
+              <div class="mk-gender-info">
+                <p class="mk-chart-subtitle" id="gender-card-title">Distribuição por gênero</p>
+                <div class="mk-gender-pills">
+                  <span class="mk-gender-pill">
+                    <span class="mk-legend-dot mk-legend-dot-f"></span>
+                    <span id="gender-female-label">Mulheres</span>
+                    <strong id="gender-female-val">55%</strong>
+                  </span>
+                  <span class="mk-gender-pill">
+                    <span class="mk-legend-dot mk-legend-dot-m"></span>
+                    <span id="gender-male-label">Homens</span>
+                    <strong id="gender-male-val">45%</strong>
+                  </span>
+                </div>
+                <p class="mk-gender-caption" id="donut-gender-caption"></p>
+              </div>
             </div>
 
-            <div class="mk-donut-card">
-              <svg class="mk-donut-svg" viewBox="0 0 140 140" role="img" aria-label="Localização do público">
-                <circle cx="70" cy="70" r="52" fill="none" stroke="#DFDDD6" stroke-width="17"/>
-                <circle id="donut-country-arc" cx="70" cy="70" r="52" fill="none" stroke="#A86B4C" stroke-width="17"
-                  stroke-dasharray="300.6 326.7" stroke-linecap="round" transform="rotate(-90 70 70)"/>
-                <text id="donut-country-pct" x="70" y="67" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="22" font-weight="800" fill="#1B1D1C">92%</text>
-                <text id="donut-country-sub" x="70" y="84" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="11" font-weight="600" fill="#555956">brasileiro</text>
-              </svg>
-              <p class="mk-donut-caption" id="donut-country-caption"></p>
+            <div class="mk-geo-card">
+              <div class="mk-geo-grid">
+                <div class="mk-geo-col mk-geo-col-cities">
+                  <p class="mk-chart-subtitle" id="top-cities-title">Principais cidades</p>
+                  <ol class="mk-geo-list" id="top-cities-list"></ol>
+                </div>
+                <div class="mk-geo-col mk-geo-col-countries">
+                  <p class="mk-chart-subtitle" id="top-countries-title">Principais países</p>
+                  <ol class="mk-geo-list" id="top-countries-list"></ol>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1810,7 +2130,7 @@
     </section>
   </main>
 
-  <script src="midia-kit-dados.js?v=20261120c"></script>
+  <script src="midia-kit-dados.js?v=20261120d"></script>
   <script>
     (function () {
       if (typeof MIDIA_KIT_DATA === "undefined") return;
@@ -1947,35 +2267,67 @@
           .map((p) => `<p>${p}</p>`)
           .join("");
 
-        // Slide 5: Público-alvo (Demografia: Faixa etária, Gênero e Origem)
+        // Slide 5: Público-alvo (Demografia: Faixa etária & gênero, Cidades e Países)
         const demo = metrics.audienceDemographics;
+        const maxAgePct = Math.max(...demo.ageBars.map((b) => b.pct), 1);
         document.getElementById("demographics-pill").textContent = t.demographicsSection.pill;
         document.getElementById("demographics-intro").textContent = t.demographicsSection.intro;
-        document.getElementById("chart-age-title").textContent = t.demographicsSection.ageChartTitle;
+        document.getElementById("chart-age-title").textContent = t.demographicsSection.ageChartTitle(metrics, fmt);
+        document.getElementById("legend-female").textContent = t.demographicsSection.legendFemale;
+        document.getElementById("legend-male").textContent = t.demographicsSection.legendMale;
         document.getElementById("chart-age-bars").innerHTML = demo.ageBars
-          .map(
-            (b) => `
-            <div class="mk-bar-row">
-              <span class="mk-bar-label">${t.demographicsSection.ageLabels[b.key]}</span>
-              <div class="mk-bar-track">
-                <div class="mk-bar-fill" style="width: ${b.barWidth}%;"></div>
+          .map((b) => {
+            const label = t.demographicsSection.ageLabels[b.key];
+            const fWidth = Math.max((b.femalePct / maxAgePct) * 70, 1.8).toFixed(1);
+            const mWidth = Math.max((b.malePct / maxAgePct) * 70, 1.8).toFixed(1);
+            const tooltip = t.demographicsSection.ageBarTitle(label, b, fmtP);
+            return `
+            <div class="mk-bar-row mk-bar-row-age" title="${tooltip}">
+              <span class="mk-bar-label">${label}</span>
+              <div class="mk-bar-track mk-bar-track-stacked">
+                <div class="mk-bar-seg mk-bar-seg-f" style="width: ${fWidth}%;"></div>
+                <div class="mk-bar-seg mk-bar-seg-m" style="width: ${mWidth}%;"></div>
                 <span class="mk-bar-tip">${fmtP(b.pct)}</span>
               </div>
             </div>
-          `
-          )
+          `;
+          })
           .join("");
         document.getElementById("chart-age-note").innerHTML = t.demographicsSection.ageNoteHtml(demo, fmtP);
 
         setDonutArc("donut-gender-arc", demo.genderFemalePct);
         document.getElementById("donut-gender-pct").textContent = fmtW(demo.genderFemalePct);
         document.getElementById("donut-gender-sub").textContent = t.demographicsSection.genderSub;
-        document.getElementById("donut-gender-caption").innerHTML = t.demographicsSection.genderCaption(demo, fmtW);
+        document.getElementById("gender-card-title").textContent = t.demographicsSection.genderTitle;
+        document.getElementById("gender-female-label").textContent = t.demographicsSection.genderFemaleLabel;
+        document.getElementById("gender-female-val").textContent = fmtW(demo.genderFemalePct);
+        document.getElementById("gender-male-label").textContent = t.demographicsSection.genderMaleLabel;
+        document.getElementById("gender-male-val").textContent = fmtW(demo.genderMalePct);
+        document.getElementById("donut-gender-caption").textContent = t.demographicsSection.genderCaption;
 
-        setDonutArc("donut-country-arc", demo.countryBrazilPct);
-        document.getElementById("donut-country-pct").textContent = fmtW(demo.countryBrazilPct);
-        document.getElementById("donut-country-sub").textContent = t.demographicsSection.countrySub;
-        document.getElementById("donut-country-caption").innerHTML = t.demographicsSection.countryCaption(demo, fmtW);
+        document.getElementById("top-cities-title").textContent = t.demographicsSection.topCitiesTitle;
+        document.getElementById("top-cities-list").innerHTML = demo.topCities
+          .map(
+            (city, idx) => `
+            <li class="mk-geo-item${idx < 3 ? " is-top" : ""}">
+              <span class="mk-geo-rank">${idx + 1}</span>
+              <span>${city}</span>
+            </li>
+          `
+          )
+          .join("");
+
+        document.getElementById("top-countries-title").textContent = t.demographicsSection.topCountriesTitle;
+        document.getElementById("top-countries-list").innerHTML = t.demographicsSection.topCountries
+          .map(
+            (country, idx) => `
+            <li class="mk-geo-item${idx < 3 ? " is-top" : ""}">
+              <span class="mk-geo-rank">${idx + 1}</span>
+              <span>${country}</span>
+            </li>
+          `
+          )
+          .join("");
 
         // Slide 6: Comportamento & Engajamento Auditado (30 dias)
         document.getElementById("audience-pill").textContent = t.audienceSection.pill;

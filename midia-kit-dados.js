@@ -50,16 +50,31 @@ const MIDIA_KIT_DATA = {
     tiktokPesquisaViews: 2023,
     tiktokRayyanViews: 7367,
     audienceDemographics: {
+      // Distribuição proporcional extraída do painel Público do Meta Business Suite (1.255 seguidores)
       ageBars: [
-        { key: "age13_17", pct: 0.3, barWidth: 2 },
-        { key: "age18_24", pct: 47.9, barWidth: 78 },
-        { key: "age25_35", pct: 38.0, barWidth: 62 },
-        { key: "age35_45", pct: 8.0, barWidth: 13 }
+        { key: "age18_24", femalePct: 22.6, malePct: 13.7, pct: 36.3 },
+        { key: "age25_34", femalePct: 24.2, malePct: 21.9, pct: 46.1 },
+        { key: "age35_44", femalePct: 4.5, malePct: 5.7, pct: 10.2 },
+        { key: "age45_54", femalePct: 1.5, malePct: 1.8, pct: 3.3 },
+        { key: "age55_64", femalePct: 1.2, malePct: 0.9, pct: 2.1 },
+        { key: "age65_plus", femalePct: 1.0, malePct: 1.0, pct: 2.0 }
       ],
-      coreAgePct: 85.9,
+      coreAge18_34Pct: 82.4,
+      coreAge18_44Pct: 92.6,
       genderFemalePct: 55,
       genderMalePct: 45,
-      countryBrazilPct: 92
+      topCities: [
+        "São João del-Rei, MG",
+        "Belo Horizonte, MG",
+        "São Paulo, SP",
+        "Rio de Janeiro, RJ",
+        "Nova Lima, MG",
+        "Santa Cruz de Minas, MG",
+        "Barbacena, MG",
+        "Juiz de Fora, MG",
+        "Divinópolis, MG",
+        "Aveiro, Portugal"
+      ]
     },
     reelsTopicBars: [
       { key: "research", pct: 45.1, barWidth: 66 },
@@ -209,21 +224,40 @@ const MIDIA_KIT_DATA = {
       demographicsSection: {
         pill: "público-alvo",
         intro: "Diferente de perfis voltados apenas para lifestyle, meu conteúdo aprofunda em medicina baseada em evidências, pesquisa científica e estatística, atraindo estudantes dedicados, residentes e jovens médicos que investem tempo e recursos na carreira.",
-        ageChartTitle: "Faixa etária da audiência (%)",
+        ageChartTitle: (m, fmt) => `Faixa etária e gênero (${fmt(m.followers)} seguidores)`,
+        legendFemale: "Mulheres",
+        legendMale: "Homens",
         ageLabels: {
-          age13_17: "13 a 17 anos",
           age18_24: "18 a 24 anos",
-          age25_35: "25 a 35 anos",
-          age35_45: "35 a 45 anos"
+          age25_34: "25 a 34 anos",
+          age35_44: "35 a 44 anos",
+          age45_54: "45 a 54 anos",
+          age55_64: "55 a 64 anos",
+          age65_plus: "65+ anos"
         },
+        ageBarTitle: (label, b, fmtP) =>
+          `${label}: ${fmtP(b.pct)} (Mulheres ${fmtP(b.femalePct)} · Homens ${fmtP(b.malePct)})`,
         ageNoteHtml: (d, fmtP) =>
-          `<strong>${fmtP(d.coreAgePct)}</strong> do público está concentrado entre <strong>18 e 35 anos</strong>, principal faixa de estudantes de Medicina, residentes e médicos em início de carreira.`,
-        genderSub: "feminino",
-        genderCaption: (d, fmtW) =>
-          `<strong>${fmtW(d.genderFemalePct)} feminino</strong> e <strong>${fmtW(d.genderMalePct)} masculino</strong>, com distribuição equilibrada entre mulheres e homens na Medicina`,
-        countrySub: "brasileiro",
-        countryCaption: (d, fmtW) =>
-          `<strong>${fmtW(d.countryBrazilPct)} do público no Brasil</strong>, com presença complementar de brasileiros e pesquisadores no exterior`
+          `<strong>${fmtP(d.coreAge18_34Pct)}</strong> do público está entre <strong>18 e 34 anos</strong> (e <strong>${fmtP(d.coreAge18_44Pct)}</strong> até 44 anos), concentrando estudantes de Medicina, residentes e médicos em início de carreira.`,
+        genderTitle: "Distribuição por gênero",
+        genderSub: "mulheres",
+        genderFemaleLabel: "Mulheres",
+        genderMaleLabel: "Homens",
+        genderCaption: "Distribuição equilibrada entre mulheres e homens na Medicina e pesquisa.",
+        topCitiesTitle: "Principais cidades",
+        topCountriesTitle: "Principais países",
+        topCountries: [
+          "Brasil",
+          "Portugal",
+          "Estados Unidos",
+          "Alemanha",
+          "França",
+          "Canadá",
+          "Paquistão",
+          "Itália",
+          "Países Baixos",
+          "Austrália"
+        ]
       },
       audienceSection: {
         pill: "comportamento e engajamento",
@@ -415,21 +449,40 @@ const MIDIA_KIT_DATA = {
       demographicsSection: {
         pill: "target audience",
         intro: "Unlike accounts focused solely on lifestyle, my content dives into evidence-based medicine, clinical research, and statistics, attracting dedicated medical students, residents, and early-career physicians who actively invest time and resources in their careers.",
-        ageChartTitle: "Audience age distribution (%)",
+        ageChartTitle: (m, fmt) => `Age & gender distribution (${fmt(m.followers)} followers)`,
+        legendFemale: "Women",
+        legendMale: "Men",
         ageLabels: {
-          age13_17: "13 to 17 years",
-          age18_24: "18 to 24 years",
-          age25_35: "25 to 35 years",
-          age35_45: "35 to 45 years"
+          age18_24: "18–24 years",
+          age25_34: "25–34 years",
+          age35_44: "35–44 years",
+          age45_54: "45–54 years",
+          age55_64: "55–64 years",
+          age65_plus: "65+ years"
         },
+        ageBarTitle: (label, b, fmtP) =>
+          `${label}: ${fmtP(b.pct)} (Women ${fmtP(b.femalePct)} · Men ${fmtP(b.malePct)})`,
         ageNoteHtml: (d, fmtP) =>
-          `<strong>${fmtP(d.coreAgePct)}</strong> of the audience is aged <strong>18 to 35</strong>, spanning medical students, residents, and early-career physicians.`,
-        genderSub: "female",
-        genderCaption: (d, fmtW) =>
-          `<strong>${fmtW(d.genderFemalePct)} female</strong> and <strong>${fmtW(d.genderMalePct)} male</strong>, delivering balanced reach across women and men in medicine`,
-        countrySub: "Brazil",
-        countryCaption: (d, fmtW) =>
-          `<strong>${fmtW(d.countryBrazilPct)} based in Brazil</strong>, plus Brazilian medical students and researchers abroad`
+          `<strong>${fmtP(d.coreAge18_34Pct)}</strong> of the audience is aged <strong>18 to 34</strong> (and <strong>${fmtP(d.coreAge18_44Pct)}</strong> up to 44), spanning medical students, residents, and early-career physicians.`,
+        genderTitle: "Gender breakdown",
+        genderSub: "women",
+        genderFemaleLabel: "Women",
+        genderMaleLabel: "Men",
+        genderCaption: "Balanced reach across women and men in medicine and clinical research.",
+        topCitiesTitle: "Top cities",
+        topCountriesTitle: "Top countries",
+        topCountries: [
+          "Brazil",
+          "Portugal",
+          "United States",
+          "Germany",
+          "France",
+          "Canada",
+          "Pakistan",
+          "Italy",
+          "Netherlands",
+          "Australia"
+        ]
       },
       audienceSection: {
         pill: "behavior & engagement",
